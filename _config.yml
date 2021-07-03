@@ -102,7 +102,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:sooy0614@naver.com
+      #url: mailto:sooy0614@naver.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://hsyeun.github.io/"
@@ -130,7 +130,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/hsyeun"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -277,6 +277,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
