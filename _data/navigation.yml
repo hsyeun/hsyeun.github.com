@@ -1,11 +1,17 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "java"
-    url: /java/
-  - title: "spring"
-    url: /spring/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "About"
+    url: /about/
+  - title: "연도별 포스트"
+    url: /posts/
+  # - title: "java"
+  #   url: /java/
+  # - title: "spring"
+  #   url: /spring/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
