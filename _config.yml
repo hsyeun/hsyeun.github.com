@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "기록하는 개발자"
+title                    : "뚜벅이 개발자"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Your Name"
@@ -96,9 +96,9 @@ analytics:
 author:
   name             : "hsyeun"
   avatar           : "/assets/images/programmer.jpg"
-  bio              : "꾸준히 공부하는 개발자입니다."
+  bio              : "뚜벅뚜벅 나아가며 꾸준히 성장하는 개발자입니다."
   location         : "Republic of Korea"
-  email            : "sooy0614@naver.com"
+  # email            : "sooy0614@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
