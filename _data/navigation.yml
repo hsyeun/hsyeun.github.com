@@ -1,13 +1,13 @@
 # main links
 main:
-  - title: "Categories"
+  - title: "프로젝트"
+    url: /project/
+  - title: "카테고리"
     url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
   - title: "연도별 포스트"
     url: /posts/
+  # - title: "About"
+  #   url: /about/
   # - title: "java"
   #   url: /java/
   # - title: "spring"
