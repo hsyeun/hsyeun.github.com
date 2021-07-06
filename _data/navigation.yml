@@ -5,13 +5,9 @@ main:
   - title: "카테고리"
     url: /categories/
   - title: "연도별 포스트"
-    url: /posts/
+    url: /year-archive/
   # - title: "About"
   #   url: /about/
-  # - title: "java"
-  #   url: /java/
-  # - title: "spring"
-  #   url: /spring/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
