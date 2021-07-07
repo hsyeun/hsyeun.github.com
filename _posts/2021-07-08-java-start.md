@@ -1,8 +1,8 @@
 ---
 title: Java - Start
 key: 20210708
-tags: Test
-categories: java
+tags: Java
+categories: Java
 ---
 
 Java start
