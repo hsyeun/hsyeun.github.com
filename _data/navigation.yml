@@ -1,6 +1,18 @@
 header:
   - titles:
       # @start locale config
+      en      : &EN       Category
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      ko      : &KO       카테고리
+      ko-KR   : *KO
+      # @end locale config
+    url: /category.html
+
+  - titles:
+      # @start locale config
       en      : &EN       Archive
       en-GB   : *EN
       en-US   : *EN
@@ -22,81 +34,4 @@ header:
       ko-KR   : *KO
       # @end locale config
     url: /about.html
-  
-  - titles:
-      # @start locale config
-      en      : &EN       Article
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      ko      : &KO       기사
-      ko-KR   : *KO
-      # @end locale config
-    url: /article.html
-
-
-  - titles:
-      # @start locale config
-      en      : &EN       Articles
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      ko      : &KO       소개
-      ko-KR   : *KO
-      # @end locale config
-    url: /articles.html
-
-
-  - titles:
-      # @start locale config
-      en      : &EN       Base
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      ko      : &KO       소개
-      ko-KR   : *KO
-      # @end locale config
-    url: /base.html
-
-
-  - titles:
-      # @start locale config
-      en      : &EN       Home
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      ko      : &KO       소개
-      ko-KR   : *KO
-      # @end locale config
-    url: /home.html
-
-
-  - titles:
-      # @start locale config
-      en      : &EN       Landing
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      ko      : &KO       소개
-      ko-KR   : *KO
-      # @end locale config
-    url: /landing.html
-
-
-  - titles:
-      # @start locale config
-      en      : &EN       Page
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      ko      : &KO       소개
-      ko-KR   : *KO
-      # @end locale config
-    url: /page.html
 
