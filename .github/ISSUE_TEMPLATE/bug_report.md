@@ -1,68 +1,35 @@
 ---
-name: "Bug Report"
-about: "Is something not working as expected?"
+name: Bug report
+about: Create a report to help us improve
+title: 'Bug:'
+labels: ''
+assignees: ''
+
 ---
 
-<!--
-  Before opening a new issue please:
-  
-  - Verify you have the latest versions of Jekyll and Minimal Mistakes 
-    installed by running `bundle update`.
-  - Thoroughly read the theme's documentation at
-    https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - Search all issues at https://github.com/mmistakes/minimal-mistakes/issues 
-    for solutions and to avoid duplication.
-  - Ask for help at http://talk.jekyllrb.com/
-  
-  After exhausting these suggestions use the format below.
--->
+<!-- Prefer English -->
 
-## Environment
+**Description**
 
-<!--
-  Please include theme version, Jekyll version, public git repository, whether 
-  you are hosting with GitHub Pages, and the operating system you tested with.
+[Description of the bug]
 
-  Issues without a link to a public repository or ZIP file will likely go ignored.
-  Being able to see your actual files is necessary to troubleshoot, as most 
-  issues stem from invalid/missing YAML Front Matter, a mis-configured _config.sys 
-  file, or problematic site content. 
--->
+**Steps to Reproduce**
 
-- Minimal Mistakes version:
-- Ruby gem or remote theme version:
-- Jekyll version:
-- Git repository URL:
-- GitHub Pages hosted (if yes provide URL to site):
-- Operating system:
+1. [First Step]
+2. [Second Step]
+3. [and so on...]
 
-## Expected behavior
+**Expected behavior**
 
-<!--
-  What is it you expected to happen? This should be a description of how the
-  functionality you tried to use is supposed to work.
--->
+[What you expected to happen]
 
-## Steps to reproduce the behavior
+**Screenshots (If Necessary)**
 
-<!--
-  Describe the steps you took for this problem to exist. Such as: you installed
-  the theme, customized _config.yml, added your own posts, and started up a 
-  Jekyll server locally.
+[Screenshots to help explain your problem.]
 
-  If an error occurred on GitHub Pages when pushing, please test a local version
-  following these setup instructions: 
-  https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
+**Environment (If Necessary)**
 
-  Then provide a complete log by running `bundle exec jekyll build --trace --verbose` 
-  and include this output in the filed issue.
-
-  Screenshots can also be included if they help illustrate a behavior.
--->
-
-## Other
-
-<!--
-  NOTE: Please provide a code repository, gist, code snippet, sample files, 
-  screenshots, or anything else you think will aid in reproducing the issue.
--->
+- OS: [e.g. Github Pages, Windows 10, macOS 10.13, Linux(CentOS 7.5), iOS 11, Android 8(Pixel 2)]
+- Ruby: [e.g. Github Pages, 2.4.0p0]
+- Jekyll: [e.g. Github Pages, 3.7.3]
+- Browser: [e.g. Chrome, Safari, Edge, Firefox]
