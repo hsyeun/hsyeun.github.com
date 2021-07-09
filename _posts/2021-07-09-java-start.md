@@ -17,7 +17,7 @@ categories: Java
 ### SE란?
 먼저 설명하자면 자바에는 SE, EE, ME가 있습니다.
 
-```
+~~~
 SE(Standard Edition)
     - 일반적으로 사용되는 기본 에디션. 자바의 기본적인 기능이 모두 포함되어 있으며 자바 언어의 대부분의 API를 제공해줍니다.
 
@@ -27,7 +27,7 @@ EE(Enterprise Edition)
 
 ME(Micro Edition)
     - 임베디드를 위한 에디션입니다.
-```
+~~~
 
 
 여기서는 SE를 설치해보겠습니다.
@@ -41,15 +41,14 @@ ME(Micro Edition)
 자바 설치는 오라클 사이트에서 합니다.
 
 
-https://www.oracle.com/java/technologies/javase-downloads.html
+[Oracle](https://www.oracle.com/java/technologies/javase-downloads.html)
 
 > Java SE 16 버전의 다운로드 목록을 보여주는 링크입니다.
 
 
 
-```
-이미지
-```
+![](path-to-image)
+
 여기서 JDK[^1] Download를 눌러 각 컴퓨터에 해당하는 운영체제에 따라 다운받습니다.<br>
 저는 윈도우를 쓰고 있어서 Windows x64 Installer 를 다운받았습니다.
 
@@ -73,9 +72,8 @@ https://www.oracle.com/java/technologies/javase-downloads.html
 
 시스템 변수에서 새로 만들기를 클릭해 다음과 같이 입력합니다.
 
-```
-이미지
-```
+![](path-to-image)
+
 변수 이름 : JAVA_HOME
 변수 값 : (좀전에 설치한 jdk 폴더로 설정)
 
@@ -87,12 +85,12 @@ https://www.oracle.com/java/technologies/javase-downloads.html
 마찬가지로 시스템 변수에서
 이번에는 path라는 변수를 편집할게요.
 
-```
-이미지
-```
+
+![](path-to-image)
+
 
 path 편집을 눌렀을때 나오는 화면에서 새로 만들기를 클릭해
-%JAVA_HOME%\bin
+[%JAVA_HOME%\bin]
 을 입력하고 확인을 누릅니다.
 
 
