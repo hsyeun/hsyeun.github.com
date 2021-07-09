@@ -50,9 +50,10 @@ https://www.oracle.com/java/technologies/javase-downloads.html
 ```
 이미지
 ```
-여기서 JDK Download를 눌러 각 컴퓨터에 해당하는 운영체제에 따라 다운받습니다.<br>
+여기서 JDK[^1] Download를 눌러 각 컴퓨터에 해당하는 운영체제에 따라 다운받습니다.<br>
 저는 윈도우를 쓰고 있어서 Windows x64 Installer 를 다운받았습니다.
 
+[^1]: JDK(Java Development Kit)
 
 다운로드가 완료되면 C드라이브에 설치해주세요.
 
