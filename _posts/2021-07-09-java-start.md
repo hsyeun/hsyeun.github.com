@@ -28,7 +28,7 @@ Java의 특징
   
 오라클[^3]에서 배포한 JDK를 다운받아 사용합니다.
 
-[^3]: [https://www.oracle.com](https://www.oracle.com)
+[^3]: <https://www.oracle.com>
   
 [JDK 다운로드](https://www.oracle.com/java/technologies/javase-downloads.html)
   
@@ -92,13 +92,13 @@ ME(Micro Edition)
 bin 폴더 안에는 다양한 명령어들이 있는데 이 명령어들을 다른 폴더에서도 사용하려면  
 다음과 같이 path 환경변수에 bin 폴더를 등록해야 합니다.
 
-시스템 변수 내에 있는 path 환경변수를 찾아 편집을 눌러주세요.  
+시스템 변수 내에 있는 path 환경변수를 찾아 **편집**을 눌러주세요.  
   
 ![](path-to-image)
   
   
 path 편집을 눌렀을때 나오는 화면에서 새로 만들기를 클릭해
-[%JAVA_HOME%\bin]
+**[%JAVA_HOME%\bin]**
 을 입력하고 확인을 누릅니다.
   
   
