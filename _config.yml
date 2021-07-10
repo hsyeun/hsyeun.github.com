@@ -20,7 +20,7 @@ text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://hsyeun.github.io/
 baseurl : # does not include hostname
-title   : ITlog
+title   : IT log
 description: > # this means to ignore newlines until "Language & timezone"
   개발을 공부하고 기록하는 블로그
 
