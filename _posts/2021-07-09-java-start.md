@@ -84,10 +84,10 @@ ME(Micro Edition)
   
 ![JAVA_HOME](/assets/images/post/2021-07-09-java-start-javahome.png)
 
-~~~  
+
 변수 이름 : JAVA_HOME  
 변수 값 : (좀전에 설치한 jdk 폴더로 설정)
-~~~
+{:.info}
 
 변수 값은 디렉터리 찾아보기로 폴더를 지정하면 편리합니다.
   
