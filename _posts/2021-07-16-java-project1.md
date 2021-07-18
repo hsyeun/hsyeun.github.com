@@ -14,11 +14,14 @@ categories: Java
 개발 : Eclipse, Oracle  
 사용 언어 : JAVA(JDK 1.8), Oracle SQL(11g Express), Html5, CSS3, Javascript, JSP&Servlet  
 사용 기술 : JDBC, MVC모델2, jQuery, Ajax, Mail API  
-{:.info}
+
   
 내가 맡은 역할 : 서버에 데이터 연결, 연결된 데이터 활용, 총 감독  
 {:.info}
 
+# 스토리보드
+
+***
 
 # 메인페이지
 
