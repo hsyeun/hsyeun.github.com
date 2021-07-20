@@ -1,7 +1,7 @@
 ---
 title: JSP 프로젝트 - 개요
 key: 20210716
-tags: Java project JSP
+tags: Java project JSP Servlet Oracle Html CSS Javascript JDBC MVC jQuery
 categories: Java
 ---
   
