@@ -1,5 +1,5 @@
 ---
-title: github 블로그 - 시작하기
+title: 깃허브 블로그 - 시작하기
 key: 20210722
 tags: github blog jekyll
 categories: blog
