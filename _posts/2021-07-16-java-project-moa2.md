@@ -1,5 +1,5 @@
 ---
-title: JSP 프로젝트 - 개요
+title: JSP 프로젝트1 - 데이터 연결
 key: 20210716
 tags: Java project JSP Servlet Oracle Html CSS Javascript JDBC MVC jQuery
 categories: Java
@@ -19,18 +19,5 @@ categories: Java
 내가 맡은 역할 : 서버에 데이터 연결, 연결된 데이터 활용, 총 감독  
 {:.info}
 
-# 스토리보드
 
-***
 
-# 메인페이지
-
-## 전시데이터 가져오기 
-
-## 달력 
-
-템플릿 사용
-
-# 서브페이지
-
-## 메뉴 페이지
