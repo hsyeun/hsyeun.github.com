@@ -31,5 +31,6 @@ assets 폴더로 덮어쓰기 했더니 손쉽게 해결!
 ![finding-logo](/assets/images/post/2021-07-23-finding-logo.png)  
 
 그랬더니 로고가 자리만 남기고 사라졌다.  
+원인을 모르겠어서 일단 원래 로고로 원상복구함
 
 ## 두번째 시도
