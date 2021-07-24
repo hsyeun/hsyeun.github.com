@@ -19,7 +19,9 @@ categories: blog
 
 ![new-repository](/assets/images/post/2021-07-24-blog-repository.png)  
 
-3. 리포지토리가 생성되었다면 **Settings**에서 왼쪽 메뉴 중 **Pages**에 들어가보자. url이 형성된 것을 볼 수 있다. 저 url이 자신의 블로그 호스팅 주소이다.  
+## 블로그 주소 확인
+
+리포지토리가 생성되었다면 **Settings**에서 왼쪽 메뉴 중 **Pages**에 들어가보자. url이 형성된 것을 볼 수 있다. 저 url이 자신의 블로그 호스팅 주소이다.  
 
 ![url](/assets/images/post/2021-07-24-blog-io.png) 
 
