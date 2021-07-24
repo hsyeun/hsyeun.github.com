@@ -14,47 +14,28 @@ key: page-about
 ---
 
 
-비전공자 개발 블로그입니다.
+꾸준히 공부하는 비전공자 개발 블로그입니다.
 
-```javascript
-(() => console.log('Hello, World!'))();
-```
 
-<!-- ## Features
+# 보유 기술
 
-- Responsive
-- Semantic HTML
-- Skins
-- Highlight Theme
-- Internationalization
-- Search
-- Table of contents
-- Authors
-- Additional styles (alert, tag, image, icon, button, grid, etc)
-- Extensions (audios, videos, slides, demos)
-- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
-- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
-- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
-- Pageview ([LeanCloud](https://leancloud.cn/))
-- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
-- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
+- Programming Language
+  - Java, Javascript, HTML5, CSS3
+- Framework / Library
+  - Spring, jQuery, JDBC
+- Server
+  - Oracle, Apache Tomcat
 
-## Skins
+# 교육 연수
 
-TeXt has 6 built-in skins, you can also set up your own skin.
+|기간|연수과정|주관|교육내용|
+|:--:|:--:|:--:|:--:|
+|2021.01 ~ 2021.06|자바 기반 응용 sw개발자 양성|고용노동부|oracle, java, javascript, html, css, jQuery, jsp, spring, python|
+|2018.03 ~ 2018.08|스마트기기 UXUI 디자인 양성|고용노동부|포토샵, 일러스트레이터, HTML, CSS, jQuery|
 
-| `default` | `dark` | `forest` |
-| --- |  --- | --- |
-| ![Default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.jpg) | ![Dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.jpg) | ![Forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.jpg) |
+# 경력
 
-| `ocean` | `chocolate` | `orange` |
-| --- |  --- | --- |
-| ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.jpg) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.jpg) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.jpg) |
-
-### Highlight Theme
-
-TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highlight theme.
-
-| `tomorrow` | `tomorrow-night` | `tomorrow-night-eighties` | `tomorrow-night-blue` | `tomorrow-night-bright` |
-| --- |  --- | --- | --- |  --- |
-| ![Tomorrow](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow.png) | ![Tomorrow Night](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night.png) | ![Tomorrow Night Eighties](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-eighties.png) | ![Tomorrow Night Blue](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-blue.png) | ![Tomorrow Night Bright](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-bright.png) | -->
+|근무기간|근무처|직급|주요업무|
+|:--:|:--:|:--:|
+|2019.01 ~ 2020.10||사원|웹디자인|
+|2018.11 ~ 2018.12||인턴|웹디자인, 전시디자인|
