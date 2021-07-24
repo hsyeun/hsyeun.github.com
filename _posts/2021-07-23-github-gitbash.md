@@ -1,8 +1,8 @@
 ---
 title: 깃허브 - 깃배쉬(gitbash)
 key: 20210723
-tags: github blog gitbash
-categories: blog
+tags: github gitbash
+categories: github
 ---
   
 
