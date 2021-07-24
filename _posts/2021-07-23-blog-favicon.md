@@ -34,3 +34,8 @@ assets 폴더로 덮어쓰기 했더니 손쉽게 해결!
 원인을 모르겠어서 일단 원래 로고로 원상복구함
 
 ## 두번째 시도
+
+![logo](/assets/images/post/2021-07-24-logo.png)
+
+압축푼 폴더에 있는 about.txt에 공식으로 배포하는 svg 소스 주소가 있었다.  
+주소에 들어가 svg 소스 전체를 **assets/images/logo/logo.svg** 와 **_includes/svg/logo.svg** 에 복사했더니 로고가 성공적으로 변경됐다.
