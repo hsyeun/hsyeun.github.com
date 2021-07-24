@@ -14,7 +14,11 @@ key: page-about
 ---
 
 
-꾸준히 공부하는 비전공자 개발 블로그입니다.
+꾸준히 성장하는 비전공자 개발 블로그입니다.  
+  
+<!-- 대학 4년제 졸업
+Email. sooy0614@naver.com
+Github. https://github.com/ -->
 
 
 ## 보유 기술
