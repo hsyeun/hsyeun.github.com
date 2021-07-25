@@ -22,9 +22,15 @@ categories: blog
 ## 블로그 주소 확인
 
 리포지토리가 생성되었다면 **Settings**에서 왼쪽 메뉴 중 **Pages**에 들어가보자.  
-url이 형성된 것을 볼 수 있다. 저 url이 자신의 블로그 호스팅 주소이다.  
+url이 형성된 것을 볼 수 있다. 저 url이 자신의 블로그 호스팅 주소다.  
 
 ![url](/assets/images/post/2021-07-24-blog-io.png) 
+
+## 로컬저장소 연결
+
+깃배쉬를 사용해 리포지토리와 로컬저장소를 연결한다.  
+(깃배쉬 기본설정에 대해선 따로 포스팅할 계획이다.)
+
 
 # Jekyll 테마 설정
 > [기록하는 개발자 블로그](https://honbabzone.com/jekyll/start-gitHubBlog/#step-2-gitblog%EC%99%80-jekyll)를 참고했다.
@@ -41,10 +47,12 @@ Jekyll 테마를 내 블로그에 적용하는 방법은 두 가지가 있다.
 테마를 Fork 뜨는 방법과 Download 하는 방법인데 이 페이지에선 Download로 진행하고자 한다.  
 
 ![down1](/assets/images/post/2021-07-25-mndown1.png)  
-지킬 테마 사이트에서 다운로드를 바로 누르거나
+아까 링크 올린 지킬 테마 사이트에서 다운로드를 바로 누르거나
 
 ![down2](/assets/images/post/2021-07-25-mndown2.png)  
 테마 깃허브에서 Download ZIP을 눌러서 다운받는다.  
+
+리포지토리와 연결한 로컬저장소에 압축을 푼다.  
 
 
 
