@@ -27,12 +27,31 @@ url이 형성된 것을 볼 수 있다. 저 url이 자신의 블로그 호스팅
 ![url](/assets/images/post/2021-07-24-blog-io.png) 
 
 # Jekyll 테마 설정
-> 기록하는 개발자 블로그를 참고했다.
+> [기록하는 개발자 블로그](https://honbabzone.com/jekyll/start-gitHubBlog/#step-2-gitblog%EC%99%80-jekyll)를 참고했다.
+
+블로그 페이지를 처음 들어가보면 아무런 디자인이나 기능이 없어 허전할 것이다.  
+여기에 Jekyll 테마를 적용해보자.  
+
+<http://jekyllthemes.org/>  
+
+우선 공유된 테마들 중에 원하는 것을 고른다.  
+나는 블로거들이 많이 사용하는 minimal-mistakes 테마를 골랐다.  
+
+Jekyll 테마를 내 블로그에 적용하는 방법은 두 가지가 있다.  
+테마를 Fork 뜨는 방법과 Download 하는 방법인데 이 페이지에선 Download로 진행하고자 한다.  
+
+![down1](/assets/images/post/2021-07-25-mndown1.png)  
+지킬 테마 사이트에서 다운로드를 바로 누르거나
+
+![down2](/assets/images/post/2021-07-25-mndown2.png)  
+테마 깃허브에서 Download ZIP을 눌러서 다운받는다.  
+
+
 
 # 블로그 설정
 
 # 샘플 게시물 확인
-> 기록하는 개발자 블로그를 참고했다.
+> [기록하는 개발자 블로그](https://honbabzone.com/jekyll/start-gitHubBlog/#step-2-gitblog%EC%99%80-jekyll)를 참고했다.
 
 막상 사용하려고 보니 블로그 레이아웃이 맘에 들지 않아서 조금씩 수정하다가  
 이러다간 수정만하느라 시간 다 가겠다 싶어 테마 변경하기로 결정.
