@@ -59,11 +59,25 @@ Jekyll 테마를 내 블로그에 적용하는 방법은 두 가지가 있다.
 
 로컬 개발 환경 설정을 위해 루비를 설치한다.  
 
+<https://rubyinstaller.org/downloads/>  
 
-# 블로그 설정
+위 url에서 루비를 다운받아 설치한 후  
+아까 지킬 테마의 압축을 풀었던 로컬 저장소로 가서  
+폴더주소에 cmd를 입력해 cmd 창을 열어준다.
+
+cmd 창에서 다음의 명령어들을 차례대로 입력한다.  
+~~~
+gem install bundler
+bundle
+jekyll serve
+~~~
+
+정상적으로 설치가 되었다면 <http://localhost:4000/>로 확인해볼 수 있다.
 
 # 샘플 게시물 확인
 > [기록하는 개발자 블로그](https://honbabzone.com/jekyll/start-gitHubBlog/#step-2-gitblog%EC%99%80-jekyll)를 참고했다.
+
+# 블로그 설정
 
 막상 사용하려고 보니 블로그 레이아웃이 맘에 들지 않아서 조금씩 수정하다가  
 이러다간 수정만하느라 시간 다 가겠다 싶어 테마 변경하기로 결정.
