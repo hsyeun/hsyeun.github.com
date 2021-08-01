@@ -19,6 +19,7 @@ key: page-about
 대학 4년제 졸업  
 Email. sooy0614@naver.com  
 Github. https://github.com/hsyeun  
+{:.info}
 
 
 ## 보유 기술
