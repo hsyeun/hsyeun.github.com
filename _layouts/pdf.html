@@ -1,0 +1,12 @@
+{% for post in site.posts %}
+        {% for post in site.posts %}
+        <main class="container">
+            <div class="content">
+                <article class="post-body">
+                    <h1>{{ post.title }}</h1>
+                    {{ post.content }}
+                </article>
+            </div>
+        </main>
+        {% endfor %}
+{% endfor %}
