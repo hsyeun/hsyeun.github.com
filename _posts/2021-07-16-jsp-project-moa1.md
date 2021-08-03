@@ -25,7 +25,7 @@ categories: Java
 
 ## Tomcat 설치
 
-톰캣이란 아파치 소프트웨어에서 제공하는 웹서버 프로그램으로, JSP와 Servlet을 구동하기 위해 설치해주어야 한다.
+톰캣이란 아파치 소프트웨어에서 제공하는 웹서버 프로그램으로, JSP와 Servlet을 구동하게 해주면서 DB 등의 연결을 가능하게 해준다. 따라서 프로젝트를 진행하려면 꼭 설치해주어야 한다.
 
 [Apache Tomcat](https://tomcat.apache.org/download-80.cgi) 사이트에서 컴퓨터 운영체제에 맞는 tomcat 8.5.65 64-bit Windows.zip을 다운받아 c드라이브에 압축을 풀었다.
 
