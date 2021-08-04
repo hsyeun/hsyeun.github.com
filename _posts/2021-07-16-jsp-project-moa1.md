@@ -51,8 +51,10 @@ categories: Java
 ### CATALINA_BASE 만들기
 
 시스템 변수에서 새로 만들기를 클릭해 다음과 같이 설정합니다.  
+~~~
 1. 변수 이름 : CATALINA_BASE  
 2. 변수 값 : (아파치 톰캣 폴더)  
+~~~
 
 ![CATALINA_BASE](/assets/images/post/2021-08-04-CATALINA_BASE.png)
 
@@ -60,8 +62,10 @@ categories: Java
 
 마찬가지로 시스템 변수에서 새로 만들기를 클릭해 다음과 같이 설정합니다.  
 주의할 것은 변수 이름만 다르고 변수 값은 CATALINA_BASE의 설정 값과 같은 폴더로 설정해야한다는 것입니다.  
+~~~
 1. 변수 이름 : CATALINA_HOME  
 2. 변수 값 : (아파치 톰캣 폴더)  
+~~~
 
 ![CATALINA_HOME](/assets/images/post/2021-08-04-CATALINA_HOME.png)
 
