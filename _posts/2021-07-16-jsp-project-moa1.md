@@ -54,7 +54,7 @@ categories: Java
 1. 변수 이름 : CATALINA_BASE  
 2. 변수 값 : (아파치 톰캣 폴더)  
 
-[CATALINA_BASE](/assets/images/post/2021-08-04-CATALINA_BASE.png)
+![CATALINA_BASE](/assets/images/post/2021-08-04-CATALINA_BASE.png)
 
 ### CATALINA_HOME 만들기
 
@@ -63,14 +63,14 @@ categories: Java
 1. 변수 이름 : CATALINA_HOME  
 2. 변수 값 : (아파치 톰캣 폴더)  
 
-[CATALINA_HOME](/assets/images/post/2021-08-04-CATALINA_HOME.png)
+![CATALINA_HOME](/assets/images/post/2021-08-04-CATALINA_HOME.png)
 
 ### path 편집
 
 톰캣 폴더 안에 있는 bin 폴더를 사용하기 위해서 path 변수에 bin 폴더를 등록해야 합니다.  
 시스템 변수에서 path 변수를 찾아 편집을 눌러 ** %CATALINA_BASE%\bin\ **을 입력합니다.  
 
-[tomcat_path](/assets/images/post/2021-08-04-path.png)  
+![tomcat_path](/assets/images/post/2021-08-04-path.png)  
 
 좀전에 변수를 ~BASE와 ~HOME 두 개를 만들었었는데 path에는 하나만 입력하는게 맞나? 하시는 분이 있을지 모르겠는데요 하나만 입력합니다. 변수 값을 같은 폴더로 입력해줬기 때문이죠.  
 
