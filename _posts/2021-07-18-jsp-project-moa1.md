@@ -29,6 +29,9 @@ categories: Java
 ![moa](/assets/images/post/2021-08-04-moa-main.png)
 > 슬라이드에 사용된 이미지의 출처는 [캔고루](https://www.cangoroo.co.kr/main/)이며, 가공 없이 비상업적 목적으로 사용하였습니다.
 
+
+# 설계 작업
+
 ## 세부 계획서
 
 ![detail-plan](/assets/images/post/2021-08-04-detail-plan.png)
@@ -36,7 +39,6 @@ categories: Java
 
 제작할 페이지를 대분류,중분류,소분류로 분류해 뷰 작업시 필요한 내용과 각각 구현해야 할 기능을 세세하게 작성하였습니다. 이에 더해 팀원들의 이해를 돕기 위해 기능을 참고할 url을 첨부하였습니다.
 
-# 설계 작업
 ## 스토리보드
 
 ![storyboard](/assets/images/post/2021-08-04-storyboard.png)
