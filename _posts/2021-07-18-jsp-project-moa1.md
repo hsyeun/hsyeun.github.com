@@ -39,9 +39,28 @@ categories: Java
 # 설계 작업
 ## 스토리보드
 
+![storyboard](/assets/images/post/2021-08-04-storyboard.png)
+> 스토리보드의 일부.  
+
+뷰 작업을 체계적으로 진행하기 위해 스토리보드를 제작하였습니다.  
+페이지마다 디자인을 간략히 구상하고 기능이 들어가야하는 부분에 번호를 표기해 측면에 별도로 기능 설명을 달았습니다. 
+
 ## er model
+
+![ermodel](/assets/images/post/2021-08-04-ermodel.png)
+
+er model로 데이터 개체들 간의 속성 및 관계성을 표기하였습니다.  
 
 ## er diagram
 
+![erd](/assets/images/post/2021-08-04-erd.png)
+
+er diagram으로 er model을 더 구체화하여 표기하였습니다.  
+
 ## 테이블명세서
+
+![table](/assets/images/post/2021-08-04-table.png)
+> 테이블명세서의 일부.  
+
+er diagram을 참고하여 테이블명세서를 작성하였습니다. 만들어진 테이블명세서로 Oracle SQL에 테이블 및 데이터를 입력하였고 테이블은 최종적으로 18개가 생성되었습니다.
 
