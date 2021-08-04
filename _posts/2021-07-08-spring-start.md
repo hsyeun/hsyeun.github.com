@@ -1,5 +1,5 @@
 ---
-title: 스프링(Spring) 세팅
+title: 스프링(Spring) 설치
 key: 20210713
 tags: Spring 설치
 categories: Spring
