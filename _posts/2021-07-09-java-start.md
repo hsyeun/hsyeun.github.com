@@ -1,5 +1,5 @@
 ---
-title: [JAVA] 설치 및 환경변수 설정
+title: JAVA - 설치 및 환경변수 설정
 key: 20210709
 tags: Java 설치
 categories: Java
