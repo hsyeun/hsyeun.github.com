@@ -1,7 +1,7 @@
 ---
 title: Spring 프로젝트 - 전시플랫폼 사이트
 key: 20210720
-tags: Spring project
+tags: Spring project Oracle SQL Html CSS Javascript JDBC MVC jQuery pay API
 categories: Spring
 ---
   
