@@ -1,5 +1,5 @@
 ---
-title: [Spring] 설치
+title: Spring - 설치
 key: 20210713
 tags: Spring 설치
 categories: Spring
