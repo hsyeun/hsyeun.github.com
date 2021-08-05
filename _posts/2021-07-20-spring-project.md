@@ -1,5 +1,5 @@
 ---
-title: [Spring 프로젝트] 전시플랫폼 사이트
+title: Spring 프로젝트] 전시플랫폼 사이트
 key: 20210720
 tags: Spring project
 categories: Spring
