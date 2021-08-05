@@ -1,5 +1,5 @@
 ---
-title: Spring 프로젝트1 - 개요
+title: [Spring 프로젝트] 개요
 key: 20210720
 tags: Spring project
 categories: Spring
