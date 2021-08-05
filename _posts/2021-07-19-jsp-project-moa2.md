@@ -1,23 +1,25 @@
 ---
-title: JSP 프로젝트1 - 데이터 연결
+title: [JSP] jsp:include로 공통소스 간편히 사용하기
 key: 20210719
-tags: Java project JSP Servlet Oracle Html CSS Javascript JDBC MVC jQuery
+tags: Java project JSP Servlet Oracle Html CSS Javascript JDBC MVC jQuery Eclipse
 categories: Java
 ---
-  
-
-웹 프로젝트  
-주제 : 전시회 안내  
-기간 : 2021.05.03 ~ 2021.05.13(11일 간 일 5~8시간)  
-개발인원 : 5명  
-환경 : Apache Tomcat 8.0, Chrome 브라우저  
-개발 : Eclipse, Oracle  
-사용 언어 : JAVA(JDK 1.8), Oracle SQL(11g Express), Html5, CSS3, Javascript, JSP&Servlet  
-사용 기술 : JDBC, MVC모델2, jQuery, Ajax, Mail API  
-
-  
-내가 맡은 역할 : 서버에 데이터 연결, 연결된 데이터 활용, 총 감독  
-{:.info}
 
 
+메인페이지의 <head> 태그와 헤더, 푸터는 다른 페이지에도 공통으로 사용되는 소스입니다.  
+소스 중복을 방지하고 소스의 수정을 간편히 하기 위해 <jsp:include> 라는 액션태그를 사용했습니다.  
 
+~~~jsp
+<head>
+    <jsp:include page="a_nav/head.jsp" />
+</head>
+<body>
+    <!-- Header -->
+	<jsp:include page="a_nav/nav.jsp" />
+
+    ...
+
+    <!-- Footer-->
+    <jsp:include page="a_nav/footer.jsp" />
+</body>
+~~~
