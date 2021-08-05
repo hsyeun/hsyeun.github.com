@@ -1,5 +1,5 @@
 ---
-title: [JSP] jsp:include로 공통소스 간편히 사용하기
+title: JSP - jsp:include로 공통소스 간편히 사용하기
 key: 20210719
 tags: Java project JSP Servlet Oracle Html CSS Javascript JDBC MVC jQuery Eclipse
 categories: Java
