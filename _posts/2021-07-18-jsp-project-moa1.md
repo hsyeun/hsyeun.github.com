@@ -1,7 +1,7 @@
 ---
 title: JSP 프로젝트 - 전시플랫폼 사이트
 key: 20210718
-tags: Java project JSP Servlet Oracle Html CSS Javascript JDBC MVC jQuery
+tags: Java project JSP Servlet Oracle SQL Html CSS Javascript JDBC MVC jQuery
 categories: Java
 ---
 
