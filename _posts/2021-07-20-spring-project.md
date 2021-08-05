@@ -34,6 +34,6 @@ categories: Spring
 
 앞서 언급했듯이 기존에 만들어뒀던 jsp 프로젝트를 spring으로 변환시키는 것이 기본 작업이었기 때문에 세부 계획서, 스토리보드, er model, er diagram, 테이블 명세서는 이전 것에서 거의 변화가 없었습니다.  
 
-[기존 jsp 프로젝트 바로가기](/_posts/2021-07-18-jsp-project-moa1.md)  
+[기존 jsp 프로젝트 바로가기](https://hsyeun.github.io/java/2021/07/18/jsp-project-moa1.html)  
 
 다만, 기능면에서 약간 차이가 있는데 이전에 없었던 <u>결제 기능, 세부 검색 기능</u> 등이 추가되었습니다.  
