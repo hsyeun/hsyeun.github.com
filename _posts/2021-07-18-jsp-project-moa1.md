@@ -13,6 +13,7 @@ categories: Java
 개발 : Eclipse, Oracle  
 사용 언어 : JAVA(JDK 1.8), Oracle SQL(11g Express), Html5, CSS3, Javascript, JSP&Servlet  
 사용 기술 : JDBC, MVC모델2, jQuery, Ajax, Mail API  
+주요 기능 : 전시 일정을 달력으로 표기, 리뷰/문의 게시판 등
 
 내가 맡은 역할  
     1. 총괄 및 전체 세부계획서 작성  
