@@ -20,7 +20,8 @@ categories: Java
 public class Join implements Controller {
 
 	@Override
-	public String exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public String exec(HttpServletRequest req, HttpServletResponse resp)
+     throws ServletException, IOException {
 		String view = "(회원가입페이지 주소)";
 		if(req.getSession().getAttribute("SID") != null) {  //
 			req.setAttribute("isRedirect", true);
