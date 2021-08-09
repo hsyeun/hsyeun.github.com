@@ -11,7 +11,26 @@ categories: Java
 
 # 회원가입
 
-controller
+우선 회원가입 페이지를 보여주는 `컨트롤러`를 만듭니다.  
+컨트롤러는 미리 exec를 만들어둔 Controller 클래스를 오버라이드 했습니다.  
+
+~~~jsp
+# controller
+
+public class Join implements Controller {
+
+	@Override
+	public String exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String view = "(회원가입페이지 주소)";
+		if(req.getSession().getAttribute("SID") != null) {  //
+			req.setAttribute("isRedirect", true);
+			view = "(메인페이지 주소)";
+		}
+		
+		return view;
+	}
+}
+~~~
 
 # 로그인
 
