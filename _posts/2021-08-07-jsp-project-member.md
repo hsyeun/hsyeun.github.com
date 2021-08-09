@@ -12,7 +12,7 @@ categories: Java
 # 회원가입
 
 우선 회원가입 페이지를 보여주는 `컨트롤러`를 만듭니다.  
-컨트롤러는 미리 exec를 만들어둔 Controller 클래스를 오버라이드 했습니다.  
+컨트롤러는 미리 exec를 만들어둔 Controller 클래스를 상속해서 오버라이드 했습니다.  
 
 ~~~jsp
 # controller
