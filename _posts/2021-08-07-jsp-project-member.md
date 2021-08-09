@@ -11,8 +11,9 @@ categories: Java
 
 # 회원가입
 
-우선 회원가입 페이지를 보여주는 `컨트롤러`를 만듭니다.  
-컨트롤러는 미리 exec를 만들어둔 Controller 클래스를 상속해서 오버라이드 했습니다.  
+우선 데이터를 받을 회원가입 폼을 만들고  
+그 폼이 있는 뷰를 보여주는 `컨트롤러`를 만듭니다.  
+컨트롤러는 exec 메서드가 있는 Controller 클래스를 상속해서 오버라이드 했습니다.  
 
 ~~~java
 public class Join implements Controller {
