@@ -15,8 +15,6 @@ categories: Java
 컨트롤러는 미리 exec를 만들어둔 Controller 클래스를 상속해서 오버라이드 했습니다.  
 
 ~~~java
-# controller
-
 public class Join implements Controller {
 
 	@Override
