@@ -15,7 +15,7 @@ categories: Java
 (뷰 작업은 생략하겠습니다.)  
 
 그리고 그 회원가입 뷰가 서버를 통해 보여질 수 있도록 `컨트롤러` 작업을 합니다.  
-컨트롤러는 서블릿 메소드가 있는 Controller 인터페이스를 구현해서 오버라이드 했습니다.  
+컨트롤러는 서블릿 메소드가 있는 Controller 인터페이스를 구현해서 오버라이딩 했습니다.  
 
 ~~~java
 public class Join implements Controller {
