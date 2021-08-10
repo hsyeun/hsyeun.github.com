@@ -23,10 +23,10 @@ public class Join implements Controller {
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp)
      throws ServletException, IOException {
-		String view = "(회원가입페이지 주소)";
-		if(req.getSession().getAttribute("SID") != null) {  //
+		String view = "(회원가입페이지 주소)";	//기본적으로 보여질 뷰 주소
+		if(req.getSession().getAttribute("SID") != null) {
 			req.setAttribute("isRedirect", true);
-			view = "(메인페이지 주소)";
+			view = "(메인페이지 주소)";	//가입완료 후(자동로그인x) 메인페이지로 돌아가기
 		}
 		
 		return view;
