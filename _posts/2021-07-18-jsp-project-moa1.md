@@ -1,7 +1,7 @@
 ---
 title: JSP 프로젝트 - 전시플랫폼 사이트
 key: 20210718
-tags: Java project JSP Servlet Oracle SQL Html CSS Javascript JDBC MVC jQuery
+tags: Java project JSP Servlet Oracle SQL Html CSS Javascript DBCP MVC jQuery
 categories: Java
 ---
 
@@ -12,7 +12,7 @@ categories: Java
 환경 : Apache Tomcat 8.0, Chrome 브라우저  
 개발 : Eclipse, Oracle  
 사용 언어 : JAVA(JDK 1.8), Oracle SQL(11g Express), Html5, CSS3, Javascript, JSP&Servlet  
-사용 기술 : JDBC, MVC모델2, jQuery, Ajax, Mail API  
+사용 기술 : DBCP, MVC모델2, jQuery, Ajax, Mail API  
 주요 기능 : 전시 일정을 달력으로 표기, 리뷰/문의 게시판 등
 
 내가 맡은 역할  
