@@ -1,7 +1,7 @@
 ---
 title: JSP - 회원가입, 로그인, 로그아웃 기능 만들기
 key: 20210807
-tags: Java project JSP Servlet Oracle Html CSS Javascript JDBC MVC jQuery Eclipse
+tags: Java project JSP Servlet Oracle Html CSS Javascript DBCP MVC jQuery Eclipse
 categories: Java
 ---
 
@@ -65,9 +65,9 @@ public class Join implements Controller {
 
 	@Override
 	public String exec(HttpServletRequest req, HttpServletResponse resp)
-     throws ServletException, IOException {
+     	throws ServletException, IOException {
 		String view = "(회원가입페이지 경로)";	//기본적으로 보여질 뷰
-		
+
 		if(req.getSession().getAttribute("SID") != null) {
 			req.setAttribute("isRedirect", true);
 			view = "(메인페이지 경로)";	//만약 로그인되지 않으면 메인페이지로 돌아가기
