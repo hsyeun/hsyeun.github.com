@@ -1,5 +1,5 @@
 ---
-title: JSP - 회원가입, 로그인, 로그아웃 기능 만들기
+title: JSP - 회원가입 기능 만들기
 key: 20210807
 tags: Java project JSP Servlet Oracle Html CSS Javascript DBCP MVC jQuery Eclipse
 categories: Java
@@ -7,7 +7,7 @@ categories: Java
 
 
 사이트 운용에서 고객들을 관리하기 위해 회원가입, 로그인, 로그아웃 기능은 꼭 구현해두어야 합니다.  
-프로젝트 때 만들었던 기능을 재구성해보겠습니다.  
+이 글에선 프로젝트 때 만들었던 회원가입 기능을 재구성해보겠습니다.  
 
 # 회원가입
 
@@ -55,7 +55,7 @@ $('#button').click(function(){
 
 ## 컨트롤러 작업
 
-회원가입 jsp가 서버를 통해 보여질 수 있도록 `컨트롤러` 작업을 합니다.  
+회원가입 페이지(jsp)가 서버를 통해 보여질 수 있도록 `컨트롤러` 작업을 합니다.  
 컨트롤러는 서블릿 메소드가 있는 Controller 인터페이스를 구현해서 오버라이딩 했습니다.  
 
 (여기서 if문은 만일에 경우에 대비해 넣은 것이니 없어도 상관없습니다.)  
@@ -78,7 +78,9 @@ public class Join implements Controller {
 }
 ~~~
 
+## DAO, SQL, VO 작업  
 
+사전작업을 마쳤으니 이제 제대로 기능 구현을 합니다.  
 
 # 로그인
 
