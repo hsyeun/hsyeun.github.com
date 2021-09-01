@@ -7,6 +7,8 @@ categories: Java
 
 # 서블릿(Servlet)이란?
 
+사용자가 요청하는 것을 웹 서버를 통해 찾아주는 웹 서버 응용 프로그램입니다.  
+
 ~~~java
 import javax.servlet.*;
 import javax.servlet.http.*;
