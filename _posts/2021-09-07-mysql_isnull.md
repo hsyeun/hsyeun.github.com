@@ -1,5 +1,5 @@
 ---
-title: MySQL - 최소값 구하기 (프로그래머스)
+title: MySQL - 이름이 없는 동물의 아이디 (프로그래머스)
 key: 20210907
 tags: MySQL SQL Programmers CodingTest
 categories: SQL
