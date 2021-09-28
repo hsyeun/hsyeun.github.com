@@ -25,6 +25,7 @@ categories: SQL
 SQL문을 실행하면 다음과 같이 나와야 합니다.
 
 |HOUR|COUNT|
+|--|--|
 |9|1|
 |10|2|
 |11|13|
@@ -40,5 +41,17 @@ SQL문을 실행하면 다음과 같이 나와야 합니다.
 ## 풀이
 
 ~~~sql
-
+SELECT
+    HOUR(DATETIME) HOUR, COUNT(DATETIME) COUNT
+FROM
+    ANIMAL_OUTS
+WHERE
+    HOUR(DATETIME) BETWEEN 9 AND 20
+GROUP BY
+    HOUR(DATETIME) 
+ORDER BY
+    HOUR(DATETIME)
+;
 ~~~
+
+* Oracle이라면 서브쿼리를 이용했겠지만 MySQL에서는 HOUR()이라는 함수가 있어서 시간대를 표현하기가 쉽습니다. 이렇게 Oracle과 MySQL의 방식이 확연히 다르게 나오는 문제는 다음에 다른 언어로 한 번 더 풀어봐야겠네요.  
