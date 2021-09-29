@@ -1,5 +1,5 @@
 ---
-title: MySQL -   
+title: MySQL - 이름에 el이 들어가는 동물 찾기  
 key: 20210929  
 tags: MySQL SQL Programmers CodingTest
 categories: SQL
@@ -45,5 +45,17 @@ categories: SQL
 ## 풀이
 
 ~~~sql
-
+SELECT
+    ANIMAL_ID, NAME
+FROM
+    ANIMAL_INS
+WHERE
+    ANIMAL_TYPE = 'Dog'
+AND NAME LIKE '%el%'
+ORDER BY
+    NAME
+;
 ~~~
+
+1. LIKE 문을 사용해서 원하는 문자열을 찾았습니다. '%el%'에서 `%`의 의미는 중간에 el 문자열이 있다면 앞뒤에 어떤 문자가 있어도 일치한다는 뜻입니다.  
+2. LIKE 문에서는 `_` 또한 사용할 수 있는데 문자의 개수를 의미합니다. 예를 들어 NAME LIKE '_____'를 사용하면 다섯 글자인 이름들이 출력됩니다.  
