@@ -1,5 +1,5 @@
 ---
-title: MySQL - 동물 수 구하기 (프로그래머스)
+title: 프로그래머스 Lv.2| MySQL - 동물 수 구하기
 key: 20210907
 tags: MySQL SQL Programmers CodingTest
 categories: SQL

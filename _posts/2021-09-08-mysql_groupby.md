@@ -1,5 +1,5 @@
 ---
-title: MySQL - 고양이와 개는 몇 마리 있을까 (프로그래머스)
+title: 프로그래머스 Lv.2| MySQL - 고양이와 개는 몇 마리 있을까
 key: 20210908
 tags: MySQL SQL Programmers CodingTest
 categories: SQL
