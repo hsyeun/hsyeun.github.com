@@ -32,8 +32,11 @@ PL/SQL의 실행 결과를 화면에 출력시키려면 우선 `SERVEROUTPUT` �
 
 ~~~sql
 SET SERVEROUTPUT ON;
+
 BEGIN
    DBMS_OUTPUT.PUT_LINE('Hello, World!');
 END;
 /
 ~~~
+
+END; 뒤의 / 표기는 실행시킨다는 의미입니다. 
