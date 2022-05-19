@@ -1,8 +1,9 @@
 title: "Affiliates"
 email: wowthemesnet@gmail.com
 timezone: UTC
-baseurl: "/affiliates-jekyll-theme"
-permalink: "/:title/"
+url     : https://hsyeun.github.io/
+baseurl: #"/affiliates-jekyll-theme"
+permalink: #"/:title/"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 author: Sal
