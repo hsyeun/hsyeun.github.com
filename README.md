@@ -1,5 +1,7 @@
-# Affiliates - Free Jekyll Theme
+# Welcome to my BLOG!
 
-[Live Demo](https://wowthemesnet.github.io/affiliates-jekyll-theme/) | [Docs & Download](https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll/) |  [Buy me a coffee](https://www.wowthemes.net/donate/)
+[https://hsyeun.github.io/](https://hsyeun.github.io/)
+
+It is currently being redesigned🚧 See you in a little later😊
 
 ![jekyll-affiliates-theme](https://bootstrapstarter.com/assets/img/themes/affiliates-jekyll.jpg)
