@@ -4,11 +4,17 @@ topmenu:
 - title: Home
   url: ""
 
+- title: Archive
+  url: "archive/"
+
+- title: Category
+  url: "category/"
+
 - title: About
   url: "about/"
 
-- title: Contact
-  url: "contact/"
+# - title: Contact
+#   url: "contact/"
 
 - title: Get this theme  
   url: https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll/
@@ -27,6 +33,6 @@ footermenu:
 - title: Contact
   url: "contact/"
 
-- title: Download
-  url: https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll/  
-  external: true
+# - title: Download
+#   url: https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll/  
+#   external: true
