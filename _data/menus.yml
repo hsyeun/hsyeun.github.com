@@ -8,7 +8,7 @@ topmenu:
   url: "archive/"
 
 - title: Category
-  url: "/categories/"
+  url: "/category/"
 
 - title: About
   url: "about/"
