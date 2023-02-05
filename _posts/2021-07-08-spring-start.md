@@ -3,6 +3,7 @@ title: Spring - 설치
 key: 20210713
 tags: Spring 설치
 categories: Spring
+image: assets/images/spring.jpg
 ---
 
 스프링을 세팅해봅시다.

@@ -1,4 +1,4 @@
-title: IT log # "Affiliates"
+title: Lisa's DevLog # "Affiliates"
 email: # wowthemesnet@gmail.com
 timezone: UTC
 url     : https://hsyeun.github.io/
@@ -6,7 +6,7 @@ baseurl: # "/affiliates-jekyll-theme"
 permalink: # "/:title/"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-author: Sal
+author: Lisa
 paginate: 30
 disqus: 'demowebsite'
 locale: en_us
@@ -25,14 +25,14 @@ ganalytics: UA-113961478-1
 
 # Authors
 authors:
-  soo:
-    name: Soo
+  lisa:
+    name: Lisa
     display_name: # Sal
     avatar: 'assets/images/sal.png'
     email: # wowthemesnet@gmail.com
     web: https://github.com/hsyeun
     twitter: # https://twitter.com/wowthemesnet
-    description: "I am a steadily growing developer."
+    description: "Web Developer"
   # john:
   #   name: John
   #   display_name: John
