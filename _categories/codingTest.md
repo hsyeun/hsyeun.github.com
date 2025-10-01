@@ -1,6 +1,6 @@
 ---
 layout: categories
 title: "CodingTest"
-category: CodingTest
-permalink: /categories/CodingTest/
+category: codingTest
+permalink: /categories/codingtest/
 ---
