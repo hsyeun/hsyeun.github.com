@@ -316,6 +316,20 @@ span.post-name a,span.post-read-more a:hover {
     }
 }
 
+// archive
+.tags-expo {
+    margin: 50px 0;
+
+    li {
+        display: flex;
+        gap: 10px;
+
+        small {
+            color: #999;
+        }
+    }
+}
+
 blockquote {
 	border-left:4px solid #222;
 	padding:0 0 0 20px;

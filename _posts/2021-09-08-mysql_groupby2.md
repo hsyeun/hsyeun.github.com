@@ -2,7 +2,7 @@
 title: 프로그래머스 Lv.2| MySQL - 동명 동물 수 찾기
 key: 20210908
 tags: MySQL SQL Programmers CodingTest
-categories: SQL
+categories: CodingTest
 ---
 
 ## 문제 설명

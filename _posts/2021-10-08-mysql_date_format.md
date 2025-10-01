@@ -3,6 +3,7 @@ title: MySQL - DATE_FORMAT의 구분기호
 key: 20211008  
 tags: MySQL SQL
 categories: SQL
+published: false
 ---
 
 날짜를 지정한 형식으로 출력할 때 DATE_FORMAT 함수를 사용합니다.  
