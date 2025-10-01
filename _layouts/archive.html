@@ -23,12 +23,15 @@ permalink: "/archive.html"
       </li>
 
       {% if forloop.last %}
-        </ul>
-      {% elsif this_year != next_year %}
-        </ul>
-        <h2 class="post-year" id="{{ next_year }}-ref">{{ next_year }}</h2>
-        <ul>
+    </ul>
+    {% else %}
+    {% if this_year != next_year %}
+    </ul>
+    <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
+    <ul>
       {% endif %}
+      {% endif %}
+    </ul>
   </div>
   {% endfor %}
 
