@@ -18,21 +18,17 @@ permalink: "/archive.html"
       <li>
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
-          <!-- <small class="post-date">{{ post.date | date_to_string }}</small> -->
         </a>
         <small class="post-date">{{ post.date | date: "%Y년 %m월 %d일" }}</small>
       </li>
 
       {% if forloop.last %}
-    </ul>
-    {% else %}
-    {% if this_year != next_year %}
-    </ul>
-    <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
-    <ul>
+        </ul>
+      {% elsif this_year != next_year %}
+        </ul>
+        <h2 class="post-year" id="{{ next_year }}-ref">{{ next_year }}</h2>
+        <ul>
       {% endif %}
-      {% endif %}
-    </ul>
   </div>
   {% endfor %}
 
