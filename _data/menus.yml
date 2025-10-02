@@ -7,8 +7,8 @@ topmenu:
 - title: Archive
   url: "archive/"
 
-- title: Category
-  url: "categories/"
+# - title: Category
+#   url: "categories/"
 
 - title: About
   url: "about/"
