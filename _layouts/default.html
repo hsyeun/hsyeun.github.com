@@ -10,6 +10,7 @@
 {% seo %}
 
 <link href="{{ site.baseurl }}/assets/css/theme.css?v={{ site.time | date: '%s' }}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 {% if jekyll.environment == "production" %}       
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -35,14 +36,9 @@ gtag('config', '{{site.ganalytics}}');
         <div class="container">
 
           <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="{{site.baseurl}}/">
-          {% if site.logo %}
           <img class="mr-2" src="{{site.baseurl}}/{{site.logo}}" alt="logo"> 
-          {% else %}
           <span class="d-none d-md-inline-block">{{ site.title }}</span>
-          {% endif %}
           </a>
-          
-          <span class="d-none d-md-inline-block">{{ site.title }}</span>
 
           <!-- <div class="d-flex align-items-center">
             

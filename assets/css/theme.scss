@@ -10,7 +10,9 @@ $thema-color: #ffe51f;
 @import 'bootstrap/bootstrap';
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&display=swap');
 
 /* add additional CSS rules below */
 html {
@@ -21,7 +23,7 @@ body {
     background:#fff;
     font-size:17px;
     transition: all 200ms linear;
-    font-family: "PT Sans",sans-serif;
+    font-family: "IBM Plex Sans KR",sans-serif;
     line-height:1.7;
     color: #333;
     overflow-x:hidden;
@@ -29,7 +31,10 @@ body {
     
 }
 .serif-font {
-    font-family:PT Serif;
+    font-family: "PT Serif";
+}
+.title-font {
+    font-family: "Asta Sans",sans-serif;
 }
 @media (max-width: 1366px) {
     .container-xl, .container-lg, .container-md, .container-sm, .container {
@@ -590,8 +595,16 @@ ul.tags li a:hover {
 
 .article-post .h1, .article-post .h2, .article-post .h3, .article-post .h4, .article-post .h5, .article-post .h6, .article-post h1, .article-post h2, .article-post h3, .article-post h4, .article-post h5, .article-post h6 {
     font-weight: 600;
-    font-family: PT Sans;
+    font-family: "Asta Sans", sans-serif;
     margin-top: 3rem;
+}
+.article-post h2::before {
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  content: "\f219";
+  margin-right: 8px;
+  color: #FF9029;
+  font-size: 20px;
 }
 
 img {max-width:100%;height: auto;}
@@ -658,11 +671,9 @@ img {max-width:100%;height: auto;}
     }
 
     .arrows {
-        // border: 1px solid #666;
         min-width: 50px;
         display: inline-block;
-        font-size: 25px;
-        font-weight: 600;
+        font-size: 20px;
         line-height: initial;
     }
 }

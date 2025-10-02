@@ -10,22 +10,22 @@
     {%- assign end = current | plus: 2 -%}
 
     {%- if start > 2 -%}
-        <span class="dots">…</span>
+        <span class="dots title-font">…</span>
     {%- endif -%}
 
     {%- for page in (1..total) -%}
         {%- if page >= start and page <= end -%}
         {%- if page == current -%}
-            <span class="page-number active">{{ page }}</span>
+            <span class="page-number title-font active">{{ page }}</span>
         {%- else -%}
-            <a class="page-number"
+            <a class="page-number title-font"
             href="{{ site.baseurl }}/page{{ page }}/">{{ page }}</a>
         {%- endif -%}
         {%- endif -%}
     {%- endfor -%}
 
     {%- if end < total -%}
-        <span class="dots">…</span>
+        <span class="dots title-font">…</span>
     {%- endif -%}
 
     {% if paginator.next_page %}

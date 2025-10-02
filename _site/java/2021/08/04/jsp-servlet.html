@@ -5,29 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" href="/assets/images/favicon.ico">
 
-<title>JSP - Servlet 작성하기 | DEV</title>
+<title>JSP - Servlet 작성하기 | Lisa de Blog</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>JSP - Servlet 작성하기 | DEV</title>
+<title>JSP - Servlet 작성하기 | Lisa de Blog</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="JSP - Servlet 작성하기" />
 <meta name="author" content="Lisa" />
-<meta property="og:locale" content="en_us" />
+<meta property="og:locale" content="ko_kr" />
 <meta name="description" content="서블릿(Servlet)이란?" />
 <meta property="og:description" content="서블릿(Servlet)이란?" />
 <link rel="canonical" href="http://localhost:4000/java/2021/08/04/jsp-servlet.html" />
 <meta property="og:url" content="http://localhost:4000/java/2021/08/04/jsp-servlet.html" />
-<meta property="og:site_name" content="DEV" />
+<meta property="og:site_name" content="Lisa de Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-04T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-08-04T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="JSP - Servlet 작성하기" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lisa"},"dateModified":"2021-08-04T00:00:00+00:00","datePublished":"2021-08-04T00:00:00+00:00","description":"서블릿(Servlet)이란?","headline":"JSP - Servlet 작성하기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/2021/08/04/jsp-servlet.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Lisa"},"url":"http://localhost:4000/java/2021/08/04/jsp-servlet.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lisa"},"dateModified":"2021-08-04T00:00:00+09:00","datePublished":"2021-08-04T00:00:00+09:00","description":"서블릿(Servlet)이란?","headline":"JSP - Servlet 작성하기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/2021/08/04/jsp-servlet.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Lisa"},"url":"http://localhost:4000/java/2021/08/04/jsp-servlet.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-<link href="/assets/css/theme.css?v=1759413892" rel="stylesheet">
+<link href="/assets/css/theme.css?v=1759420604" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
    
@@ -44,12 +45,9 @@
         <div class="container">
 
           <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
-          
           <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
-          
+          <span class="d-none d-md-inline-block">Lisa de Blog</span>
           </a>
-          
-          <span class="d-none d-md-inline-block">DEV</span>
 
           <!-- <div class="d-flex align-items-center">
             
@@ -132,14 +130,14 @@
                 <!-- End Categories -->
                 
                 <!-- Post Title -->
-				<h1 class="posttitle">JSP - Servlet 작성하기</h1> 
+				<h1 class="posttitle title-font">JSP - Servlet 작성하기</h1> 
                 
 			</div>
 
 			
 
 			<!-- Post Content -->
-			<div class="article-post serif-font">
+			<div class="article-post">
 				<h1 id="서블릿servlet이란">서블릿(Servlet)이란?</h1>
 
 <p>클라이언트가 요청하는 요소(HTTP)를 웹 서버를 통해 동적인 Html 문서로 생성하여 그 결과를 전달해주는 자바 클래스입니다. 일반적인 자바 프로그램과는 달리 웹 서버에서 실행되어지는 프로그램이기 때문에 지정된 특정 클래스를 상속받아 사용합니다.<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
@@ -222,7 +220,7 @@ public class Resrc extends HttpServlet {
                 <section class="disqus">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-        var disqus_shortname = 'demowebsite'; 
+        var disqus_shortname = 'devblog'; 
         var disqus_developer = 0;
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -304,7 +302,7 @@ public class Resrc extends HttpServlet {
     
     </ul>
     <div class="copyright small">
-       Copyright © DEV. All rights reserved.
+       Copyright © Lisa de Blog. All rights reserved.
     </div>
 </footer>
 

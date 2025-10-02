@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "블로그 우여곡절 만들기-사이드바(메뉴)"
+title:  "우여곡절 블로그 만들기-사이드바(메뉴)"
 categories: blog
 tags: [Jekyll, blog, sidebar, category]
 image: assets/images/1.jpg
