@@ -1,8 +1,8 @@
 # Top Menu
 topmenu:
 
-- title: Home
-  url: ""
+# - title: Home
+#   url: ""
 
 - title: Archive
   url: "archive/"

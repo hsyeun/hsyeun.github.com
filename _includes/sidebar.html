@@ -1,9 +1,16 @@
 <div class="sidebar sticky-top">        
     <div class="sidebar-section">
         <h5><span>Catergory</span></h5>
-        <ul>
-            {% for category in site.categories %}
-            <li><a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}/">{{ category[0] }}</a></li>
+        {% assign cats = "" | split: "" %}
+        {% for pair in site.categories %}
+            {% assign cats = cats | push: pair[0] %}
+        {% endfor %}
+        {% assign cats = cats | sort_natural %}
+        <ul>            
+            {% for category in cats %}
+                <li>
+                    <a href="{{ site.baseurl }}/categories/{{ category | slugify }}/">{{ site.data.categories[category] | default: category }}</a>
+                </li>
             {% endfor %}
         </ul>
     </div>

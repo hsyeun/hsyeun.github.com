@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en_us"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en_us" /><updated>2025-10-02T14:04:52+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DEV</title><author><name>Lisa</name></author><entry><title type="html">블로그 우여곡절 만들기-사이드바(메뉴)</title><link href="http://localhost:4000/blog/2025/10/02/blog_sidebar.html" rel="alternate" type="text/html" title="블로그 우여곡절 만들기-사이드바(메뉴)" /><published>2025-10-02T00:00:00+00:00</published><updated>2025-10-02T00:00:00+00:00</updated><id>http://localhost:4000/blog/2025/10/02/blog_sidebar</id><content type="html" xml:base="http://localhost:4000/blog/2025/10/02/blog_sidebar.html"><![CDATA[<p>“색” 위주의 디자인이 맘에 들어서 <a href="https://github.com/codebygina/affiliates-jekyll-theme">“Affiliates” Jekyll Theme</a> 를 토대로 블로그를 만들고 있다.</p>
+
+<p>블로그를 생성한 건 몇 년 됐는데 한참 현생 핑계로 들어오지 않다가 이제야 밀린 블로그 꾸미기를 하고 있다!</p>
+
+<p>여러 가지를 사부작거리며 손대고 있는데 그 중에서 <strong>카테고리</strong>를 사이드 메뉴로 만든 과정을 기록하려 한다.</p>
+
+<h2 id="카테고리-링크-만들기">카테고리 링크 만들기</h2>
+
+<h2 id="표시될-이름-설정하기">표시될 이름 설정하기</h2>
+
+<h2 id="알파벳-순으로-정렬하기">알파벳 순으로 정렬하기</h2>
+
+<!-- ## Special formatting
+
+As well as bold and italics, you can also use some other special formatting in Markdown when the need arises, for example:
+
++ ~~strike through~~
++ ==highlight==
++ \*escaped characters\*
+
+
+## Writing code blocks
+
+There are two types of code elements which can be inserted in Markdown, the first is inline, and the other is block. Inline code is formatted by wrapping any word or words in back-ticks, `like this`. Larger snippets of code can be displayed across multiple lines using triple back ticks:
+
+```
+.my-link {
+    text-decoration: underline;
+}
+```
+
+If you want to get really fancy, you can even add syntax highlighting using Rouge.
+
+
+![walking](/assets/images/3.jpg)
+
+## Reference lists
+
+The quick brown jumped over the lazy.
+
+Another way to insert links in markdown is using reference lists. You might want to use this style of linking to cite reference material in a Wikipedia-style. All of the links are listed at the end of the document, so you can maintain full separation between content and its source or reference.
+
+## Full HTML
+
+Perhaps the best part of Markdown is that you're never limited to just Markdown. You can write HTML directly in the Markdown editor and it will just work as HTML usually does. No limits! Here's a standard YouTube embed code as an example: -->]]></content><author><name>Lisa</name></author><category term="blog" /><category term="Jekyll" /><category term="blog" /><category term="sidebar" /><category term="category" /><summary type="html"><![CDATA[“색” 위주의 디자인이 맘에 들어서 “Affiliates” Jekyll Theme 를 토대로 블로그를 만들고 있다.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">백준 10162번| Python - 전자레인지</title><link href="http://localhost:4000/codingtest/2022/01/18/python_ct1.html" rel="alternate" type="text/html" title="백준 10162번| Python - 전자레인지" /><published>2022-01-18T00:00:00+00:00</published><updated>2022-01-18T00:00:00+00:00</updated><id>http://localhost:4000/codingtest/2022/01/18/python_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2022/01/18/python_ct1.html"><![CDATA[<p><img src="/assets/images/post/2022-01-18-pg1.png" alt="pg" /></p>
+
+<h2 id="풀이">풀이(</h2>
+<pre><code class="language-python">
+</code></pre>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="BAEKJOON" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">가까운 공항 찾기</title><link href="http://localhost:4000/codingtest/2022/01/13/python_ml_01.html" rel="alternate" type="text/html" title="가까운 공항 찾기" /><published>2022-01-13T00:00:00+00:00</published><updated>2022-01-13T00:00:00+00:00</updated><id>http://localhost:4000/codingtest/2022/01/13/python_ml_01</id><content type="html" xml:base="http://localhost:4000/codingtest/2022/01/13/python_ml_01.html"><![CDATA[<p>주어진 세 공항들의 위도, 경도를 현재 위치의 위도, 경도와 비교하여 가장 가까운 공항을 찾는 문제입니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>구분</th>
+      <th>위도</th>
+      <th>경도</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>인천</td>
+      <td>37.46</td>
+      <td>126.45</td>
+    </tr>
+    <tr>
+      <td>청주</td>
+      <td>36.43</td>
+      <td>127.30</td>
+    </tr>
+    <tr>
+      <td>제주</td>
+      <td>33.30</td>
+      <td>126.29</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>현재 위치</td>
+      <td>35.00</td>
+      <td>126.55</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>머신러닝 입문으로 푼 문제입니다.<br />
+주어진 데이터를 배열로 사용할 수 있기 때문에 Numpy를 사용할 것입니다. 그러기 위해서 우선은 Numpy를 임포트 하여 사용하기 위한 준비를 합니다.</p>
+
+<pre><code class="language-python">import numpy as np
+</code></pre>
+
+<p>각 거리들을 요소별(위도는 위도끼리, 경도는 경도끼리)로 연산을 하기 위해서 함수를 제작합니다.</p>
+
+<pre><code class="language-python">def distance(x, y):
+    x1 = np.array(x)
+    y1 = np.array(y)
+    diff = x1 - y1
+    display(x1, y1, diff)
+
+    return np.sqrt(np.sum(diff**2))
+</code></pre>
+
+<p>이제 함수를 이용해서 세 공항과 현재 위치를 비교할 건데요</p>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Numpy" /><category term="Machine-Learning" /><category term="codingtest" /><summary type="html"><![CDATA[주어진 세 공항들의 위도, 경도를 현재 위치의 위도, 경도와 비교하여 가장 가까운 공항을 찾는 문제입니다.]]></summary></entry><entry><title type="html">프로그래머스 Lv.4| MySQL - 우유와 요거트가 담긴 바구니</title><link href="http://localhost:4000/codingtest/2022/01/04/mysql_ct1.html" rel="alternate" type="text/html" title="프로그래머스 Lv.4| MySQL - 우유와 요거트가 담긴 바구니" /><published>2022-01-04T00:00:00+00:00</published><updated>2022-01-04T00:00:00+00:00</updated><id>http://localhost:4000/codingtest/2022/01/04/mysql_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2022/01/04/mysql_ct1.html"><![CDATA[<p><img src="/assets/images/post/2022-01-04-pg1.png" alt="pg" /></p>
+
+<h2 id="풀이">풀이(</h2>
+<pre><code class="language-sql">SELECT C.CART_ID
+FROM CART_PRODUCTS C JOIN (SELECT CART_ID, NAME
+                    FROM CART_PRODUCTS
+                    WHERE NAME IN ('Milk')) M
+ON C.CART_ID = M.CART_ID
+WHERE C.NAME IN ('Yogurt')
+GROUP BY CART_ID
+ORDER BY CART_ID
+</code></pre>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="MySQL" /><category term="SQL" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.4| MySQL - 보호소에서 중성화한 동물</title><link href="http://localhost:4000/codingtest/2022/01/01/mysql_ct.html" rel="alternate" type="text/html" title="프로그래머스 Lv.4| MySQL - 보호소에서 중성화한 동물" /><published>2022-01-01T00:00:00+00:00</published><updated>2022-01-01T00:00:00+00:00</updated><id>http://localhost:4000/codingtest/2022/01/01/mysql_ct</id><content type="html" xml:base="http://localhost:4000/codingtest/2022/01/01/mysql_ct.html"><![CDATA[<h2 id="문제-설명">문제 설명</h2>
+
+<p><code>ANIMAL_OUTS</code> 테이블은 동물 보호소에서 입양 보낸 동물의 정보를 담은 테이블입니다. <code>ANIMAL_OUTS</code> 테이블 구조는 다음과 같으며, <code>ANIMAL_ID</code>, <code>ANIMAL_TYPE</code>, <code>DATETIME</code>, <code>NAME</code>, <code>SEX_UPON_OUTCOME</code>는 각각 동물의 아이디, 생물 종, 입양일, 이름, 성별 및 중성화 여부를 나타냅니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>NAME</th>
+      <th>TYPE</th>
+      <th>NULLABLE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ANIMAL_ID</td>
+      <td>VARCHAR(N)</td>
+      <td>FALSE</td>
+    </tr>
+    <tr>
+      <td>ANIMAL_TYPE</td>
+      <td>VARCHAR(N)</td>
+      <td>FALSE</td>
+    </tr>
+    <tr>
+      <td>DATETIME</td>
+      <td>DATETIME</td>
+      <td>FALSE</td>
+    </tr>
+    <tr>
+      <td>NAME</td>
+      <td>VARCHAR(N)</td>
+      <td>TRUE</td>
+    </tr>
+    <tr>
+      <td>SEX_UPON_INTAKE</td>
+      <td>VARCHAR(N)</td>
+      <td>FALSE</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code>ANIMAL_OUTS</code> 테이블은 동물 보호소에서 입양 보낸 동물의 정보를 담은 테이블입니다. <code>ANIMAL_OUTS</code> 테이블 구조는 다음과 같으며, <code>ANIMAL_ID</code>, <code>ANIMAL_TYPE</code>, <code>DATETIME</code>, <code>NAME</code>, <code>SEX_UPON_OUTCOME</code>는 각각 동물의 아이디, 생물 종, 입양일, 이름, 성별 및 중성화 여부를 나타냅니다. <code>ANIMAL_OUTS</code> 테이블의 <code>ANIMAL_ID</code>는 <code>ANIMAL_INS</code>의 <code>ANIMAL_ID</code>의 외래 키입니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>NAME</th>
+      <th>TYPE</th>
+      <th>NULLABLE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ANIMAL_ID</td>
+      <td>VARCHAR(N)</td>
+      <td>FALSE</td>
+    </tr>
+    <tr>
+      <td>ANIMAL_TYPE</td>
+      <td>VARCHAR(N)</td>
+      <td>FALSE</td>
+    </tr>
+    <tr>
+      <td>DATETIME</td>
+      <td>DATETIME</td>
+      <td>FALSE</td>
+    </tr>
+    <tr>
+      <td>NAME</td>
+      <td>VARCHAR(N)</td>
+      <td>TRUE</td>
+    </tr>
+    <tr>
+      <td>SEX_UPON_INTAKE</td>
+      <td>VARCHAR(N)</td>
+      <td>FALSE</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>보호소에서 중성화 수술을 거친 동물 정보를 알아보려 합니다. 보호소에 들어올 당시에는 중성화1되지 않았지만, 보호소를 나갈 당시에는 중성화된 동물의 아이디와 생물 종, 이름을 조회하는 아이디 순으로 조회하는 SQL 문을 작성해주세요.</p>
+
+<p><strong>예시</strong></p>
+
+<p>예를 들어 <code>ANIMAL_INS</code> 테이블과 <code>ANIMAL_OUTS</code> 테이블이 다음과 같다면</p>
+
+<p><code>ANIMAL_INS</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ANIMAL_ID</th>
+      <th>ANIMAL_TYPE</th>
+      <th>DATETIME</th>
+      <th>INTAKE_CONDITION</th>
+      <th>NAME</th>
+      <th>SEX_UPON_INTAKE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A367438</td>
+      <td>Dog</td>
+      <td>2015-09-10 16:01:00</td>
+      <td>Normal</td>
+      <td>Cookie</td>
+      <td>Spayed Female</td>
+    </tr>
+    <tr>
+      <td>A382192</td>
+      <td>Dog</td>
+      <td>2015-03-13 13:14:00</td>
+      <td>Normal</td>
+      <td>Maxwell 2</td>
+      <td>Intact Male</td>
+    </tr>
+    <tr>
+      <td>A405494</td>
+      <td>Dog</td>
+      <td>2014-05-16 14:17:00</td>
+      <td>Normal</td>
+      <td>Kaila</td>
+      <td>Spayed Female</td>
+    </tr>
+    <tr>
+      <td>A410330</td>
+      <td>Dog</td>
+      <td>2016-09-11 14:09:00</td>
+      <td>Sick</td>
+      <td>Chewy</td>
+      <td>Intact Female</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code>ANIMAL_OUTS</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ANIMAL_ID</th>
+      <th>ANIMAL_TYPE</th>
+      <th>DATETIME</th>
+      <th>NAME</th>
+      <th>SEX_UPON_INTAKE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A367438</td>
+      <td>Dog</td>
+      <td>2015-09-12 13:30:00</td>
+      <td>Cookie</td>
+      <td>Spayed Female</td>
+    </tr>
+    <tr>
+      <td>A382192</td>
+      <td>Dog</td>
+      <td>2015-03-16 13:46:00</td>
+      <td>Maxwell 2</td>
+      <td>Neutered Male</td>
+    </tr>
+    <tr>
+      <td>A405494</td>
+      <td>Dog</td>
+      <td>2014-05-20 11:44:00</td>
+      <td>Kaila</td>
+      <td>Spayed Female</td>
+    </tr>
+    <tr>
+      <td>A410330</td>
+      <td>Dog</td>
+      <td>2016-09-13 13:46:00</td>
+      <td>Chewy</td>
+      <td>Spayed Female</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Cookie는 보호소에 들어올 당시에 이미 중성화되어있었습니다.</li>
+  <li>Maxwell 2는 보호소에 들어온 후 중성화되었습니다.</li>
+  <li>Kaila는 보호소에 들어올 당시에 이미 중성화되어있었습니다.</li>
+  <li>Chewy는 보호소에 들어온 후 중성화되었습니다.</li>
+</ul>
+
+<p>따라서 SQL문을 실행하면 다음과 같이 나와야 합니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ANIMAL_ID</th>
+      <th>ANIMAL_TYPE</th>
+      <th>NAME</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A382192</td>
+      <td>Dog</td>
+      <td>Maxwell 2</td>
+    </tr>
+    <tr>
+      <td>A410330</td>
+      <td>Dog</td>
+      <td>Chewy</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="풀이">풀이</h2>
+
+<pre><code class="language-sql">SELECT O.ANIMAL_ID, O.ANIMAL_TYPE, O.NAME
+FROM ANIMAL_OUTS O
+RIGHT OUTER JOIN (SELECT * 
+                  FROM ANIMAL_INS 
+                  WHERE SEX_UPON_INTAKE NOT LIKE ('%Spayed%')) I
+ON O.ANIMAL_ID = I.ANIMAL_ID
+WHERE SEX_UPON_OUTCOME != SEX_UPON_INTAKE
+ORDER BY O.ANIMAL_ID ASC;
+</code></pre>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="MySQL" /><category term="SQL" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[문제 설명]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 체육복</title><link href="http://localhost:4000/codingtest/2021/12/27/python_ct1.html" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 체육복" /><published>2021-12-27T00:00:00+00:00</published><updated>2021-12-27T00:00:00+00:00</updated><id>http://localhost:4000/codingtest/2021/12/27/python_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/27/python_ct1.html"><![CDATA[<p><img src="/assets/images/post/2021-12-27-pg1.png" alt="pg" /></p>
+
+<h2 id="풀이">풀이(</h2>
+<pre><code class="language-python">def solution(n, lost, reserve):
+    set_r = set(reserve)-set(lost)
+    set_l = set(lost)-set(reserve)
+    
+    for i in set_r:
+        if i-1 in set_l:
+            set_l.remove(i-1)
+        elif i+1 in set_l:
+            set_l.remove(i+1)
+    return n-len(set_l)
+</code></pre>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 자릿수 더하기</title><link href="http://localhost:4000/codingtest/2021/12/26/python_ct1.html" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 자릿수 더하기" /><published>2021-12-26T00:00:00+00:00</published><updated>2021-12-26T00:00:00+00:00</updated><id>http://localhost:4000/codingtest/2021/12/26/python_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/26/python_ct1.html"><![CDATA[<p><img src="/assets/images/post/2021-12-26-pg1.png" alt="pg" /></p>
+
+<h2 id="풀이">풀이(</h2>
+<pre><code class="language-python">def solution(n):
+
+    answer = list(map(int, str(n)))
+
+    return sum(answer)
+</code></pre>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 핸드폰 번호 가리기</title><link href="http://localhost:4000/codingtest/2021/12/25/python_ct1.html" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 핸드폰 번호 가리기" /><published>2021-12-25T00:00:00+00:00</published><updated>2021-12-25T00:00:00+00:00</updated><id>http://localhost:4000/codingtest/2021/12/25/python_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/25/python_ct1.html"><![CDATA[<p><img src="/assets/images/post/2021-12-25-pg1.png" alt="pg" /></p>
+
+<h2 id="풀이실패">풀이(실패)</h2>
+<pre><code class="language-python">def solution(phone_number):
+    
+    for i in range(len(phone_number)-4):
+        phone_number = phone_number.replace(phone_number[i], '*')
+    
+    return phone_number
+</code></pre>
+
+<ol>
+  <li>실행결과 9번만 맞고 다른 결과는 실패로 나왔습니다. 찾아보니 9번 케이스는 문자열 길이가 4인 경우라고 하네요. 실행 전 테스트 케이스는 다 통과했었는데 실패하는 이유가 뭘까요?</li>
+</ol>
+
+<h2 id="풀이성공">풀이(성공)</h2>
+<pre><code class="language-python">def solution(phone_number):
+    return '*' * (len(phone_number)-4) + phone_number[-4:]
+</code></pre>
+
+<ol>
+  <li>다른 방식으로 풀이하여 통과하였습니다.</li>
+</ol>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 2016년</title><link href="http://localhost:4000/codingtest/2021/12/24/python_ct1.html" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 2016년" /><published>2021-12-24T00:00:00+00:00</published><updated>2021-12-24T00:00:00+00:00</updated><id>http://localhost:4000/codingtest/2021/12/24/python_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/24/python_ct1.html"><![CDATA[<p><img src="/assets/images/post/2021-12-24-pg1.png" alt="pg" /></p>
+
+<h2 id="풀이">풀이</h2>
+<pre><code class="language-python">import datetime
+def solution(a, b):
+    answer = ['MON','TUE','WED','THU','FRI','SAT','SUN']    
+    
+    return answer[datetime.date(2016, a, b).weekday()]
+</code></pre>
+
+<ol>
+  <li>날짜 관련 모듈을 찾아보고 간단하게 작성했습니다!</li>
+</ol>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 완주하지 못한 선수</title><link href="http://localhost:4000/codingtest/2021/12/19/python_ct1.html" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 완주하지 못한 선수" /><published>2021-12-19T00:00:00+00:00</published><updated>2021-12-19T00:00:00+00:00</updated><id>http://localhost:4000/codingtest/2021/12/19/python_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/19/python_ct1.html"><![CDATA[<p><img src="/assets/images/post/2021-12-19-pg1.png" alt="pg" /></p>
+
+<h2 id="풀이">풀이</h2>
+<pre><code class="language-python">def solution(participant, completion):
+    answer = ''
+    
+    participant.sort()
+    completion.sort()
+    
+    for i in range(len(completion)):
+        if (participant[i] != completion[i]):
+            return participant[i]
+
+    return participant[len(participant)-1] 
+</code></pre>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry></feed>

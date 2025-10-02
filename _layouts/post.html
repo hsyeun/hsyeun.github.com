@@ -16,7 +16,11 @@ post_class: post-template
         
 		<div class="col-sm-9">
             <!-- Post Featured Image -->
-			{% if page.image %}<img class="featured-image img-fluid rounded" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">{% endif %}
+			{% if page.image %}
+            <div class="featured-image img-fluid rounded" style="background-color: {{ page.color }}">
+                <img class="featured-image img-fluid rounded" style="margin: 0 auto;" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
+            </div>
+            {% endif %}
 			<!-- End Featured Image -->
 			<div class="mainheading">             
                 
@@ -26,7 +30,7 @@ post_class: post-template
                         {% assign sortedCategories = page.categories | sort %}
                         {% for category in sortedCategories %}
                         <li>
-                         <a href="{{ site.baseurl }}/categories#{{ category | slugify }}">{{ category }}</a>
+                         <a href="{{ site.baseurl }}/categories/{{ category | slugify }}">{{ category }}</a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -49,9 +53,9 @@ post_class: post-template
             <!-- Post Date -->
             <p>
             <small>
-                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:'%Y-%m-%d' }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time></span>           
                 {% if page.last_modified_at %}
-                (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+                (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%Y년 %m월 %d일" }}</time>)
                 {% endif %}
                 </small>
             </p>

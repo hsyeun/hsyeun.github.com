@@ -96,10 +96,10 @@ small, .small {
 }
 .start-header.scroll-on {	
 	padding: 5px 0;
-	-webkit-transition : all 0.3s ease-out;
-	transition : all 0.3s ease-out;
+	// -webkit-transition : all 0.3s ease-out;
+	// transition : all 0.3s ease-out;
     box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.05);
-    background: $thema-color;
+    background: #fff;
 }
 .start-header.scroll-on .navbar-brand img {	
 	-webkit-transition : all 0.3s ease-out;
@@ -122,6 +122,10 @@ small, .small {
     margin-left: 15px;
 }
 
+.intro {
+    height: 280px;
+}
+
 /* Sidebar
 ================================================== */
 .sidebar.sticky-top {
@@ -134,11 +138,72 @@ small, .small {
     }
 }
 
+.sidebar {font-size: 15px;}
+.sidebar h5 {    margin-bottom: 1rem;   text-align:center; position:relative;font-weight: 700; }
+.sidebar h5 span {
+background-color: #fff;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 0px 15px 0 15px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.sidebar h5:before {
+    margin-bottom: 0;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 15px;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: #333333;
+}
+.sidebar ul {list-style:none;padding-left:0;}
+.sidebar ul li a {
+    color: #999;
+    border-bottom: 1px solid #f6f6f6;
+    display: block;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+.sidebar-section {     
+    margin-bottom: 2rem;
+    box-shadow:0 0px 1px 0 rgba(0, 0, 0, 0.44);
+    padding: 30px;
+}
+.sidebar #mc_embed_signup form {
+    padding: 0 !important;
+}
+.sidebar #mc_embed_signup .button {
+    width: 100% !important;
+    background: #3d61fd !important;
+    height: auto;
+    padding: 6px 20px;
+    font-weight: 600;
+}
+.sidebar #mc_embed_signup h2 {
+    font-weight: 400;
+    font-size: 15px;
+    color: #999;
+    margin-bottom: 1rem; 
+    line-height: 1.5;
+    text-align: center;
+}
+.sidebar #mc_embed_signup input {width:100%;}
+.sidebar #mc_embed_signup .mc-field-group {width:100% !important;}
+#mc_embed_signup .mc-field-group input {text-indent: 5% !important;}
+#mc_embed_signup {font-family:inherit !important;}
+.sidebar-right .sidebar {max-width:inherit;}
+
 /* Pages
 ================================================== */
 .hero {
     background: #fdd93d;
-    padding: 5rem 5rem;
+    padding: 50px 80px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -522,66 +587,6 @@ ul.tags li a:hover {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
 }
-.sidebar {font-size: 15px;}
-.sidebar h5 {    margin-bottom: 1rem;   text-align:center; position:relative;font-weight: 700; }
-.sidebar h5 span {
-background-color: #fff;
-    position: relative;
-    z-index: 2;
-    display: inline-block;
-    padding: 0px 15px 0 15px;
-    text-align: center;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.sidebar h5:before {
-    margin-bottom: 0;
-    position: absolute;
-    z-index: 1;
-    left: 0px;
-    top: 15px;
-    width: 100%;
-    height: 1px;
-    content: '';
-    background-color: #333333;
-}
-.sidebar ul {list-style:none;padding-left:0;}
-.sidebar ul li a {
-    color: #999;
-    border-bottom: 1px solid #f6f6f6;
-    display: block;
-    padding-bottom: 7px;
-    padding-top: 7px;
-}
-.sidebar-section {     
-    margin-bottom: 2rem;
-    box-shadow:0 0px 1px 0 rgba(0, 0, 0, 0.44);
-    padding: 30px;
-}
-.sidebar #mc_embed_signup form {
-    padding: 0 !important;
-}
-.sidebar #mc_embed_signup .button {
-    width: 100% !important;
-    background: #3d61fd !important;
-    height: auto;
-    padding: 6px 20px;
-    font-weight: 600;
-}
-.sidebar #mc_embed_signup h2 {
-    font-weight: 400;
-    font-size: 15px;
-    color: #999;
-    margin-bottom: 1rem; 
-    line-height: 1.5;
-    text-align: center;
-}
-.sidebar #mc_embed_signup input {width:100%;}
-.sidebar #mc_embed_signup .mc-field-group {width:100% !important;}
-#mc_embed_signup .mc-field-group input {text-indent: 5% !important;}
-#mc_embed_signup {font-family:inherit !important;}
-.sidebar-right .sidebar {max-width:inherit;}
 
 .article-post .h1, .article-post .h2, .article-post .h3, .article-post .h4, .article-post .h5, .article-post .h6, .article-post h1, .article-post h2, .article-post h3, .article-post h4, .article-post h5, .article-post h6 {
     font-weight: 600;
@@ -591,17 +596,6 @@ background-color: #fff;
 
 img {max-width:100%;height: auto;}
 
-.bottompagination span.navigation a {
-	background: #fdd93d;
-    color: #333;
-    padding: 5px;
-    border-radius: 3px;
-    text-transform: none;
-    font-weight: 600;
-    letter-spacing: 0;
-    min-width: 100px;
-    display: inline-block;
-}
 .pointerup {
 	margin-bottom:-18px;
 	margin-left:49%;
@@ -610,26 +604,32 @@ img {max-width:100%;height: auto;}
 .pointerup i.fa {
 	color:#eaeaea;
 }
-.bottompagination span.navigation i {
-	display:inline-block;
+
+.bottompagination {
+    span.navigation {
+        display: block;
+        font-size: 0.93rem;
+        font-weight: 700;
+        text-align:center;
+        position:relative;
+
+        &:before {
+            margin-bottom: 0;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            right: 0px;
+            top: 12px;
+            height: 1px;
+            content: '';
+        }
+
+        i {
+            display:inline-block;
+        }
+    }
 }
-span.navigation {
-    display: block;
-    font-size: 0.93rem;
-    font-weight: 700;
-    text-align:center;
-    position:relative;
-}
-span.navigation:before {
-    margin-bottom: 0;
-    position: absolute;
-    z-index: 1;
-    left: 0px;
-    right: 0px;
-    top: 12px;
-    height: 1px;
-    content: '';
-}
+
 .pagination {
     display: inline-block;
     background: #fff;
@@ -640,6 +640,31 @@ span.navigation:before {
     letter-spacing: 0.5px;
     font-weight: 500;
     text-transform: uppercase;
+
+    .page-number, .dots {
+        color: #333;
+        padding: 10px 5px;
+        border-radius: 3px;
+        text-transform: none;
+        font-weight: 600;
+        letter-spacing: 0;
+        min-width: 50px;
+        display: inline-block;
+        line-height: normal;
+    }
+
+    .page-number.active {
+        background: #fdd93d;
+    }
+
+    .arrows {
+        // border: 1px solid #666;
+        min-width: 50px;
+        display: inline-block;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: initial;
+    }
 }
 
 .footer {
@@ -652,6 +677,6 @@ span.navigation:before {
 }
 
 .hover-opacity:hover {
-    transition: all.3s;
+    transition: all .3s;
     opacity:.8;
 }
