@@ -33,8 +33,8 @@ published: true
   - `movie_data` : 영화 제목, 장르, 감독, 배우 저장  
   - `theater_data` : 영화관 이름, 주소, 연락처 저장  
 - **PyMySQL**을 활용한 DB 초기화 및 학습 데이터 적재
-  - `all_clear_train_data()` : 기존 QnA 데이터 삭제 및 auto_increment 초기화  
-  - `insert_data()` : 학습용 Excel(`DB_QnA.xlsx`) 데이터 DB에 Insert  
+  - 기존 QnA 데이터 삭제 및 auto_increment 초기화  
+  - 학습용 Excel 데이터 DB에 Insert  
 
 ### 3. 챗봇 엔진
 - **Preprocess 모듈**
