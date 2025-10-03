@@ -55,11 +55,8 @@ post_class: post-template
 
             <!-- Post Date -->
             <p style="text-align: right;">
-            <small>
-                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:'%Y-%m-%d' }}">Post : {{ page.date | date: "%Y.%m.%d" }}</time></span>           
-                {% if page.last_modified_at %}
-                (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%Y년 %m월 %d일" }}</time>)
-                {% endif %}
+                <small>
+                    <span class="post-date"><time class="post-date" datetime="{{ page.date | date:'%Y.%m.%d %H:%M' }}">Post : {{ page.date | date: "%Y.%m.%d %H:%M" }}</time></span>           
                 </small>
             </p>
             

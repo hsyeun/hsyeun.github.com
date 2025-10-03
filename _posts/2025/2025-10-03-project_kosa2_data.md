@@ -2,7 +2,7 @@
 layout: post
 title:  "신년 분석과 트렌드 예측 프로젝트"
 categories: project
-tags: [project, BI, BI Portal, Javascript, jQuery, JSP, CSS, Kotlin, Spring Boot, MariaDB, UI/UX, Tableau]
+tags: [project, Python, Jupyter, HTML, CSS, JavaScript, AmCharts4, BeautifulSoup, Selenium, Pandas, Numpy]
 image: assets/images/post/2025/2025-10-03-project_kosa2_data2.png
 color: "#fff"
 published: true
