@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           bundle config set path 'vendor/bundle'
-          bundle install
+          bundle install --without windows
 
       - name: Build site with Jekyll
         run: bundle exec jekyll build --trace
