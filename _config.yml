@@ -2,12 +2,11 @@ title: Lisa.dev
 email: # wowthemesnet@gmail.com
 timezone: Asia/Seoul
 url     : https://hsyeun.github.io/
-baseurl: # "/affiliates-jekyll-theme"
+baseurl: ''
 permalink: # "/:title/"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 author: Lisa
-paginate: 30
 disqus: 'devblog'
 locale: ko_kr
 lang: ko_kr
@@ -61,5 +60,31 @@ plugins:
 - jekyll-feed
 - jekyll-seo-tag
 - jekyll-archives
+- jekyll-paginate-v2
 
-paginate: 10
+pagination:
+  enabled: true
+  per_page: 10
+  collection: "posts"
+  sort_field: "date"
+  sort_reverse: true
+
+autopages:
+  enabled: true
+  categories:
+    enabled: true
+    layouts:
+      - categories.html
+    title: ":cat"
+    permalink: "/categories/:cat"
+    pagination:
+      enabled: true
+      per_page: 10
+      title: ":cat"
+      permalink: "/categories/:cat/page:num"
+      sort_field: "date"
+      sort_reverse: true
+  tags:
+    enabled: false
+  collections:
+    enabled: false

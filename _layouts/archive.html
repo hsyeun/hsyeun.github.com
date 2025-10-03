@@ -15,9 +15,13 @@ permalink: "/archive.html"
     {% endif %}
 
           <li>
-            <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-              {{ post.title }}
-            </a>
+            <p>
+              <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+              </a>
+              <span>{{ site.data.categories[post.categories.first] | default: post.categories }}</span>
+            </p>
+            
             <small class="post-date">{{ post.date | date: "%Y년 %m월 %d일" }}</small>
           </li>
 

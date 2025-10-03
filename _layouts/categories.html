@@ -2,14 +2,32 @@
 layout: default
 ---
 
-<h4 class="mt-5 mb-4 pb-2 border-bottom">
-  <span class="text-capitalize small font-weight-bold">In "{{ page.title }}"</span>
+{% if page.autopages and page.autopages.display_name %}
+  {% assign page_title = page.autopages.display_name %}
+{% else %}
+  {% assign page_title = page.title %}
+{% endif %}
+
+<h4 class="category-title mt-5 mb-4 pb-2">
+  <span class="category-label">Category:</span>
+  <span class="category-name">{{ site.data.categories[page_title] | default: page_title }}</span>
 </h4>
-<div class="row">
-{% assign pages_list = site.categories[page.category] %}
-{% for post in pages_list %}
-<div class="col-md-4 mb-5">
-{% include postbox.html %}
-</div>
-{% endfor %}
-</div>
+<section class="row">
+  <div class="col-sm-9">
+    <div class="row">
+      {% for post in paginator.posts %}
+      <div class="col-md-6 mb-5">
+        {% include postbox.html %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="bottompagination">
+      <span class="navigation" role="navigation">
+          {% include pagination.html %}
+      </span>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    {% include sidebar.html %}
+  </div>
+</section>

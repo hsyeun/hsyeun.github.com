@@ -2,11 +2,13 @@
 title: Home
 layout: default
 background: '/img/bg-index.jpg'
+pagination:
+  enabled: true
 ---
 
 <!-- Home Intro
 ================================================== -->
-{% if page.url == "/" %} 
+{% if paginator and paginator.page == 1 %}
 <div class="rounded mb-5 hero">
   <div class="row align-items-center justify-content-between">
     <div class="col-md-6" style="padding: 0;">

@@ -1,6 +1,8 @@
 <nav class="pagination" role="pagination">
+    {%- assign base = paginator.first_page_path | replace:'index.html','' -%}
+
     {% if paginator.previous_page %}
-        <a class="arrows newer-posts" href="{{site.baseurl}}/" title="First Page">&laquo;</a>
+        <a class="arrows newer-posts" href="{{ base | relative_url }}" title="First Page">&laquo;</a>
     {% endif %}
 
     {%- assign total = paginator.total_pages -%}
@@ -18,10 +20,10 @@
         {%- if page == current -%}
             <span class="page-number title-font active">{{ page }}</span>
         {%- elsif page == 1 -%}
-            <a class="page-number title-font" href="/">{{ page }}</a>
+            <a class="page-number title-font" href="{{ base | relative_url }}">{{ page }}</a>
         {%- else -%}
             <a class="page-number title-font"
-            href="{{ site.baseurl }}/page{{ page }}/">{{ page }}</a>
+            href="{{ base }}page{{ page }}/">{{ page }}</a>
         {%- endif -%}
         {%- endif -%}
     {%- endfor -%}
@@ -32,7 +34,7 @@
 
     {% if paginator.next_page %}
     <a class="arrows older-posts"
-       href="{{ site.baseurl }}/page{{ total }}/"
+       href="{{ base }}page{{ total }}/"
        title="Last Page">&raquo;</a>
         <!-- <a class="older-posts" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" title="Next Page">Older &raquo;</a> -->
     {% endif %} 
