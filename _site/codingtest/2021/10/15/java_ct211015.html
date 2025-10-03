@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" href="/assets/images/favicon.ico">
+
+<title>프로그래머스 Lv.2| Java - 위장 | Lisa.dev</title>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>프로그래머스 Lv.2 Java - 위장 | Lisa.dev</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="프로그래머스 Lv.2 Java - 위장" />
+<meta name="author" content="Lisa" />
+<meta property="og:locale" content="ko_kr" />
+<meta name="description" content="문제" />
+<meta property="og:description" content="문제" />
+<link rel="canonical" href="http://localhost:4000/codingtest/2021/10/15/java_ct211015.html" />
+<meta property="og:url" content="http://localhost:4000/codingtest/2021/10/15/java_ct211015.html" />
+<meta property="og:site_name" content="Lisa.dev" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-15T20:21:19+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="프로그래머스 Lv.2 Java - 위장" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lisa"},"dateModified":"2021-10-15T20:21:19+09:00","datePublished":"2021-10-15T20:21:19+09:00","description":"문제","headline":"프로그래머스 Lv.2 Java - 위장","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/codingtest/2021/10/15/java_ct211015.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Lisa"},"url":"http://localhost:4000/codingtest/2021/10/15/java_ct211015.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link href="/assets/css/theme.css?v=1759511755" rel="stylesheet">
+<link href="/assets/css/syntax.css?v=1759511755" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+   
+</head>   
+    
+
+<body class="layout-post">
+
+    
+<!-- Menu Navigation
+================================================== -->
+<div class="navigation-wrap start-header start-style">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+          <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
+          <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
+          </a>    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
+              
+              <li class="nav-item">
+                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
+              </li>
+              
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </div>  
+
+    
+<!-- Container
+================================================== -->    
+<main class="container">   
+      <!-- Begin Article
+================================================== -->
+	<div class="row mt-5">
+		<!-- Post -->        
+        
+        
+		<div class="col-sm-9">
+            <!-- Post Featured Image -->
+			
+			<!-- End Featured Image -->
+			<div class="mainheading">             
+                
+                <!-- Post Categories -->
+                <div class="after-post-tags">
+                    <ul class="tags">
+                        
+                        
+                        <li>
+                         <a href="/categories/codingtest">codingtest</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- End Categories -->
+                
+                <!-- Post Title -->
+				<h1 class="posttitle title-font">프로그래머스 Lv.2| Java - 위장</h1> 
+                
+			</div>
+
+			
+
+			<!-- Post Content -->
+			<div class="article-post">
+				<h2 id="문제">문제</h2>
+
+<p>스파이들은 매일 다른 옷을 조합하여 입어 자신을 위장합니다.</p>
+
+<p>예를 들어 스파이가 가진 옷이 아래와 같고 오늘 스파이가 동그란 안경, 긴 코트, 파란색 티셔츠를 입었다면 다음날은 청바지를 추가로 입거나 동그란 안경 대신 검정 선글라스를 착용하거나 해야 합니다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>종류</th>
+      <th>이름</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>얼굴</td>
+      <td>동그란 안경, 검정 선글라스</td>
+    </tr>
+    <tr>
+      <td>상의</td>
+      <td>파란색 티셔츠</td>
+    </tr>
+    <tr>
+      <td>하의</td>
+      <td>청바지</td>
+    </tr>
+    <tr>
+      <td>겉옷</td>
+      <td>긴 코트</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>스파이가 가진 의상들이 담긴 2차원 배열 clothes가 주어질 때 서로 다른 옷의 조합의 수를 return 하도록 solution 함수를 작성해주세요.</p>
+
+<p><strong>제한사항</strong></p>
+
+<ul>
+  <li>clothes의 각 행은 [의상의 이름, 의상의 종류]로 이루어져 있습니다.</li>
+  <li>스파이가 가진 의상의 수는 1개 이상 30개 이하입니다.</li>
+  <li>같은 이름을 가진 의상은 존재하지 않습니다.</li>
+  <li>clothes의 모든 원소는 문자열로 이루어져 있습니다.</li>
+  <li>모든 문자열의 길이는 1 이상 20 이하인 자연수이고 알파벳 소문자 또는 ‘_’ 로만 이루어져 있습니다.</li>
+  <li>스파이는 하루에 최소 한 개의 의상은 입습니다.</li>
+</ul>
+
+<p><strong>입출력 예</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>clothes</th>
+      <th>return</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[[“yellowhat”, “headgear”], [“bluesunglasses”, “eyewear”], [“green_turban”, “headgear”]]</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>[[“crowmask”, “face”], [“bluesunglasses”, “face”], [“smoky_makeup”, “face”]]</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="풀이">풀이</h2>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    
+<span class="o">}</span>
+</code></pre></div></div>
+
+                <div class="clearfix"></div>
+			</div>
+
+            <div class="post-tags">
+            
+                <p>Java</p>
+            
+                <p>Programmers</p>
+            
+                <p>codingtest</p>
+            
+            </div>
+
+            <!-- Post Date -->
+            <p style="text-align: right;">
+                <small>
+                    <span class="post-date"><time class="post-date" datetime="2021.10.15 20:21">Post : 2021.10.15 20:21</time></span>           
+                </small>
+            </p>
+            
+            <!-- Prev/Next -->
+            <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
+              
+                <div class="col-md-6 rightborder pl-0">
+                    <a class="thepostlink" href="http://localhost:4000/codingtest/2021/10/14/java_ct211014.html">&laquo; 프로그래머스 Lv.2| Java - 최댓값과 최솟값</a>
+                </div>
+              
+              
+                <div class="col-md-6 text-right pr-0">
+                    <a class="thepostlink" href="http://localhost:4000/codingtest/2021/10/18/mysql_ct211018.html">프로그래머스 Lv.3| MySQL - 없어진 기록 찾기 &raquo;</a>
+                </div>
+              
+            </div>
+            <!-- End Prev/Next -->            
+            
+            <!-- Begin Comments
+            ================================================== -->
+            <section>
+            <div id="comments">                          
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'devblog'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+ 
+            </div>
+            </section>
+            <!--End Comments
+            ================================================== -->
+            
+		</div>
+		<!-- End Post -->
+
+		<!-- Sidebar -->
+        <div class="col-sm-3">
+            <div class="sidebar sticky-top">        
+    <div class="sidebar-section">
+        <h5><span>Catergory</span></h5>
+        
+        
+        
+        <ul>            
+            
+                <li>
+                    <a href="/categories/blog/">Blog</a>
+                </li>
+            
+                <li>
+                    <a href="/categories/codingtest/">Coding Test</a>
+                </li>
+            
+                <li>
+                    <a href="/categories/plsql/">PL/SQL</a>
+                </li>
+            
+        </ul>
+    </div>
+    <!-- <div class="sidebar-section">
+        <h5><span>Your Ad Here</span></h5>
+        <img src="/assets/images/ad.png">
+    </div> -->
+</div>
+        </div>
+
+	</div>
+
+<!-- End Article
+================================================== -->  
+</main>
+
+<!-- 
+Top Button
+================================================== -->  
+<div class="top-button" id="toTop">
+  <i class="fa-regular fa-square-caret-up"></i>
+</div>
+
+<!-- Footer
+================================================== -->    
+<footer class="footer container text-center">  
+  <ul class="p-0 mb-1 small">
+    
+    </ul>
+    <div class="copyright small">
+       Copyright © Lisa.dev. All rights reserved.
+    </div>
+</footer>
+
+<!-- JavaScript
+================================================== -->    
+<script src="/assets/js/jquery.min.js"></script>   
+<script src="/assets/js/bootstrap.min.js"></script>   
+<script src="/assets/js/theme.js"></script> 
+
+<script>
+  $(function(){
+    window.addEventListener('scroll' ,function() {
+      if(this.scrollY >= 250){
+        $('#toTop').show();
+      } else {
+        $('#toTop').hide();
+      }
+    })
+
+    $('#toTop').click(function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+  })
+</script>
+    
+</body>
+    
+</html>

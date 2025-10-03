@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" href="/assets/images/favicon.ico">
+
+<title>백준 2741번| Java - N 찍기 | Lisa.dev</title>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>백준 2741번 Java - N 찍기 | Lisa.dev</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="백준 2741번 Java - N 찍기" />
+<meta name="author" content="Lisa" />
+<meta property="og:locale" content="ko_kr" />
+<link rel="canonical" href="http://localhost:4000/codingtest/2021/11/01/java_ct_n.html" />
+<meta property="og:url" content="http://localhost:4000/codingtest/2021/11/01/java_ct_n.html" />
+<meta property="og:site_name" content="Lisa.dev" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-01T23:07:02+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="백준 2741번 Java - N 찍기" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lisa"},"dateModified":"2021-11-01T23:07:02+09:00","datePublished":"2021-11-01T23:07:02+09:00","headline":"백준 2741번 Java - N 찍기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/codingtest/2021/11/01/java_ct_n.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Lisa"},"url":"http://localhost:4000/codingtest/2021/11/01/java_ct_n.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link href="/assets/css/theme.css?v=1759511755" rel="stylesheet">
+<link href="/assets/css/syntax.css?v=1759511755" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+   
+</head>   
+    
+
+<body class="layout-post">
+
+    
+<!-- Menu Navigation
+================================================== -->
+<div class="navigation-wrap start-header start-style">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+          <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
+          <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
+          </a>    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
+              
+              <li class="nav-item">
+                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
+              </li>
+              
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </div>  
+
+    
+<!-- Container
+================================================== -->    
+<main class="container">   
+      <!-- Begin Article
+================================================== -->
+	<div class="row mt-5">
+		<!-- Post -->        
+        
+        
+		<div class="col-sm-9">
+            <!-- Post Featured Image -->
+			
+			<!-- End Featured Image -->
+			<div class="mainheading">             
+                
+                <!-- Post Categories -->
+                <div class="after-post-tags">
+                    <ul class="tags">
+                        
+                        
+                        <li>
+                         <a href="/categories/codingtest">codingtest</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <!-- End Categories -->
+                
+                <!-- Post Title -->
+				<h1 class="posttitle title-font">백준 2741번| Java - N 찍기</h1> 
+                
+			</div>
+
+			
+
+			<!-- Post Content -->
+			<div class="article-post">
+				<p><img src="/assets/images/post/2021/2021-11-01-bj1.png" alt="bj1" /></p>
+
+<h2 id="풀이">풀이</h2>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+		<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+                <div class="clearfix"></div>
+			</div>
+
+            <div class="post-tags">
+            
+                <p>Java</p>
+            
+                <p>BAEKJOON</p>
+            
+                <p>codingtest</p>
+            
+            </div>
+
+            <!-- Post Date -->
+            <p style="text-align: right;">
+                <small>
+                    <span class="post-date"><time class="post-date" datetime="2021.11.01 23:07">Post : 2021.11.01 23:07</time></span>           
+                </small>
+            </p>
+            
+            <!-- Prev/Next -->
+            <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
+              
+                <div class="col-md-6 rightborder pl-0">
+                    <a class="thepostlink" href="http://localhost:4000/codingtest/2021/10/21/mysql_ct_outs.html">&laquo; 프로그래머스 Lv.4| MySQL - 입양 시각 구하기(2)</a>
+                </div>
+              
+              
+                <div class="col-md-6 text-right pr-0">
+                    <a class="thepostlink" href="http://localhost:4000/codingtest/2021/11/01/java_ct1211102.html">백준 2438번| Java - 별 찍기 1 &raquo;</a>
+                </div>
+              
+            </div>
+            <!-- End Prev/Next -->            
+            
+            <!-- Begin Comments
+            ================================================== -->
+            <section>
+            <div id="comments">                          
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'devblog'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+ 
+            </div>
+            </section>
+            <!--End Comments
+            ================================================== -->
+            
+		</div>
+		<!-- End Post -->
+
+		<!-- Sidebar -->
+        <div class="col-sm-3">
+            <div class="sidebar sticky-top">        
+    <div class="sidebar-section">
+        <h5><span>Catergory</span></h5>
+        
+        
+        
+        <ul>            
+            
+                <li>
+                    <a href="/categories/blog/">Blog</a>
+                </li>
+            
+                <li>
+                    <a href="/categories/codingtest/">Coding Test</a>
+                </li>
+            
+                <li>
+                    <a href="/categories/plsql/">PL/SQL</a>
+                </li>
+            
+        </ul>
+    </div>
+    <!-- <div class="sidebar-section">
+        <h5><span>Your Ad Here</span></h5>
+        <img src="/assets/images/ad.png">
+    </div> -->
+</div>
+        </div>
+
+	</div>
+
+<!-- End Article
+================================================== -->  
+</main>
+
+<!-- 
+Top Button
+================================================== -->  
+<div class="top-button" id="toTop">
+  <i class="fa-regular fa-square-caret-up"></i>
+</div>
+
+<!-- Footer
+================================================== -->    
+<footer class="footer container text-center">  
+  <ul class="p-0 mb-1 small">
+    
+    </ul>
+    <div class="copyright small">
+       Copyright © Lisa.dev. All rights reserved.
+    </div>
+</footer>
+
+<!-- JavaScript
+================================================== -->    
+<script src="/assets/js/jquery.min.js"></script>   
+<script src="/assets/js/bootstrap.min.js"></script>   
+<script src="/assets/js/theme.js"></script> 
+
+<script>
+  $(function(){
+    window.addEventListener('scroll' ,function() {
+      if(this.scrollY >= 250){
+        $('#toTop').show();
+      } else {
+        $('#toTop').hide();
+      }
+    })
+
+    $('#toTop').click(function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+  })
+</script>
+    
+</body>
+    
+</html>

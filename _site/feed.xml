@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_kr"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko_kr" /><updated>2025-10-03T23:54:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lisa.dev</title><author><name>Lisa</name></author><entry><title type="html">영화 추천 및 정보 제공 챗봇 프로젝트</title><link href="http://localhost:4000/project/2025/10/03/project_kosa3_chatbot/" rel="alternate" type="text/html" title="영화 추천 및 정보 제공 챗봇 프로젝트" /><published>2025-10-03T23:41:45+09:00</published><updated>2025-10-03T23:41:45+09:00</updated><id>http://localhost:4000/project/2025/10/03/project_kosa3_chatbot</id><content type="html" xml:base="http://localhost:4000/project/2025/10/03/project_kosa3_chatbot/"><![CDATA[<h2 id="프로젝트-개요">프로젝트 개요</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko_kr"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko_kr" /><updated>2025-10-04T02:15:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lisa.dev</title><author><name>Lisa</name></author><entry><title type="html">AI 기반 IT 취업 지원 웹 서비스 프로젝트</title><link href="http://localhost:4000/project/2025/10/04/project_kosa4_itsjob.html" rel="alternate" type="text/html" title="AI 기반 IT 취업 지원 웹 서비스 프로젝트" /><published>2025-10-04T01:22:27+09:00</published><updated>2025-10-04T01:22:27+09:00</updated><id>http://localhost:4000/project/2025/10/04/project_kosa4_itsjob</id><content type="html" xml:base="http://localhost:4000/project/2025/10/04/project_kosa4_itsjob.html"><![CDATA[<h2 id="프로젝트-개요">프로젝트 개요</h2>
+<ul>
+  <li><strong>프로젝트명</strong> : AI 기반 IT 취업 지원 서비스</li>
+  <li><strong>기간</strong> : 2022.02 ~ 2022.04 (약 7주)</li>
+  <li><strong>소속/고객사</strong> : 팀 프로젝트</li>
+  <li><strong>사용 기술</strong> :
+    <ul>
+      <li><strong>서버</strong> : Flask, Tomcat, Spring</li>
+      <li><strong>프로그래밍 언어</strong> : Python, Java, HTML, CSS, JavaScript, JSP</li>
+      <li><strong>DBMS</strong> : MariaDB</li>
+      <li><strong>AI/NLP</strong> : GPT2, KoGPT2, BERT, Pandas, NumPy, TensorFlow, Scikit-learn</li>
+      <li><strong>데이터 수집/크롤링</strong> : BeautifulSoup, Selenium</li>
+    </ul>
+  </li>
+</ul>
+
+<p>본 프로젝트는 취업 준비생을 위한 <strong>기업 추천, 자기소개서 작성 지원, 취업 상담 챗봇</strong>을 제공하는 웹 서비스입니다.<br />
+Spring 기반 웹 서비스와 Flask AI 서버를 연동하여 대규모 데이터 크롤링 및 AI 모델링을 통해 <strong>개인화된 취업 지원 플랫폼</strong>을 구현했습니다.</p>
+
+<h2 id="담당-역할">담당 역할</h2>
+<ul>
+  <li>PM : 데이터 수집, 전처리, DB설계, 서버 연동, 모델링 구현 총괄, 자소서 및 챗봇 기능 구현</li>
+  <li><strong>PL(본인)</strong> : Front-End구현, Spring 세팅, 유저 관련 페이지 구현, Git 형상 관리</li>
+  <li>팀원1 : 데이터 수집, 추천 알고리즘 구현, 기업, 채용공고 페이지 구현</li>
+  <li>팀원2 : 데이터 수집, 전처리, 자소서 모델 구현, Back-End 지원</li>
+</ul>
+
+<h2 id="데이터-모델링">데이터 모델링</h2>
+
+<h3 id="1-자기소개서-데이터-모델링">1. 자기소개서 데이터 모델링</h3>
+<ol>
+  <li><strong>데이터 수집</strong> : BeautifulSoup, Selenium으로 잡코리아 합격 자소서 크롤링 → 질문/답변 단위로 분류</li>
+  <li><strong>전처리</strong> : 첨삭 내용 제거, 특수문자 및 불필요 단어 제거</li>
+  <li><strong>문장 분류</strong> : 불필요 조사 제거 → 문장 벡터화 → 유사도 기반 클러스터링</li>
+  <li><strong>모델링</strong> :
+    <ul>
+      <li>INTENT별로 분류된 데이터 학습</li>
+      <li>입력 문장을 DB 내 저장 문장과 비교 후 가장 유사한 답변 출력</li>
+      <li><strong>GPT2, KoGPT2</strong> 모델을 활용하여 자소서 문장 자동 생성</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="2-기업-추천-데이터-모델링">2. 기업 추천 데이터 모델링</h3>
+<ol>
+  <li><strong>데이터 수집</strong> : BeautifulSoup, Selenium으로 잡코리아에서 기업 정보, 합격 스펙, 채용공고 크롤링</li>
+  <li><strong>전처리</strong> : 산업 분류 표기를 정규화(12개 카테고리), 특수문자 제거</li>
+  <li><strong>추천 알고리즘</strong> :
+    <ul>
+      <li><strong>근사값 알고리즘</strong> : 합격자 평균 스펙과 사용자 스펙의 절대값 차이 계산</li>
+      <li><strong>콘텐츠 기반 필터링(Content-Based Filtering)</strong> + <strong>원-핫 인코딩</strong> : 사용자 스펙과 기업/채용공고를 비교해 유사 기업 추천</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="3-챗봇-데이터-모델링취업-상담">3. 챗봇 데이터 모델링(취업 상담)</h3>
+<ol>
+  <li><strong>데이터 수집</strong> : OKKY 개발자 커뮤니티 질문/댓글 크롤링
+    <ul>
+      <li><strong>문제점</strong> : 취업과 무관한 글, 비방/욕설 포함</li>
+      <li><strong>해결</strong> : 취업 관련 키워드 포함 글만 추출, 추천수 마이너스 글 제거</li>
+    </ul>
+  </li>
+  <li><strong>전처리</strong> : 댓글의 맞춤법·문체 문제 → <strong>PORORO 자연어 처리</strong>로 문법 교정 및 변환</li>
+  <li><strong>임베딩</strong> : 사용자 질문 ↔ 질문셋 데이터를 <strong>GOOGLE BERT</strong> 임베딩으로 벡터화</li>
+  <li><strong>유사도</strong> : <strong>코사인 유사도</strong>로 두 벡터 간 유사도 계산 → 가장 가까운 답변 반환</li>
+</ol>
+
+<hr />
+
+<h3 id="4-챗봇-데이터-모델링기업-문의">4. 챗봇 데이터 모델링(기업 문의)</h3>
+<ol>
+  <li><strong>데이터 수집</strong> : 잡플래닛 기업 리뷰(약 12만 건), 면접 후기(약 7만 건) 크롤링</li>
+  <li><strong>전처리</strong> :
+    <ul>
+      <li>기업명 표준화 (㈜ 제거, 영문 → 한글 통일)</li>
+      <li><strong>KOMORAN</strong> 형태소 분석 → 명사 추출</li>
+      <li>기업명을 사용자 사전에 추가하여 고유명사 인식 문제 해결</li>
+    </ul>
+  </li>
+  <li><strong>모델링</strong> :
+    <ul>
+      <li><strong>Intent 분석 모델</strong> : RNN 기반, 28만 건 데이터셋 학습</li>
+      <li><strong>개체명 인식 모델 (NER)</strong> : 기업명에 <code class="language-plaintext highlighter-rouge">B_COMPANY</code> 태그 적용 → LSTM 학습</li>
+      <li><strong>질문·답변 매핑</strong> : Intent + NER 결과를 바탕으로 DB에서 적절한 답변 검색</li>
+    </ul>
+  </li>
+</ol>
+
+<p><img src="/assets/images/post/2025/2025-10-04-project_kosa4_itsjob2.gif" alt="chatbot1" /></p>
+
+<p><img src="/assets/images/post/2025/2025-10-04-project_kosa4_itsjob3.gif" alt="chatbot2" /></p>
+
+<p><img src="/assets/images/post/2025/2025-10-04-project_kosa4_itsjob4.gif" alt="chatbot3" /></p>]]></content><author><name>Lisa</name></author><category term="project" /><category term="project" /><category term="Python" /><category term="Flask" /><category term="MySQL" /><category term="HTML" /><category term="CSS" /><category term="JavaScript" /><category term="BeautifulSoup" /><category term="Selenium" /><category term="Pandas" /><category term="OpenPyXL" /><category term="Konlpy" /><category term="Okt" /><category term="Tensorflow" /><category term="Keras" /><category term="LSTM" /><category term="PyMySQL" /><summary type="html"><![CDATA[프로젝트 개요 프로젝트명 : AI 기반 IT 취업 지원 서비스 기간 : 2022.02 ~ 2022.04 (약 7주) 소속/고객사 : 팀 프로젝트 사용 기술 : 서버 : Flask, Tomcat, Spring 프로그래밍 언어 : Python, Java, HTML, CSS, JavaScript, JSP DBMS : MariaDB AI/NLP : GPT2, KoGPT2, BERT, Pandas, NumPy, TensorFlow, Scikit-learn 데이터 수집/크롤링 : BeautifulSoup, Selenium]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/post/2025/2025-10-04-project_kosa4_itsjob1.png" /><media:content medium="image" url="http://localhost:4000/assets/images/post/2025/2025-10-04-project_kosa4_itsjob1.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">영화 추천 및 정보 제공 챗봇 프로젝트</title><link href="http://localhost:4000/project/2025/10/03/project_kosa3_chatbot.html" rel="alternate" type="text/html" title="영화 추천 및 정보 제공 챗봇 프로젝트" /><published>2025-10-03T23:41:45+09:00</published><updated>2025-10-03T23:41:45+09:00</updated><id>http://localhost:4000/project/2025/10/03/project_kosa3_chatbot</id><content type="html" xml:base="http://localhost:4000/project/2025/10/03/project_kosa3_chatbot.html"><![CDATA[<h2 id="프로젝트-개요">프로젝트 개요</h2>
 <ul>
   <li><strong>프로젝트명</strong> : 영화 추천 및 정보 제공 챗봇 프로젝트</li>
   <li><strong>기간</strong> : 2022.02 ~ 2022.02(2주)</li>
@@ -83,7 +180,7 @@
   <li><strong>KOFIC Open API 연동</strong> : 일일 박스오피스, 영화 목록 데이터를 JSON으로 수집</li>
 </ul>
 
-<p><img src="/assets/images/post/2025/2025-10-03-project_kosa3_chatbot3.gif" alt="chatbot" /></p>]]></content><author><name>Lisa</name></author><category term="project" /><category term="project" /><category term="Python" /><category term="Flask" /><category term="MySQL" /><category term="HTML" /><category term="CSS" /><category term="JavaScript" /><category term="BeautifulSoup" /><category term="Selenium" /><category term="Pandas" /><category term="OpenPyXL" /><category term="Konlpy" /><category term="Okt" /><category term="Tensorflow" /><category term="Keras" /><category term="LSTM" /><category term="PyMySQL" /><summary type="html"><![CDATA[프로젝트 개요 프로젝트명 : 영화 추천 및 정보 제공 챗봇 프로젝트 기간 : 2022.02 ~ 2022.02(2주) 소속/고객사 : 팀 프로젝트 사용 기술 : Python, Flask, MySQL, HTML, CSS, JavaScript, BeautifulSoup, Selenium, Pandas, OpenPyXL, Konlpy(코모란, Okt), Tensorflow/Keras(Bi-LSTM), PyMySQL 등]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/post/2025/2025-10-03-project_kosa3_chatbot2.png" /><media:content medium="image" url="http://localhost:4000/assets/images/post/2025/2025-10-03-project_kosa3_chatbot2.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">신년 분석과 트렌드 예측 프로젝트</title><link href="http://localhost:4000/project/2025/10/03/project_kosa2_data/" rel="alternate" type="text/html" title="신년 분석과 트렌드 예측 프로젝트" /><published>2025-10-03T21:40:29+09:00</published><updated>2025-10-03T21:40:29+09:00</updated><id>http://localhost:4000/project/2025/10/03/project_kosa2_data</id><content type="html" xml:base="http://localhost:4000/project/2025/10/03/project_kosa2_data/"><![CDATA[<h2 id="프로젝트-개요">프로젝트 개요</h2>
+<p><img src="/assets/images/post/2025/2025-10-03-project_kosa3_chatbot3.gif" alt="chatbot" /></p>]]></content><author><name>Lisa</name></author><category term="project" /><category term="project" /><category term="Python" /><category term="Flask" /><category term="MySQL" /><category term="HTML" /><category term="CSS" /><category term="JavaScript" /><category term="BeautifulSoup" /><category term="Selenium" /><category term="Pandas" /><category term="OpenPyXL" /><category term="Konlpy" /><category term="Okt" /><category term="Tensorflow" /><category term="Keras" /><category term="LSTM" /><category term="PyMySQL" /><summary type="html"><![CDATA[프로젝트 개요 프로젝트명 : 영화 추천 및 정보 제공 챗봇 프로젝트 기간 : 2022.02 ~ 2022.02(2주) 소속/고객사 : 팀 프로젝트 사용 기술 : Python, Flask, MySQL, HTML, CSS, JavaScript, BeautifulSoup, Selenium, Pandas, OpenPyXL, Konlpy(코모란, Okt), Tensorflow/Keras(Bi-LSTM), PyMySQL 등]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/post/2025/2025-10-03-project_kosa3_chatbot2.png" /><media:content medium="image" url="http://localhost:4000/assets/images/post/2025/2025-10-03-project_kosa3_chatbot2.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">신년 분석과 트렌드 예측 프로젝트</title><link href="http://localhost:4000/project/2025/10/03/project_kosa2_data.html" rel="alternate" type="text/html" title="신년 분석과 트렌드 예측 프로젝트" /><published>2025-10-03T21:40:29+09:00</published><updated>2025-10-03T21:40:29+09:00</updated><id>http://localhost:4000/project/2025/10/03/project_kosa2_data</id><content type="html" xml:base="http://localhost:4000/project/2025/10/03/project_kosa2_data.html"><![CDATA[<h2 id="프로젝트-개요">프로젝트 개요</h2>
 <ul>
   <li><strong>프로젝트명</strong> : 신년 분석과 트렌드 예측 프로젝트</li>
   <li><strong>기간</strong> : 2022.01 ~ 2022.01(2주)</li>
@@ -145,7 +242,7 @@ SNS/OTT/스포츠/팬톤컬러 등 다양한 데이터를 크롤링, 전처리, 
 
 <p><img src="/assets/images/post/2025/2025-10-03-project_kosa2_data4.png" alt="beijing olympics" /></p>
 
-<p><img src="/assets/images/post/2025/2025-10-03-project_kosa2_data5.png" alt="graph2" /></p>]]></content><author><name>Lisa</name></author><category term="project" /><category term="project" /><category term="Python" /><category term="Jupyter" /><category term="HTML" /><category term="CSS" /><category term="JavaScript" /><category term="AmCharts4" /><category term="BeautifulSoup" /><category term="Selenium" /><category term="Pandas" /><category term="Numpy" /><summary type="html"><![CDATA[프로젝트 개요 프로젝트명 : 신년 분석과 트렌드 예측 프로젝트 기간 : 2022.01 ~ 2022.01(2주) 소속/고객사 : 팀 프로젝트 (데이터 분석 &amp; 웹 구현) 사용 기술 : Python, Jupyter, HTML, CSS, JavaScript, AmCharts4, BeautifulSoup, Selenium, Pandas, Numpy 등]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/post/2025/2025-10-03-project_kosa2_data2.png" /><media:content medium="image" url="http://localhost:4000/assets/images/post/2025/2025-10-03-project_kosa2_data2.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">우여곡절 블로그 만들기-카테고리 메뉴</title><link href="http://localhost:4000/blog/2022/05/19/blog_sidebar/" rel="alternate" type="text/html" title="우여곡절 블로그 만들기-카테고리 메뉴" /><published>2022-05-19T21:04:54+09:00</published><updated>2022-05-19T21:04:54+09:00</updated><id>http://localhost:4000/blog/2022/05/19/blog_sidebar</id><content type="html" xml:base="http://localhost:4000/blog/2022/05/19/blog_sidebar/"><![CDATA[<p>“색” 위주의 디자인이 맘에 들어서 <a href="https://github.com/codebygina/affiliates-jekyll-theme">“Affiliates” Jekyll Theme</a> 를 토대로 블로그를 만들고 있다.<br />
+<p><img src="/assets/images/post/2025/2025-10-03-project_kosa2_data5.png" alt="graph2" /></p>]]></content><author><name>Lisa</name></author><category term="project" /><category term="project" /><category term="Python" /><category term="Jupyter" /><category term="HTML" /><category term="CSS" /><category term="JavaScript" /><category term="AmCharts4" /><category term="BeautifulSoup" /><category term="Selenium" /><category term="Pandas" /><category term="Numpy" /><summary type="html"><![CDATA[프로젝트 개요 프로젝트명 : 신년 분석과 트렌드 예측 프로젝트 기간 : 2022.01 ~ 2022.01(2주) 소속/고객사 : 팀 프로젝트 (데이터 분석 &amp; 웹 구현) 사용 기술 : Python, Jupyter, HTML, CSS, JavaScript, AmCharts4, BeautifulSoup, Selenium, Pandas, Numpy 등]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/post/2025/2025-10-03-project_kosa2_data2.png" /><media:content medium="image" url="http://localhost:4000/assets/images/post/2025/2025-10-03-project_kosa2_data2.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">우여곡절 블로그 만들기-카테고리 메뉴</title><link href="http://localhost:4000/blog/2022/05/19/blog_sidebar.html" rel="alternate" type="text/html" title="우여곡절 블로그 만들기-카테고리 메뉴" /><published>2022-05-19T21:04:54+09:00</published><updated>2022-05-19T21:04:54+09:00</updated><id>http://localhost:4000/blog/2022/05/19/blog_sidebar</id><content type="html" xml:base="http://localhost:4000/blog/2022/05/19/blog_sidebar.html"><![CDATA[<p>“색” 위주의 디자인이 맘에 들어서 <a href="https://github.com/codebygina/affiliates-jekyll-theme">“Affiliates” Jekyll Theme</a> 를 토대로 블로그를 만들고 있다.<br />
 (지금은 관리를 안하시는지 Demo 페이지가 없다.)</p>
 
 <p>블로그를 만든 지는 꽤 됐지만 한참 현생 핑계로 방치하다가 이제야 밀린 블로그 꾸미기를 하고 있다!</p>
@@ -282,11 +379,11 @@ Liquid로 이리저리 sort를 하고 싶었는데 잘 되지 않았다..</p>
   <li>키 배열 추출 후 순차 정렬</li>
 </ul>
 
-<p>아직은 카테고리가 많지 않지만 추후에 계획만큼 늘어나면 아코디언 메뉴나 검색 기능도 붙여볼 생각이다.</p>]]></content><author><name>Lisa</name></author><category term="blog" /><category term="Affiliates" /><category term="Jekyll" /><category term="theme" /><category term="github" /><category term="blog" /><category term="liquid" /><category term="sidemenu" /><category term="menu" /><category term="category" /><summary type="html"><![CDATA[“색” 위주의 디자인이 맘에 들어서 “Affiliates” Jekyll Theme 를 토대로 블로그를 만들고 있다. (지금은 관리를 안하시는지 Demo 페이지가 없다.)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">백준 10162번| Python - 전자레인지</title><link href="http://localhost:4000/codingtest/2022/01/18/python_ct1/" rel="alternate" type="text/html" title="백준 10162번| Python - 전자레인지" /><published>2022-01-18T21:43:12+09:00</published><updated>2022-01-18T21:43:12+09:00</updated><id>http://localhost:4000/codingtest/2022/01/18/python_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2022/01/18/python_ct1/"><![CDATA[<p><img src="/assets/images/post/2022/2022-01-18-pg1.png" alt="pg" /></p>
+<p>아직은 카테고리가 많지 않지만 추후에 계획만큼 늘어나면 아코디언 메뉴나 검색 기능도 붙여볼 생각이다.</p>]]></content><author><name>Lisa</name></author><category term="blog" /><category term="Affiliates" /><category term="Jekyll" /><category term="theme" /><category term="github" /><category term="blog" /><category term="liquid" /><category term="sidemenu" /><category term="menu" /><category term="category" /><summary type="html"><![CDATA[“색” 위주의 디자인이 맘에 들어서 “Affiliates” Jekyll Theme 를 토대로 블로그를 만들고 있다. (지금은 관리를 안하시는지 Demo 페이지가 없다.)]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/1.jpg" /><media:content medium="image" url="http://localhost:4000/assets/images/1.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">백준 10162번| Python - 전자레인지</title><link href="http://localhost:4000/codingtest/2022/01/18/python_ct1.html" rel="alternate" type="text/html" title="백준 10162번| Python - 전자레인지" /><published>2022-01-18T21:43:12+09:00</published><updated>2022-01-18T21:43:12+09:00</updated><id>http://localhost:4000/codingtest/2022/01/18/python_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2022/01/18/python_ct1.html"><![CDATA[<p><img src="/assets/images/post/2022/2022-01-18-pg1.png" alt="pg" /></p>
 
 <h2 id="풀이">풀이(</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-</code></pre></div></div>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="BAEKJOON" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">가까운 공항 찾기</title><link href="http://localhost:4000/codingtest/2022/01/13/python_ml_01/" rel="alternate" type="text/html" title="가까운 공항 찾기" /><published>2022-01-13T23:50:43+09:00</published><updated>2022-01-13T23:50:43+09:00</updated><id>http://localhost:4000/codingtest/2022/01/13/python_ml_01</id><content type="html" xml:base="http://localhost:4000/codingtest/2022/01/13/python_ml_01/"><![CDATA[<p>주어진 세 공항들의 위도, 경도를 현재 위치의 위도, 경도와 비교하여 가장 가까운 공항을 찾는 문제입니다.</p>
+</code></pre></div></div>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="BAEKJOON" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">가까운 공항 찾기</title><link href="http://localhost:4000/codingtest/2022/01/13/python_ml_01.html" rel="alternate" type="text/html" title="가까운 공항 찾기" /><published>2022-01-13T23:50:43+09:00</published><updated>2022-01-13T23:50:43+09:00</updated><id>http://localhost:4000/codingtest/2022/01/13/python_ml_01</id><content type="html" xml:base="http://localhost:4000/codingtest/2022/01/13/python_ml_01.html"><![CDATA[<p>주어진 세 공항들의 위도, 경도를 현재 위치의 위도, 경도와 비교하여 가장 가까운 공항을 찾는 문제입니다.</p>
 
 <table>
   <thead>
@@ -342,7 +439,7 @@ Liquid로 이리저리 sort를 하고 싶었는데 잘 되지 않았다..</p>
     <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">diff</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
 </code></pre></div></div>
 
-<p>이제 함수를 이용해서 세 공항과 현재 위치를 비교할 건데요</p>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Numpy" /><category term="Machine-Learning" /><category term="codingtest" /><summary type="html"><![CDATA[주어진 세 공항들의 위도, 경도를 현재 위치의 위도, 경도와 비교하여 가장 가까운 공항을 찾는 문제입니다.]]></summary></entry><entry><title type="html">프로그래머스 Lv.4| MySQL - 우유와 요거트가 담긴 바구니</title><link href="http://localhost:4000/codingtest/2022/01/04/mysql_ct1/" rel="alternate" type="text/html" title="프로그래머스 Lv.4| MySQL - 우유와 요거트가 담긴 바구니" /><published>2022-01-04T22:22:06+09:00</published><updated>2022-01-04T22:22:06+09:00</updated><id>http://localhost:4000/codingtest/2022/01/04/mysql_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2022/01/04/mysql_ct1/"><![CDATA[<p><img src="/assets/images/post/2022/2022-01-04-pg1.png" alt="pg" /></p>
+<p>이제 함수를 이용해서 세 공항과 현재 위치를 비교할 건데요</p>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Numpy" /><category term="Machine-Learning" /><category term="codingtest" /><summary type="html"><![CDATA[주어진 세 공항들의 위도, 경도를 현재 위치의 위도, 경도와 비교하여 가장 가까운 공항을 찾는 문제입니다.]]></summary></entry><entry><title type="html">프로그래머스 Lv.4| MySQL - 우유와 요거트가 담긴 바구니</title><link href="http://localhost:4000/codingtest/2022/01/04/mysql_ct1.html" rel="alternate" type="text/html" title="프로그래머스 Lv.4| MySQL - 우유와 요거트가 담긴 바구니" /><published>2022-01-04T22:22:06+09:00</published><updated>2022-01-04T22:22:06+09:00</updated><id>http://localhost:4000/codingtest/2022/01/04/mysql_ct1</id><content type="html" xml:base="http://localhost:4000/codingtest/2022/01/04/mysql_ct1.html"><![CDATA[<p><img src="/assets/images/post/2022/2022-01-04-pg1.png" alt="pg" /></p>
 
 <h2 id="풀이">풀이(</h2>
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="k">C</span><span class="p">.</span><span class="n">CART_ID</span>
@@ -353,7 +450,7 @@ Liquid로 이리저리 sort를 하고 싶었는데 잘 되지 않았다..</p>
 <span class="k">WHERE</span> <span class="k">C</span><span class="p">.</span><span class="n">NAME</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">'Yogurt'</span><span class="p">)</span>
 <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">CART_ID</span>
 <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">CART_ID</span>
-</code></pre></div></div>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="MySQL" /><category term="SQL" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 체육복</title><link href="http://localhost:4000/codingtest/2021/12/27/python_ct_cloth/" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 체육복" /><published>2021-12-27T22:42:27+09:00</published><updated>2021-12-27T22:42:27+09:00</updated><id>http://localhost:4000/codingtest/2021/12/27/python_ct_cloth</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/27/python_ct_cloth/"><![CDATA[<p><img src="/assets/images/post/2021/2021-12-27-pg1.png" alt="pg" /></p>
+</code></pre></div></div>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="MySQL" /><category term="SQL" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 체육복</title><link href="http://localhost:4000/codingtest/2021/12/27/python_ct_cloth.html" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 체육복" /><published>2021-12-27T22:42:27+09:00</published><updated>2021-12-27T22:42:27+09:00</updated><id>http://localhost:4000/codingtest/2021/12/27/python_ct_cloth</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/27/python_ct_cloth.html"><![CDATA[<p><img src="/assets/images/post/2021/2021-12-27-pg1.png" alt="pg" /></p>
 
 <h2 id="풀이">풀이(</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">lost</span><span class="p">,</span> <span class="n">reserve</span><span class="p">):</span>
@@ -366,7 +463,7 @@ Liquid로 이리저리 sort를 하고 싶었는데 잘 되지 않았다..</p>
         <span class="k">elif</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="ow">in</span> <span class="n">set_l</span><span class="p">:</span>
             <span class="n">set_l</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">n</span><span class="o">-</span><span class="nf">len</span><span class="p">(</span><span class="n">set_l</span><span class="p">)</span>
-</code></pre></div></div>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 자릿수 더하기</title><link href="http://localhost:4000/codingtest/2021/12/26/python_ct_plus/" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 자릿수 더하기" /><published>2021-12-26T22:05:46+09:00</published><updated>2021-12-26T22:05:46+09:00</updated><id>http://localhost:4000/codingtest/2021/12/26/python_ct_plus</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/26/python_ct_plus/"><![CDATA[<p><img src="/assets/images/post/2021/2021-12-26-pg1.png" alt="pg" /></p>
+</code></pre></div></div>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 자릿수 더하기</title><link href="http://localhost:4000/codingtest/2021/12/26/python_ct_plus.html" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 자릿수 더하기" /><published>2021-12-26T22:05:46+09:00</published><updated>2021-12-26T22:05:46+09:00</updated><id>http://localhost:4000/codingtest/2021/12/26/python_ct_plus</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/26/python_ct_plus.html"><![CDATA[<p><img src="/assets/images/post/2021/2021-12-26-pg1.png" alt="pg" /></p>
 
 <h2 id="풀이">풀이(</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -374,7 +471,7 @@ Liquid로 이리저리 sort를 하고 싶었는데 잘 되지 않았다..</p>
     <span class="n">answer</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nf">str</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
 
     <span class="k">return</span> <span class="nf">sum</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
-</code></pre></div></div>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 핸드폰 번호 가리기</title><link href="http://localhost:4000/codingtest/2021/12/25/python_ct_masking/" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 핸드폰 번호 가리기" /><published>2021-12-25T23:27:16+09:00</published><updated>2021-12-25T23:27:16+09:00</updated><id>http://localhost:4000/codingtest/2021/12/25/python_ct_masking</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/25/python_ct_masking/"><![CDATA[<p><img src="/assets/images/post/2021/2021-12-25-pg1.png" alt="pg" /></p>
+</code></pre></div></div>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 핸드폰 번호 가리기</title><link href="http://localhost:4000/codingtest/2021/12/25/python_ct_masking.html" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 핸드폰 번호 가리기" /><published>2021-12-25T23:27:16+09:00</published><updated>2021-12-25T23:27:16+09:00</updated><id>http://localhost:4000/codingtest/2021/12/25/python_ct_masking</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/25/python_ct_masking.html"><![CDATA[<p><img src="/assets/images/post/2021/2021-12-25-pg1.png" alt="pg" /></p>
 
 <h2 id="풀이실패">풀이(실패)</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">phone_number</span><span class="p">):</span>
@@ -396,16 +493,4 @@ Liquid로 이리저리 sort를 하고 싶었는데 잘 되지 않았다..</p>
 
 <ol>
   <li>다른 방식으로 풀이하여 통과하였습니다.</li>
-</ol>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">프로그래머스 Lv.1| Python - 2016년</title><link href="http://localhost:4000/codingtest/2021/12/24/python_ct_2016/" rel="alternate" type="text/html" title="프로그래머스 Lv.1| Python - 2016년" /><published>2021-12-24T22:20:11+09:00</published><updated>2021-12-24T22:20:11+09:00</updated><id>http://localhost:4000/codingtest/2021/12/24/python_ct_2016</id><content type="html" xml:base="http://localhost:4000/codingtest/2021/12/24/python_ct_2016/"><![CDATA[<p><img src="/assets/images/post/2021/2021-12-24-pg1.png" alt="pg" /></p>
-
-<h2 id="풀이">풀이</h2>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">datetime</span>
-<span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="n">answer</span> <span class="o">=</span> <span class="p">[</span><span class="sh">'</span><span class="s">MON</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">TUE</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">WED</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">THU</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">FRI</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">SAT</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">SUN</span><span class="sh">'</span><span class="p">]</span>    
-    
-    <span class="k">return</span> <span class="n">answer</span><span class="p">[</span><span class="n">datetime</span><span class="p">.</span><span class="nf">date</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">).</span><span class="nf">weekday</span><span class="p">()]</span>
-</code></pre></div></div>
-
-<ol>
-  <li>날짜 관련 모듈을 찾아보고 간단하게 작성했습니다!</li>
 </ol>]]></content><author><name>Lisa</name></author><category term="codingtest" /><category term="Python" /><category term="Programmers" /><category term="codingtest" /><summary type="html"><![CDATA[]]></summary></entry></feed>
