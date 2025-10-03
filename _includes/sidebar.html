@@ -3,7 +3,9 @@
         <h5><span>Catergory</span></h5>
         {% assign cats = "" | split: "" %}
         {% for pair in site.categories %}
+            {% if pair[0] != 'project' %}
             {% assign cats = cats | push: pair[0] %}
+            {% endif %}
         {% endfor %}
         {% assign cats = cats | sort_natural %}
         <ul>            

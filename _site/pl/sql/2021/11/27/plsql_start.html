@@ -5,29 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" href="/assets/images/favicon.ico">
 
-<title>JSP - Servlet 작성하기 | Lisa de Blog</title>
+<title>PL/SQL - 기본 구조 | Lisa.dev</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>JSP - Servlet 작성하기 | Lisa de Blog</title>
+<title>PL/SQL - 기본 구조 | Lisa.dev</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="JSP - Servlet 작성하기" />
+<meta property="og:title" content="PL/SQL - 기본 구조" />
 <meta name="author" content="Lisa" />
 <meta property="og:locale" content="ko_kr" />
-<meta name="description" content="서블릿(Servlet)이란?" />
-<meta property="og:description" content="서블릿(Servlet)이란?" />
-<link rel="canonical" href="http://localhost:4000/java/2021/08/04/jsp-servlet.html" />
-<meta property="og:url" content="http://localhost:4000/java/2021/08/04/jsp-servlet.html" />
-<meta property="og:site_name" content="Lisa de Blog" />
+<meta name="description" content="PL/SQL은 블록 구조를 가지고 있습니다." />
+<meta property="og:description" content="PL/SQL은 블록 구조를 가지고 있습니다." />
+<link rel="canonical" href="http://localhost:4000/pl/sql/2021/11/27/plsql_start.html" />
+<meta property="og:url" content="http://localhost:4000/pl/sql/2021/11/27/plsql_start.html" />
+<meta property="og:site_name" content="Lisa.dev" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-04T00:00:00+09:00" />
+<meta property="article:published_time" content="2021-11-27T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="JSP - Servlet 작성하기" />
+<meta property="twitter:title" content="PL/SQL - 기본 구조" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lisa"},"dateModified":"2021-08-04T00:00:00+09:00","datePublished":"2021-08-04T00:00:00+09:00","description":"서블릿(Servlet)이란?","headline":"JSP - Servlet 작성하기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/2021/08/04/jsp-servlet.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Lisa"},"url":"http://localhost:4000/java/2021/08/04/jsp-servlet.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lisa"},"dateModified":"2021-11-27T00:00:00+09:00","datePublished":"2021-11-27T00:00:00+09:00","description":"PL/SQL은 블록 구조를 가지고 있습니다.","headline":"PL/SQL - 기본 구조","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pl/sql/2021/11/27/plsql_start.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Lisa"},"url":"http://localhost:4000/pl/sql/2021/11/27/plsql_start.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-<link href="/assets/css/theme.css?v=1759420604" rel="stylesheet">
+<link href="/assets/css/theme.css?v=1759472989" rel="stylesheet">
+<link href="/assets/css/syntax.css?v=1759472989" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
@@ -46,7 +47,7 @@
 
           <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
           <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
-          <span class="d-none d-md-inline-block">Lisa de Blog</span>
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
           </a>
 
           <!-- <div class="d-flex align-items-center">
@@ -83,11 +84,15 @@
             <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
               
               <li class="nav-item">
+                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
+              </li>
+              
+              <li class="nav-item">
                 <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link px-3 " href="/about/" alt="About">About</a>
+                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
               </li>
               
             </ul>
@@ -122,7 +127,7 @@
                         
                         
                         <li>
-                         <a href="/categories/java">Java</a>
+                         <a href="/categories/pl-sql">pl/sql</a>
                         </li>
                         
                     </ul>
@@ -130,7 +135,7 @@
                 <!-- End Categories -->
                 
                 <!-- Post Title -->
-				<h1 class="posttitle title-font">JSP - Servlet 작성하기</h1> 
+				<h1 class="posttitle title-font">PL/SQL - 기본 구조</h1> 
                 
 			</div>
 
@@ -138,80 +143,74 @@
 
 			<!-- Post Content -->
 			<div class="article-post">
-				<h1 id="서블릿servlet이란">서블릿(Servlet)이란?</h1>
+				<p>PL/SQL은 블록 구조를 가지고 있습니다.</p>
 
-<p>클라이언트가 요청하는 요소(HTTP)를 웹 서버를 통해 동적인 Html 문서로 생성하여 그 결과를 전달해주는 자바 클래스입니다. 일반적인 자바 프로그램과는 달리 웹 서버에서 실행되어지는 프로그램이기 때문에 지정된 특정 클래스를 상속받아 사용합니다.<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DECLARE</span>
+   <span class="p">[</span><span class="err">실행에</span> <span class="err">필요한</span> <span class="err">여러</span> <span class="err">요소</span> <span class="err">선언</span><span class="p">];</span>
+<span class="k">BEGIN</span>
+   <span class="p">[</span><span class="err">작업을</span> <span class="err">위해</span> <span class="err">실제</span> <span class="err">진행하는</span> <span class="err">명령어</span><span class="p">];</span>
+<span class="n">EXCEPTION</span>
+   <span class="p">[</span><span class="n">PL</span><span class="o">/</span><span class="k">SQL</span> <span class="err">수행</span> <span class="err">도중</span> <span class="err">발생하는</span> <span class="err">오류처리</span><span class="p">];</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="o">/</span>
+</code></pre></div></div>
 
-<h1 id="서블릿의-장점">서블릿의 장점</h1>
+<p>각각의 키워드를 설명하자면</p>
 
-<ul>
-  <li>순수 자바 프로그램이기 때문에 모든 자바 API를 사용할 수 있습니다.</li>
-  <li>개발된 프로그램은 운영체제의 종류에 구애받지 않고 다양한 서버 환경에서 실행할 수 있습니다.</li>
-  <li></li>
-  <li>jh</li>
-</ul>
+<ol>
+  <li>DECLARE는 선언부로 실행에 사용될 변수, 상수, 커서 등을 선언합니다.</li>
+  <li>BEGIN은 실행부로, PL/SQL을 작성할 때 필수로 입력합니다. 조건문, 반복문, 함수 등을 정의합니다.</li>
+  <li>EXCEPTION은 예외처리부로, 실행 도중 발생하는 예외 상황을 해결하는 문장이 들어갑니다.</li>
+</ol>
 
-<pre><code class="language-java">import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+<p>필요에 따라 블록 안에 다른 블록을 포함할 수도 있는데 이것을 <code class="language-plaintext highlighter-rouge">중첩 블록</code>이라고 합니다.</p>
 
-@WebServlet({"/css/*", "/js/*", "/img/*", "/static/*"})
-public class Resrc extends HttpServlet {
+<p>PL/SQL을 사용해서 Hello, World!를 출력해보겠습니다.<br />
+PL/SQL의 실행 결과를 화면에 출력시키려면 우선 <code class="language-plaintext highlighter-rouge">SERVEROUTPUT</code> 환경 변수 값을 ON으로 변경해주어야 합니다.</p>
 
-	public void service(HttpServletRequest req, HttpServletResponse resp) {
-		
-		String url = req.getRequestURI(); 
-						
-		url = url.substring(url.indexOf("/", 1));	
-		RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/resources" + url);
-		try {
-			rd.forward(req, resp);
-		} catch(Exception e) {
-			e.printStackTrace();
-		}		
-	}
-}
-</code></pre>
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1">
-      <p>참고) <code>JSP</code>는 서블릿 기반의 웹 프로그래밍 기술이기 때문에 내부적으로 서블릿으로 변환되어 실행됩니다. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SET</span> <span class="n">SERVEROUTPUT</span> <span class="k">ON</span><span class="p">;</span>
+
+<span class="k">BEGIN</span>
+   <span class="n">DBMS_OUTPUT</span><span class="p">.</span><span class="n">PUT_LINE</span><span class="p">(</span><span class="s1">'Hello, World!'</span><span class="p">);</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="o">/</span>
+</code></pre></div></div>
+
+<p>END; 뒤의 / 표기는 실행시킨다는 의미입니다.</p>
 
                 <div class="clearfix"></div>
 			</div>
 
+            <div class="post-tags">
+            
+                <p>SQL</p>
+            
+                <p>PL/SQL</p>
+            
+            </div>
+
             <!-- Post Date -->
-            <p>
+            <p style="text-align: right;">
             <small>
-                <span class="post-date"><time class="post-date" datetime="2021-08-04">2021년 08월 04일</time></span>           
+                <span class="post-date"><time class="post-date" datetime="2021-11-27">Post : 2021.11.27</time></span>           
                 
                 </small>
             </p>
-            
-			
             
             <!-- Prev/Next -->
             <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
               
                 <div class="col-md-6 rightborder pl-0">
-                    <a class="thepostlink" href="http://localhost:4000/java/2021/07/28/jsp-db.html">&laquo; JSP - DB 연결하기(JDBC & DBCP)</a>
+                    <a class="thepostlink" href="http://localhost:4000/pl/sql/2021/11/22/plsql.html">&laquo; ORA-01756:단일 인용부를 지정해주십시오</a>
                 </div>
               
               
                 <div class="col-md-6 text-right pr-0">
-                    <a class="thepostlink" href="http://localhost:4000/java/2021/08/11/jsp-join.html">JSP - 회원가입 기능 만들기 &raquo;</a>
+                    <a class="thepostlink" href="http://localhost:4000/codingtest/2021/12/08/python_ct1.html">백준 1000번| Python - A+B &raquo;</a>
                 </div>
               
             </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                
-            
+            <!-- End Prev/Next -->            
             
             <!-- Begin Comments
             ================================================== -->
@@ -259,15 +258,7 @@ public class Resrc extends HttpServlet {
                 </li>
             
                 <li>
-                    <a href="/categories/java/">Java</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/project/">Project</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/sql/">SQL</a>
+                    <a href="/categories/pl-sql/">PL/SQL</a>
                 </li>
             
         </ul>
@@ -302,7 +293,7 @@ public class Resrc extends HttpServlet {
     
     </ul>
     <div class="copyright small">
-       Copyright © Lisa de Blog. All rights reserved.
+       Copyright © Lisa.dev. All rights reserved.
     </div>
 </footer>
 

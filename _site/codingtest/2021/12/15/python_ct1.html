@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" href="/assets/images/favicon.ico">
 
-<title>프로그래머스 Lv.2| Python - 더 맵게 | Lisa de Blog</title>
+<title>프로그래머스 Lv.2| Python - 더 맵게 | Lisa.dev</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>프로그래머스 Lv.2 Python - 더 맵게 | Lisa de Blog</title>
+<title>프로그래머스 Lv.2 Python - 더 맵게 | Lisa.dev</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="프로그래머스 Lv.2 Python - 더 맵게" />
 <meta name="author" content="Lisa" />
 <meta property="og:locale" content="ko_kr" />
 <link rel="canonical" href="http://localhost:4000/codingtest/2021/12/15/python_ct1.html" />
 <meta property="og:url" content="http://localhost:4000/codingtest/2021/12/15/python_ct1.html" />
-<meta property="og:site_name" content="Lisa de Blog" />
+<meta property="og:site_name" content="Lisa.dev" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-12-15T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
@@ -25,7 +25,8 @@
 <!-- End Jekyll SEO tag -->
 
 
-<link href="/assets/css/theme.css?v=1759420604" rel="stylesheet">
+<link href="/assets/css/theme.css?v=1759472989" rel="stylesheet">
+<link href="/assets/css/syntax.css?v=1759472989" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
@@ -44,7 +45,7 @@
 
           <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
           <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
-          <span class="d-none d-md-inline-block">Lisa de Blog</span>
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
           </a>
 
           <!-- <div class="d-flex align-items-center">
@@ -81,11 +82,15 @@
             <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
               
               <li class="nav-item">
+                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
+              </li>
+              
+              <li class="nav-item">
                 <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link px-3 " href="/about/" alt="About">About</a>
+                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
               </li>
               
             </ul>
@@ -136,23 +141,23 @@
 
 			<!-- Post Content -->
 			<div class="article-post">
-				<p><img src="/assets/images/post/2021-12-15-pg1.png" alt="pg" /></p>
+				<p><img src="/assets/images/post/2021/2021-12-15-pg1.png" alt="pg" /></p>
 
 <h2 id="풀이">풀이</h2>
-<pre><code class="language-python">import heapq
-def solution(sco, K):
-    # heapq.heapify(sco)
-    sco.sort()  # 시간이 더 적게 걸림
-    count = 0
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">heapq</span>
+<span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">sco</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
+    <span class="c1"># heapq.heapify(sco)
+</span>    <span class="n">sco</span><span class="p">.</span><span class="nf">sort</span><span class="p">()</span>  <span class="c1"># 시간이 더 적게 걸림
+</span>    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
     
-    while sco[0] &lt; K:           
-        if len(sco) &lt;= 1:
-            return -1
-        else:
-            heapq.heappush(sco, heapq.heappop(sco) + heapq.heappop(sco) * 2)  
-            count += 1  
-    return count
-</code></pre>
+    <span class="k">while</span> <span class="n">sco</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">K</span><span class="p">:</span>           
+        <span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">sco</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">heapq</span><span class="p">.</span><span class="nf">heappush</span><span class="p">(</span><span class="n">sco</span><span class="p">,</span> <span class="n">heapq</span><span class="p">.</span><span class="nf">heappop</span><span class="p">(</span><span class="n">sco</span><span class="p">)</span> <span class="o">+</span> <span class="n">heapq</span><span class="p">.</span><span class="nf">heappop</span><span class="p">(</span><span class="n">sco</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>  
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>  
+    <span class="k">return</span> <span class="n">count</span>
+</code></pre></div></div>
 
 <ol>
   <li>heapq 함수를 사용했습니다. 리스트 정렬을 먼저 하고 코드를 작성했는데 정렬을 할 때 heapq.heapify()보다는 .sort()가 시간이 더 적게 걸렸습니다.</li>
@@ -161,15 +166,23 @@ def solution(sco, K):
                 <div class="clearfix"></div>
 			</div>
 
+            <div class="post-tags">
+            
+                <p>Python</p>
+            
+                <p>Programmers</p>
+            
+                <p>codingtest</p>
+            
+            </div>
+
             <!-- Post Date -->
-            <p>
+            <p style="text-align: right;">
             <small>
-                <span class="post-date"><time class="post-date" datetime="2021-12-15">2021년 12월 15일</time></span>           
+                <span class="post-date"><time class="post-date" datetime="2021-12-15">Post : 2021.12.15</time></span>           
                 
                 </small>
             </p>
-            
-			
             
             <!-- Prev/Next -->
             <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
@@ -184,12 +197,7 @@ def solution(sco, K):
                 </div>
               
             </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                
-            
+            <!-- End Prev/Next -->            
             
             <!-- Begin Comments
             ================================================== -->
@@ -237,15 +245,7 @@ def solution(sco, K):
                 </li>
             
                 <li>
-                    <a href="/categories/java/">Java</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/project/">Project</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/sql/">SQL</a>
+                    <a href="/categories/pl-sql/">PL/SQL</a>
                 </li>
             
         </ul>
@@ -280,7 +280,7 @@ def solution(sco, K):
     
     </ul>
     <div class="copyright small">
-       Copyright © Lisa de Blog. All rights reserved.
+       Copyright © Lisa.dev. All rights reserved.
     </div>
 </footer>
 

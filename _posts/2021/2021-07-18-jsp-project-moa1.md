@@ -3,7 +3,7 @@ layout: post
 title: JSP 프로젝트 - 전시플랫폼 사이트
 key: 20210718
 tags: Java project JSP Servlet Oracle SQL Html CSS Javascript DBCP MVC jQuery
-categories: Project
+categories: project
 ---
 
 웹 프로젝트  
@@ -28,7 +28,7 @@ categories: Project
 현재 국내에서 진행중인 전시 정보를 한 곳에 모아 보고, 예매할 수 있도록 제작한 **전시플랫폼 홈페이지**입니다.  
 다양한 전시를 분류 작업을 통해 원하는 상품을 쉽게 찾을 수 있도록 하였고 사이트 자체에서 진행하는 이벤트를 통해 소비자의 니즈에 한발 더 다가가도록 하였습니다.  
 
-![moa](/assets/images/post/2021-08-04-moa-main.png)
+![moa](/assets/images/post/2021/2021-08-04-moa-main.png)
 > 슬라이드에 사용된 이미지의 출처는 [캔고루](https://www.cangoroo.co.kr/main/)이며, 가공 없이 비상업적 목적으로 사용하였습니다.
 
 
@@ -36,14 +36,14 @@ categories: Project
 
 ## 세부 계획서
 
-![detail-plan](/assets/images/post/2021-08-04-detail-plan.png)
+![detail-plan](/assets/images/post/2021/2021-08-04-detail-plan.png)
 > 작성한 세부 계획서의 일부.  
 
 제작할 페이지를 대분류,중분류,소분류로 분류해 뷰 작업시 필요한 내용과 각각 구현해야 할 기능을 세세하게 작성하였습니다. 이에 더해 팀원들의 이해를 돕기 위해 기능을 참고할 url을 첨부하였습니다.
 
 ## 스토리보드
 
-![storyboard](/assets/images/post/2021-08-04-storyboard.png)
+![storyboard](/assets/images/post/2021/2021-08-04-storyboard.png)
 > 스토리보드의 일부.  
 
 뷰 작업을 체계적으로 진행하기 위해 스토리보드를 제작하였습니다.  
@@ -51,19 +51,19 @@ categories: Project
 
 ## er model
 
-![ermodel](/assets/images/post/2021-08-04-ermodel.png)
+![ermodel](/assets/images/post/2021/2021-08-04-ermodel.png)
 
 er model로 데이터 개체들 간의 속성 및 관계성을 표기하였습니다.  
 
 ## er diagram
 
-![erd](/assets/images/post/2021-08-04-erd.png)
+![erd](/assets/images/post/2021/2021-08-04-erd.png)
 
 er diagram으로 er model을 더 구체화하여 표기하였습니다.  
 
 ## 테이블명세서
 
-![table](/assets/images/post/2021-08-04-table.png)
+![table](/assets/images/post/2021/2021-08-04-table.png)
 > 테이블명세서의 일부.  
 
 er diagram을 참고하여 테이블명세서를 작성하였습니다. 만들어진 테이블명세서로 Oracle SQL에 테이블 및 데이터를 입력하였고 테이블은 최종적으로 18개가 생성되었습니다.

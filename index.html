@@ -6,20 +6,21 @@ background: '/img/bg-index.jpg'
 
 <!-- Home Intro
 ================================================== -->
-
+{% if page.url == "/" %} 
 <div class="rounded mb-5 hero">
   <div class="row align-items-center justify-content-between">
-    <div class="col-md-6">
-      <h1 class="font-weight-bold mb-4 serif-font">Lisa's Dev Blog<br> — 개발과 기록의 공간</h1>
-      <p class="lead mb-4">My name is Lyam and I'm here to share with you my knowledge and experience of over 10 years of monetizing my blog.</p>
-      <a href="{{site.baseurl}}/about" class="btn btn-dark text-white px-5 btn-lg">About me</a>
+    <div class="col-md-6" style="padding: 0;">
+      <h1 class="font-weight-bold mb-4 serif-font">Small steps, steady code</h1>
+      <p class="lead mb-4" style="white-space: nowrap;">개발 과정에서 마주한 문제와 그 해결 과정을 기록하는 공간입니다.<br>
+작지만 꾸준한 기록을 통해 더 나은 코드와 경험을 만들어 가고자 합니다.</p>
+      <a href="{{site.baseurl}}/profile" class="btn btn-dark text-white px-5 btn-lg">About me</a>
     </div>
     <div class="col-md-6 text-right pl-0 pl-lg-4">
       <img class="intro" src="{{site.baseurl}}/assets/images/intro.svg">      
     </div>
   </div>
 </div>
-
+{% endif %} 
 
 <!-- Featured
 ================================================== -->

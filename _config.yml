@@ -1,4 +1,4 @@
-title: Lisa de Blog
+title: Lisa.dev
 email: # wowthemesnet@gmail.com
 timezone: Asia/Seoul
 url     : https://hsyeun.github.io/
@@ -16,8 +16,10 @@ feed_update_period: daily
 feed_update_frequency: 1
 markdown: kramdown
 kramdown:
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    disable: true
+    css_class: 'highlight'
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed

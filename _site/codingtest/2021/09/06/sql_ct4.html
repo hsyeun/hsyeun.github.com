@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" href="/assets/images/favicon.ico">
 
-<title>프로그래머스 Lv.3| Oracle - 헤비 유저가 소유한 장소 | Lisa de Blog</title>
+<title>프로그래머스 Lv.3| Oracle - 헤비 유저가 소유한 장소 | Lisa.dev</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>프로그래머스 Lv.3 Oracle - 헤비 유저가 소유한 장소 | Lisa de Blog</title>
+<title>프로그래머스 Lv.3 Oracle - 헤비 유저가 소유한 장소 | Lisa.dev</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="프로그래머스 Lv.3 Oracle - 헤비 유저가 소유한 장소" />
 <meta name="author" content="Lisa" />
@@ -17,7 +17,7 @@
 <meta property="og:description" content="문제 설명" />
 <link rel="canonical" href="http://localhost:4000/codingtest/2021/09/06/sql_ct4.html" />
 <meta property="og:url" content="http://localhost:4000/codingtest/2021/09/06/sql_ct4.html" />
-<meta property="og:site_name" content="Lisa de Blog" />
+<meta property="og:site_name" content="Lisa.dev" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-09-06T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
@@ -27,7 +27,8 @@
 <!-- End Jekyll SEO tag -->
 
 
-<link href="/assets/css/theme.css?v=1759420604" rel="stylesheet">
+<link href="/assets/css/theme.css?v=1759472989" rel="stylesheet">
+<link href="/assets/css/syntax.css?v=1759472989" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
@@ -46,7 +47,7 @@
 
           <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
           <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
-          <span class="d-none d-md-inline-block">Lisa de Blog</span>
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
           </a>
 
           <!-- <div class="d-flex align-items-center">
@@ -83,11 +84,15 @@
             <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
               
               <li class="nav-item">
+                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
+              </li>
+              
+              <li class="nav-item">
                 <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link px-3 " href="/about/" alt="About">About</a>
+                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
               </li>
               
             </ul>
@@ -140,7 +145,7 @@
 			<div class="article-post">
 				<h2 id="문제-설명">문제 설명</h2>
 
-<p><code>PLACES</code> 테이블은 공간 임대 서비스에 등록된 공간의 정보를 담은 테이블입니다. <code>PLACES</code> 테이블의 구조는 다음과 같으며 <code>ID</code>, <code>NAME</code>, <code>HOST_ID</code>는 각각 공간의 아이디, 이름, 공간을 소유한 유저의 아이디를 나타냅니다. <code>ID</code>는 기본키입니다.</p>
+<p><code class="language-plaintext highlighter-rouge">PLACES</code> 테이블은 공간 임대 서비스에 등록된 공간의 정보를 담은 테이블입니다. <code class="language-plaintext highlighter-rouge">PLACES</code> 테이블의 구조는 다음과 같으며 <code class="language-plaintext highlighter-rouge">ID</code>, <code class="language-plaintext highlighter-rouge">NAME</code>, <code class="language-plaintext highlighter-rouge">HOST_ID</code>는 각각 공간의 아이디, 이름, 공간을 소유한 유저의 아이디를 나타냅니다. <code class="language-plaintext highlighter-rouge">ID</code>는 기본키입니다.</p>
 
 <table>
   <thead>
@@ -169,7 +174,7 @@
 
 <p><strong>예시</strong></p>
 
-<p>예를 들어 <code>PLACES</code> 테이블이 다음과 같다면</p>
+<p>예를 들어 <code class="language-plaintext highlighter-rouge">PLACES</code> 테이블이 다음과 같다면</p>
 
 <table>
   <thead>
@@ -260,37 +265,47 @@
 
 <h2 id="풀이">풀이</h2>
 
-<pre><code class="language-sql">SELECT
-    *
-FROM
-    PLACES
-WHERE
-    HOST_ID IN (SELECT HOST_ID 
-                FROM PLACES
-                GROUP BY HOST_ID
-                HAVING COUNT(HOST_ID) &gt;=2)
-ORDER BY
-    ID
-;
-</code></pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span>
+    <span class="o">*</span>
+<span class="k">FROM</span>
+    <span class="n">PLACES</span>
+<span class="k">WHERE</span>
+    <span class="n">HOST_ID</span> <span class="k">IN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">HOST_ID</span> 
+                <span class="k">FROM</span> <span class="n">PLACES</span>
+                <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">HOST_ID</span>
+                <span class="k">HAVING</span> <span class="k">COUNT</span><span class="p">(</span><span class="n">HOST_ID</span><span class="p">)</span> <span class="o">&gt;=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">ORDER</span> <span class="k">BY</span>
+    <span class="n">ID</span>
+<span class="p">;</span>
+</code></pre></div></div>
 
 <ol>
-  <li>두 번 이상 쓰인 HOST_ID의 정보를 불러와야 합니다. 여기에 저는 HOST_ID를 GROUP BY 절로 그룹화한 뒤 COUNT 함수를 사용해서 그룹화된 개수가 2개 이상인 것을 불러올 것입니다. 그러려면 우선 <code>GROUP BY HOST_ID</code>를 입력해야 하는데 이것은 메인쿼리에서 사용할 수 없습니다. 왜냐하면 조회할 컬럼(*)과 GROUP BY의 컬럼(HOST_ID)이 일치하지 않기 때문이죠.(<code>ORA-00979</code> 오류가 발생합니다.) 그래서 WHERE 조건절에서 IN()을 사용해 서브쿼리로 작성하였습니다.</li>
+  <li>두 번 이상 쓰인 HOST_ID의 정보를 불러와야 합니다. 여기에 저는 HOST_ID를 GROUP BY 절로 그룹화한 뒤 COUNT 함수를 사용해서 그룹화된 개수가 2개 이상인 것을 불러올 것입니다. 그러려면 우선 <code class="language-plaintext highlighter-rouge">GROUP BY HOST_ID</code>를 입력해야 하는데 이것은 메인쿼리에서 사용할 수 없습니다. 왜냐하면 조회할 컬럼(*)과 GROUP BY의 컬럼(HOST_ID)이 일치하지 않기 때문이죠.(<code class="language-plaintext highlighter-rouge">ORA-00979</code> 오류가 발생합니다.) 그래서 WHERE 조건절에서 IN()을 사용해 서브쿼리로 작성하였습니다.</li>
   <li>아이디 순 조회 조건을 잊지마세요.</li>
 </ol>
 
                 <div class="clearfix"></div>
 			</div>
 
+            <div class="post-tags">
+            
+                <p>Oracle</p>
+            
+                <p>SQL</p>
+            
+                <p>Programmers</p>
+            
+                <p>codingtest</p>
+            
+            </div>
+
             <!-- Post Date -->
-            <p>
+            <p style="text-align: right;">
             <small>
-                <span class="post-date"><time class="post-date" datetime="2021-09-06">2021년 09월 06일</time></span>           
+                <span class="post-date"><time class="post-date" datetime="2021-09-06">Post : 2021.09.06</time></span>           
                 
                 </small>
             </p>
-            
-			
             
             <!-- Prev/Next -->
             <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
@@ -305,12 +320,7 @@ ORDER BY
                 </div>
               
             </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                
-            
+            <!-- End Prev/Next -->            
             
             <!-- Begin Comments
             ================================================== -->
@@ -358,15 +368,7 @@ ORDER BY
                 </li>
             
                 <li>
-                    <a href="/categories/java/">Java</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/project/">Project</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/sql/">SQL</a>
+                    <a href="/categories/pl-sql/">PL/SQL</a>
                 </li>
             
         </ul>
@@ -401,7 +403,7 @@ ORDER BY
     
     </ul>
     <div class="copyright small">
-       Copyright © Lisa de Blog. All rights reserved.
+       Copyright © Lisa.dev. All rights reserved.
     </div>
 </footer>
 

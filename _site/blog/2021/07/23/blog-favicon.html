@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" href="/assets/images/favicon.ico">
 
-<title>깃허브 블로그 - 로고와 파비콘 변경하기 | Lisa de Blog</title>
+<title>깃허브 블로그 - 로고와 파비콘 변경하기 | Lisa.dev</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>깃허브 블로그 - 로고와 파비콘 변경하기 | Lisa de Blog</title>
+<title>깃허브 블로그 - 로고와 파비콘 변경하기 | Lisa.dev</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="깃허브 블로그 - 로고와 파비콘 변경하기" />
 <meta name="author" content="Lisa" />
@@ -17,7 +17,7 @@
 <meta property="og:description" content="TeXt 테마의 기본 파비콘을 원하는 그림으로 변경하기로 했다." />
 <link rel="canonical" href="http://localhost:4000/blog/2021/07/23/blog-favicon.html" />
 <meta property="og:url" content="http://localhost:4000/blog/2021/07/23/blog-favicon.html" />
-<meta property="og:site_name" content="Lisa de Blog" />
+<meta property="og:site_name" content="Lisa.dev" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-07-23T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
@@ -27,7 +27,8 @@
 <!-- End Jekyll SEO tag -->
 
 
-<link href="/assets/css/theme.css?v=1759420604" rel="stylesheet">
+<link href="/assets/css/theme.css?v=1759472989" rel="stylesheet">
+<link href="/assets/css/syntax.css?v=1759472989" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
@@ -46,7 +47,7 @@
 
           <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
           <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
-          <span class="d-none d-md-inline-block">Lisa de Blog</span>
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
           </a>
 
           <!-- <div class="d-flex align-items-center">
@@ -83,11 +84,15 @@
             <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
               
               <li class="nav-item">
+                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
+              </li>
+              
+              <li class="nav-item">
                 <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link px-3 " href="/about/" alt="About">About</a>
+                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
               </li>
               
             </ul>
@@ -147,7 +152,7 @@
 
 <h1 id="파비콘-변경하기">파비콘 변경하기</h1>
 
-<p><img src="/assets/images/post/2021-07-23-favicon.png" alt="favicon" /></p>
+<p><img src="/assets/images/post/2021/2021-07-23-favicon.png" alt="favicon" /></p>
 
 <p>압춘 푼 폴더에 있는 <strong>favicon.ico</strong> , <strong>favicon-16x16.png</strong> , <strong>favicon-32x32.png</strong> 를<br />
 assets 폴더로 덮어쓰기 했더니 손쉽게 해결!</p>
@@ -161,14 +166,14 @@ assets 폴더로 덮어쓰기 했더니 손쉽게 해결!</p>
 <p>/assets/safari-pinned-tab.svg의 svg 태그를 복사해서<br />
 <strong>assets/images/logo/logo.svg</strong> 와 <strong>_includes/svg/logo.svg</strong> 에 복사한다.</p>
 
-<p><img src="/assets/images/post/2021-07-23-finding-logo.png" alt="finding-logo" /></p>
+<p><img src="/assets/images/post/2021/2021-07-23-finding-logo.png" alt="finding-logo" /></p>
 
 <p>그랬더니 로고가 자리만 남기고 사라졌다.<br />
 원인을 모르겠어서 일단 원래 로고로 원상복구함</p>
 
 <h2 id="두번째-시도">두번째 시도</h2>
 
-<p><img src="/assets/images/post/2021-07-24-logo.png" alt="logo" /></p>
+<p><img src="/assets/images/post/2021/2021-07-24-logo.png" alt="logo" /></p>
 
 <p>압축푼 폴더에 있는 about.txt에 공식으로 배포하는 svg 소스 주소가 있었다.<br />
 주소에 들어가 svg 소스 전체를 <strong>assets/images/logo/logo.svg</strong> 와 <strong>_includes/svg/logo.svg</strong> 에 복사했더니 로고가 성공적으로 변경됐다.</p>
@@ -176,15 +181,29 @@ assets 폴더로 덮어쓰기 했더니 손쉽게 해결!</p>
                 <div class="clearfix"></div>
 			</div>
 
+            <div class="post-tags">
+            
+                <p>github</p>
+            
+                <p>blog</p>
+            
+                <p>jekyll</p>
+            
+                <p>TeXt</p>
+            
+                <p>logo</p>
+            
+                <p>favicon</p>
+            
+            </div>
+
             <!-- Post Date -->
-            <p>
+            <p style="text-align: right;">
             <small>
-                <span class="post-date"><time class="post-date" datetime="2021-07-23">2021년 07월 23일</time></span>           
+                <span class="post-date"><time class="post-date" datetime="2021-07-23">Post : 2021.07.23</time></span>           
                 
                 </small>
             </p>
-            
-			
             
             <!-- Prev/Next -->
             <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
@@ -195,16 +214,11 @@ assets 폴더로 덮어쓰기 했더니 손쉽게 해결!</p>
               
               
                 <div class="col-md-6 text-right pr-0">
-                    <a class="thepostlink" href="http://localhost:4000/java/2021/07/28/jsp-db.html">JSP - DB 연결하기(JDBC & DBCP) &raquo;</a>
+                    <a class="thepostlink" href="http://localhost:4000/codingtest/2021/08/22/java_ct1.html">프로그래머스 Lv.1| Java - K번째수 &raquo;</a>
                 </div>
               
             </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                
-            
+            <!-- End Prev/Next -->            
             
             <!-- Begin Comments
             ================================================== -->
@@ -252,15 +266,7 @@ assets 폴더로 덮어쓰기 했더니 손쉽게 해결!</p>
                 </li>
             
                 <li>
-                    <a href="/categories/java/">Java</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/project/">Project</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/sql/">SQL</a>
+                    <a href="/categories/pl-sql/">PL/SQL</a>
                 </li>
             
         </ul>
@@ -295,7 +301,7 @@ assets 폴더로 덮어쓰기 했더니 손쉽게 해결!</p>
     
     </ul>
     <div class="copyright small">
-       Copyright © Lisa de Blog. All rights reserved.
+       Copyright © Lisa.dev. All rights reserved.
     </div>
 </footer>
 

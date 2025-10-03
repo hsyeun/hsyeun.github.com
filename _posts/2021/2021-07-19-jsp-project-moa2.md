@@ -3,7 +3,7 @@ layout: post
 title: JSP - jsp:include로 공통소스 간편히 사용하기
 key: 20210719
 tags: Java project JSP Servlet Oracle Html CSS Javascript DBCP MVC jQuery Eclipse
-categories: Project
+categories: project
 ---
 
 

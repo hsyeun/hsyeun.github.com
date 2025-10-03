@@ -18,14 +18,14 @@ categories: blog
 
 2. 그리고 아래의 README 체크를 잊지 말자.
 
-![new-repository](/assets/images/post/2021-07-24-blog-repository.png)  
+![new-repository](/assets/images/post/2021/2021-07-24-blog-repository.png)  
 
 ## 블로그 주소 확인
 
 리포지토리가 생성되었다면 **Settings**에서 왼쪽 메뉴 중 **Pages**에 들어가보자.  
 url이 형성된 것을 볼 수 있다. 저 url이 자신의 블로그 호스팅 주소다.  
 
-![url](/assets/images/post/2021-07-24-blog-io.png) 
+![url](/assets/images/post/2021/2021-07-24-blog-io.png) 
 
 ## 로컬저장소 연결
 
@@ -47,10 +47,10 @@ url이 형성된 것을 볼 수 있다. 저 url이 자신의 블로그 호스팅
 Jekyll 테마를 내 블로그에 적용하는 방법은 두 가지가 있다.  
 테마를 Fork 뜨는 방법과 Download 하는 방법인데 이 페이지에선 Download로 진행하고자 한다.  
 
-![down1](/assets/images/post/2021-07-25-mndown1.png)  
+![down1](/assets/images/post/2021/2021-07-25-mndown1.png)  
 아까 링크 올린 지킬 테마 사이트에서 다운로드를 바로 누르거나
 
-![down2](/assets/images/post/2021-07-25-mndown2.png)  
+![down2](/assets/images/post/2021/2021-07-25-mndown2.png)  
 테마 깃허브에서 Download ZIP을 눌러서 다운받는다.  
 
 리포지토리와 연결한 로컬저장소에 압축을 풀고 커밋&푸시를 한다.  

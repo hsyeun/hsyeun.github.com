@@ -50,17 +50,21 @@ post_class: post-template
                 <div class="clearfix"></div>
 			</div>
 
+            <div class="post-tags">
+            {% for tag in page.tags %}
+                <p>{{tag}}</p>
+            {% endfor %}
+            </div>
+
             <!-- Post Date -->
-            <p>
+            <p style="text-align: right;">
             <small>
-                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:'%Y-%m-%d' }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time></span>           
+                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:'%Y-%m-%d' }}">Post : {{ page.date | date: "%Y.%m.%d" }}</time></span>           
                 {% if page.last_modified_at %}
                 (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%Y년 %m월 %d일" }}</time>)
                 {% endif %}
                 </small>
             </p>
-            
-			
             
             <!-- Prev/Next -->
             <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
@@ -75,22 +79,7 @@ post_class: post-template
                 </div>
               {% endif %}
             </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                {% if page.author %}				
-				<div class="row post-top-meta">
-					<div class="col-md-2">
-						<img class="author-thumb" src="{{site.baseurl}}/{{author.avatar}}" alt="{{ author.display_name }}">
-					</div>
-					<div class="col-md-10">
-						<a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a><a target="_blank" href="{{ author.twitter }}" class="btn follow">Follow</a>
-						<span class="author-description">{{ author.description }}</span>						
-					</div>
-				</div>				
-                {% endif %}
-            
+            <!-- End Prev/Next -->            
             
             <!-- Begin Comments
             ================================================== -->

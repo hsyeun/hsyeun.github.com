@@ -3,7 +3,7 @@ layout: post
 title: MySQL - DATE_FORMAT의 구분기호
 key: 20211008  
 tags: MySQL SQL
-categories: SQL
+categories: mysql
 published: false
 ---
 

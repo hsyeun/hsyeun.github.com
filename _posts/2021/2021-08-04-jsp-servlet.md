@@ -3,7 +3,8 @@ layout: post
 title: JSP - Servlet 작성하기
 key: 20210804
 tags: Java project JSP Servlet Oracle Html CSS Javascript DBCP MVC jQuery Eclipse
-categories: Java
+categories: java
+published: false
 ---
 
 # 서블릿(Servlet)이란?

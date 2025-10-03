@@ -5,29 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" href="/assets/images/favicon.ico">
 
-<title>JSP - DB 연결하기(JDBC & DBCP) | Lisa de Blog</title>
+<title>ORA-01756:단일 인용부를 지정해주십시오 | Lisa.dev</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>JSP - DB 연결하기(JDBC &amp; DBCP) | Lisa de Blog</title>
+<title>ORA-01756:단일 인용부를 지정해주십시오 | Lisa.dev</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="JSP - DB 연결하기(JDBC &amp; DBCP)" />
+<meta property="og:title" content="ORA-01756:단일 인용부를 지정해주십시오" />
 <meta name="author" content="Lisa" />
 <meta property="og:locale" content="ko_kr" />
-<meta name="description" content="서버에 데이터베이스를 연결할 때 JDBC나 DBCP를 사용합니다." />
-<meta property="og:description" content="서버에 데이터베이스를 연결할 때 JDBC나 DBCP를 사용합니다." />
-<link rel="canonical" href="http://localhost:4000/java/2021/07/28/jsp-db.html" />
-<meta property="og:url" content="http://localhost:4000/java/2021/07/28/jsp-db.html" />
-<meta property="og:site_name" content="Lisa de Blog" />
+<meta name="description" content="PL/SQL을 작성해봅니다." />
+<meta property="og:description" content="PL/SQL을 작성해봅니다." />
+<link rel="canonical" href="http://localhost:4000/pl/sql/2021/11/22/plsql.html" />
+<meta property="og:url" content="http://localhost:4000/pl/sql/2021/11/22/plsql.html" />
+<meta property="og:site_name" content="Lisa.dev" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-07-28T00:00:00+09:00" />
+<meta property="article:published_time" content="2021-11-22T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="JSP - DB 연결하기(JDBC &amp; DBCP)" />
+<meta property="twitter:title" content="ORA-01756:단일 인용부를 지정해주십시오" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lisa"},"dateModified":"2021-07-28T00:00:00+09:00","datePublished":"2021-07-28T00:00:00+09:00","description":"서버에 데이터베이스를 연결할 때 JDBC나 DBCP를 사용합니다.","headline":"JSP - DB 연결하기(JDBC &amp; DBCP)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/2021/07/28/jsp-db.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Lisa"},"url":"http://localhost:4000/java/2021/07/28/jsp-db.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Lisa"},"dateModified":"2021-11-22T00:00:00+09:00","datePublished":"2021-11-22T00:00:00+09:00","description":"PL/SQL을 작성해봅니다.","headline":"ORA-01756:단일 인용부를 지정해주십시오","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/pl/sql/2021/11/22/plsql.html"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"},"name":"Lisa"},"url":"http://localhost:4000/pl/sql/2021/11/22/plsql.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-<link href="/assets/css/theme.css?v=1759420604" rel="stylesheet">
+<link href="/assets/css/theme.css?v=1759472989" rel="stylesheet">
+<link href="/assets/css/syntax.css?v=1759472989" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
@@ -46,7 +47,7 @@
 
           <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
           <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
-          <span class="d-none d-md-inline-block">Lisa de Blog</span>
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
           </a>
 
           <!-- <div class="d-flex align-items-center">
@@ -83,11 +84,15 @@
             <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
               
               <li class="nav-item">
+                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
+              </li>
+              
+              <li class="nav-item">
                 <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link px-3 " href="/about/" alt="About">About</a>
+                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
               </li>
               
             </ul>
@@ -122,7 +127,7 @@
                         
                         
                         <li>
-                         <a href="/categories/java">Java</a>
+                         <a href="/categories/pl-sql">pl/sql</a>
                         </li>
                         
                     </ul>
@@ -130,7 +135,7 @@
                 <!-- End Categories -->
                 
                 <!-- Post Title -->
-				<h1 class="posttitle title-font">JSP - DB 연결하기(JDBC & DBCP)</h1> 
+				<h1 class="posttitle title-font">ORA-01756:단일 인용부를 지정해주십시오</h1> 
                 
 			</div>
 
@@ -138,167 +143,65 @@
 
 			<!-- Post Content -->
 			<div class="article-post">
-				<p>서버에 데이터베이스를 연결할 때 JDBC나 DBCP를 사용합니다.</p>
+				<p>PL/SQL을 작성해봅니다.</p>
 
-<p>JDBC와 DBCP가 무엇인지, 둘의 차이점이 뭔지, 그리고 각각 어떻게 사용하는지를 포스팅하도록 하겠습니다.</p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span>
+   <span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="s1">'Hello World);
+end;
+/
+</span></code></pre></div></div>
 
-<h1 id="jdbc">JDBC</h1>
+<p>그런데 다음과 같은 오류가 발생했습니다.</p>
 
-<p>자바가 데이터베이스에 접근하는 프로그램을 제작할 때 DBMS의 종류가 다양하고 각각 구조와 특징이 다르다는 문제점이 있었습니다. 이를 해결하면서 DB 연결을 원활하게 이루기 위해 모든 DBMS에서 공통적으로 사용할 수 있는 인터페이스와 클래스로 구성하는 JDBC를 개발하였습니다.</p>
+<p><img src="/assets/images/post/2021/2021-11-22-er.png" alt="error" /></p>
 
-<p>JDBC를 작성하는 순서는</p>
-<ol>
-  <li>드라이버 로드하기</li>
-  <li>커넥션 객체 생성하기</li>
-  <li>스테이트먼트 객체 생성하기 (Statement/PreparedStatement)</li>
-  <li>SQL문에 결과물이 있다면 ResultSet 객체 생성하기</li>
-  <li>모든 객체 닫기<br />
-입니다.</li>
-</ol>
+<h2 id="해결">해결</h2>
 
-<p>순서에 따라 실제로 구현한 코드는 다음과 같습니다.</p>
+<p>잘 살펴보니 해당 오류는 문자열 뒤에 ‘ 을 빠트려서 생긴 것입니다.</p>
 
-<pre><code class="language-java">public class JDBC {
-	public JDBC() {
-		//드라이버 로딩
-		try {
-			Class.forName("(사용할 드라이버 주소)");
-		} catch(Exception e) {
-			System.out.println("(로딩 실패 메시지)");
-			e.printStackTrace();
-		}		
-	}
-	
-	//커넥션을 요구하면 꺼내서 반환해주는 함수
-	public Connection getCon() {
-		Connection con = null;
-		String url = "(ip 주소)";
-		String id = "(오라클 계정)";
-		String pw = "(오라클 비번)";
-		try {
-			con = DriverManager.getConnection(url, id, pw);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		return con;
-	}
-	
-	//Statement를 요구하면 꺼내서 반환해주는 함수
-	public Statement getSTMT(Connection con) {
-		Statement stmt = null;
-		try {
-			stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		return stmt;
-	}
-	
-	//PreparedStatement를 요구하면 꺼내서 반환해주는 함수
-	public PreparedStatement getPSTMT(Connection con, String sql) {
-		PreparedStatement pstmt = null;
-		try {
-			pstmt = con.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		return pstmt;
-	}
-	
-	//더이상 사용하지 않는 자원을 반환해주는 함수
-	public void close(Object o) {
-		//매개변수로 입력된 타입을 확인
-		try {
-			if(o instanceof Connection) {
-				((Connection) o).close();
-			} else if(o instanceof Statement) {
-				((Statement) o).close();
-			} else if(o instanceof PreparedStatement) {
-				((PreparedStatement) o).close();
-			} else if(o instanceof ResultSet) {
-				((ResultSet) o).close();
-			}
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-}
-</code></pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">begin</span>
+   <span class="n">dbms_output</span><span class="p">.</span><span class="n">put_line</span><span class="p">(</span><span class="s1">'Hello World'</span><span class="p">);</span>  
+<span class="k">end</span><span class="p">;</span>
+<span class="o">/</span>
+</code></pre></div></div>
 
-<p>그런데, JDBC는 DB에서 정보를 가져올 때마다 매번 DB연결을 열고 닫는 것을 반복합니다. 그렇게 되면 작업 효율이 떨어지게 되죠. 때문에 이와 대비되어 언급되는 게 풀(Pool)을 사용하는 DBCP입니다.</p>
-
-<h1 id="dbcp">DBCP</h1>
-
-<p>DBCP는 어플리케이션을 시작할 때 원하는 만큼 커넥션 객체를 만들어 놓고 풀에 넣어놓은 채 필요할 때마다 가져다 사용하는 방식입니다.</p>
-
-<p>학원에서 프로젝트를 할 땐 주로 이 DBCP를 사용하였습니다.</p>
-
-<pre><code class="language-java">public class DBCP {
-	//커넥션 풀을 관리할 변수 준비
-	public DataSource ds;
-	
-    //커넥션 풀 찾기
-	public DBCP() {
-		try {
-			//1. context.xml 파일에 등록된 자원을 알아낸다.
-			InitialContext context = new InitialContext();
-			//2. 이 중에 필요한 자원을 얻는다.
-			ds = (DataSource) context.lookup("java:/comp/env/찾을이름");
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-    //커넥션 풀에 기억된 커넥션 가져오기
-	public Connection getCon() {
-		Connection con = null;
-		try {
-			con = ds.getConnection();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}		
-		return con;
-	}
-	
-	//이후 JDBC와 동일
-	public Statement getSTMT(Connection con) {	
-
-    ...   
-}
-</code></pre>
+<p>코드를 수정하여 간단하게 오류를 해결했습니다.</p>
 
                 <div class="clearfix"></div>
 			</div>
 
+            <div class="post-tags">
+            
+                <p>SQL</p>
+            
+                <p>PL/SQL</p>
+            
+                <p>error</p>
+            
+            </div>
+
             <!-- Post Date -->
-            <p>
+            <p style="text-align: right;">
             <small>
-                <span class="post-date"><time class="post-date" datetime="2021-07-28">2021년 07월 28일</time></span>           
+                <span class="post-date"><time class="post-date" datetime="2021-11-22">Post : 2021.11.22</time></span>           
                 
                 </small>
             </p>
-            
-			
             
             <!-- Prev/Next -->
             <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
               
                 <div class="col-md-6 rightborder pl-0">
-                    <a class="thepostlink" href="http://localhost:4000/blog/2021/07/23/blog-favicon.html">&laquo; 깃허브 블로그 - 로고와 파비콘 변경하기</a>
+                    <a class="thepostlink" href="http://localhost:4000/codingtest/2021/11/15/java_ct1.html">&laquo; 백준 10818번| 최소, 최대</a>
                 </div>
               
               
                 <div class="col-md-6 text-right pr-0">
-                    <a class="thepostlink" href="http://localhost:4000/java/2021/08/04/jsp-servlet.html">JSP - Servlet 작성하기 &raquo;</a>
+                    <a class="thepostlink" href="http://localhost:4000/pl/sql/2021/11/27/plsql_start.html">PL/SQL - 기본 구조 &raquo;</a>
                 </div>
               
             </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                
-            
+            <!-- End Prev/Next -->            
             
             <!-- Begin Comments
             ================================================== -->
@@ -346,15 +249,7 @@
                 </li>
             
                 <li>
-                    <a href="/categories/java/">Java</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/project/">Project</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/sql/">SQL</a>
+                    <a href="/categories/pl-sql/">PL/SQL</a>
                 </li>
             
         </ul>
@@ -389,7 +284,7 @@
     
     </ul>
     <div class="copyright small">
-       Copyright © Lisa de Blog. All rights reserved.
+       Copyright © Lisa.dev. All rights reserved.
     </div>
 </footer>
 

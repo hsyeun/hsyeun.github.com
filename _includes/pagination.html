@@ -17,6 +17,8 @@
         {%- if page >= start and page <= end -%}
         {%- if page == current -%}
             <span class="page-number title-font active">{{ page }}</span>
+        {%- elsif page == 1 -%}
+            <a class="page-number title-font" href="/">{{ page }}</a>
         {%- else -%}
             <a class="page-number title-font"
             href="{{ site.baseurl }}/page{{ page }}/">{{ page }}</a>

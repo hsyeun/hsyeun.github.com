@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" href="/assets/images/favicon.ico">
 
-<title>백준 10952번| Java - A+B-5 | Lisa de Blog</title>
+<title>백준 10952번| Java - A+B-5 | Lisa.dev</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>백준 10952번 Java - A+B-5 | Lisa de Blog</title>
+<title>백준 10952번 Java - A+B-5 | Lisa.dev</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="백준 10952번 Java - A+B-5" />
 <meta name="author" content="Lisa" />
 <meta property="og:locale" content="ko_kr" />
 <link rel="canonical" href="http://localhost:4000/codingtest/2021/11/06/java_ct1.html" />
 <meta property="og:url" content="http://localhost:4000/codingtest/2021/11/06/java_ct1.html" />
-<meta property="og:site_name" content="Lisa de Blog" />
+<meta property="og:site_name" content="Lisa.dev" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-11-06T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
@@ -25,7 +25,8 @@
 <!-- End Jekyll SEO tag -->
 
 
-<link href="/assets/css/theme.css?v=1759420604" rel="stylesheet">
+<link href="/assets/css/theme.css?v=1759472989" rel="stylesheet">
+<link href="/assets/css/syntax.css?v=1759472989" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
@@ -44,7 +45,7 @@
 
           <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
           <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
-          <span class="d-none d-md-inline-block">Lisa de Blog</span>
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
           </a>
 
           <!-- <div class="d-flex align-items-center">
@@ -81,11 +82,15 @@
             <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
               
               <li class="nav-item">
+                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
+              </li>
+              
+              <li class="nav-item">
                 <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link px-3 " href="/about/" alt="About">About</a>
+                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
               </li>
               
             </ul>
@@ -136,40 +141,48 @@
 
 			<!-- Post Content -->
 			<div class="article-post">
-				<p><img src="/assets/images/post/2021-11-06-bj1.png" alt="bj1" /></p>
+				<p><img src="/assets/images/post/2021/2021-11-06-bj1.png" alt="bj1" /></p>
 
 <h2 id="풀이">풀이</h2>
-<pre><code class="language-java">import java.util.*;
-public class Main {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+		<span class="nc">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Scanner</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
 		
-		while(true) {
-			int a = sc.nextInt();
-			int b = sc.nextInt();
+		<span class="k">while</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+			<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+			<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 			
-			if(a==0 &amp;&amp; b==0) {
-				sc.close();
-				break;
-			}
-			System.out.println(a+b);
-		}
-	}
-}
-</code></pre>
+			<span class="k">if</span><span class="o">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">sc</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+				<span class="k">break</span><span class="o">;</span>
+			<span class="o">}</span>
+			<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
                 <div class="clearfix"></div>
 			</div>
 
+            <div class="post-tags">
+            
+                <p>Java</p>
+            
+                <p>BAEKJOON</p>
+            
+                <p>codingtest</p>
+            
+            </div>
+
             <!-- Post Date -->
-            <p>
+            <p style="text-align: right;">
             <small>
-                <span class="post-date"><time class="post-date" datetime="2021-11-06">2021년 11월 06일</time></span>           
+                <span class="post-date"><time class="post-date" datetime="2021-11-06">Post : 2021.11.06</time></span>           
                 
                 </small>
             </p>
-            
-			
             
             <!-- Prev/Next -->
             <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
@@ -184,12 +197,7 @@ public class Main {
                 </div>
               
             </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                
-            
+            <!-- End Prev/Next -->            
             
             <!-- Begin Comments
             ================================================== -->
@@ -237,15 +245,7 @@ public class Main {
                 </li>
             
                 <li>
-                    <a href="/categories/java/">Java</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/project/">Project</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/sql/">SQL</a>
+                    <a href="/categories/pl-sql/">PL/SQL</a>
                 </li>
             
         </ul>
@@ -280,7 +280,7 @@ public class Main {
     
     </ul>
     <div class="copyright small">
-       Copyright © Lisa de Blog. All rights reserved.
+       Copyright © Lisa.dev. All rights reserved.
     </div>
 </footer>
 

@@ -3,7 +3,7 @@ layout: post
 title: JAVA - 설치 및 환경변수 설정
 key: 20210709
 tags: Java 설치
-categories: Java
+categories: java
 image: assets/images/java.jpg
 published: false
 ---
@@ -39,7 +39,7 @@ Java의 특징
   
   
   
-![다운로드](/assets/images/post/2021-07-09-java-start-se.png)
+![다운로드](/assets/images/post/2021/2021-07-09-java-start-se.png)
   
 여기서 JDK Download를 눌러 각 컴퓨터에 해당하는 운영체제에 따라 다운받습니다.<br>
 저는 윈도우를 쓰고 있어서 Windows x64 Installer 를 다운받았습니다.
@@ -49,7 +49,7 @@ Java의 특징
 
 cmd에서 **java -version**을 입력했을때 아래처럼 자바 버전이 잘 나온다면 설치가 완료된 것입니다.
 
-![cmd](/assets/images/post/2021-07-09-java-start-cmd.png)
+![cmd](/assets/images/post/2021/2021-07-09-java-start-cmd.png)
 
 
 ### 잠깐, SE란?
@@ -85,7 +85,7 @@ ME(Micro Edition)
   
 시스템 변수에서 새로 만들기를 클릭해 다음과 같이 입력합니다.
   
-![JAVA_HOME](/assets/images/post/2021-07-09-java-start-javahome.png)
+![JAVA_HOME](/assets/images/post/2021/2021-07-09-java-start-javahome.png)
 
 
 변수 이름 : JAVA_HOME  
@@ -103,7 +103,7 @@ bin 폴더 안에는 다양한 명령어들이 있는데 이 명령어들을 다
 
 시스템 변수 내에 있는 path 환경변수를 찾아 **편집**을 눌러주세요.  
   
-![path](/assets/images/post/2021-07-09-java-start-path.png)
+![path](/assets/images/post/2021/2021-07-09-java-start-path.png)
   
   
 path 편집을 눌렀을때 나오는 화면에서 새로 만들기를 클릭해

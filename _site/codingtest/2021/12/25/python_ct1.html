@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" href="/assets/images/favicon.ico">
 
-<title>프로그래머스 Lv.1| Python - 핸드폰 번호 가리기 | Lisa de Blog</title>
+<title>프로그래머스 Lv.1| Python - 핸드폰 번호 가리기 | Lisa.dev</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>프로그래머스 Lv.1 Python - 핸드폰 번호 가리기 | Lisa de Blog</title>
+<title>프로그래머스 Lv.1 Python - 핸드폰 번호 가리기 | Lisa.dev</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="프로그래머스 Lv.1 Python - 핸드폰 번호 가리기" />
 <meta name="author" content="Lisa" />
 <meta property="og:locale" content="ko_kr" />
 <link rel="canonical" href="http://localhost:4000/codingtest/2021/12/25/python_ct1.html" />
 <meta property="og:url" content="http://localhost:4000/codingtest/2021/12/25/python_ct1.html" />
-<meta property="og:site_name" content="Lisa de Blog" />
+<meta property="og:site_name" content="Lisa.dev" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-12-25T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
@@ -25,7 +25,8 @@
 <!-- End Jekyll SEO tag -->
 
 
-<link href="/assets/css/theme.css?v=1759420604" rel="stylesheet">
+<link href="/assets/css/theme.css?v=1759472989" rel="stylesheet">
+<link href="/assets/css/syntax.css?v=1759472989" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
@@ -44,7 +45,7 @@
 
           <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
           <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
-          <span class="d-none d-md-inline-block">Lisa de Blog</span>
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
           </a>
 
           <!-- <div class="d-flex align-items-center">
@@ -81,11 +82,15 @@
             <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
               
               <li class="nav-item">
+                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
+              </li>
+              
+              <li class="nav-item">
                 <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link px-3 " href="/about/" alt="About">About</a>
+                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
               </li>
               
             </ul>
@@ -136,25 +141,25 @@
 
 			<!-- Post Content -->
 			<div class="article-post">
-				<p><img src="/assets/images/post/2021-12-25-pg1.png" alt="pg" /></p>
+				<p><img src="/assets/images/post/2021/2021-12-25-pg1.png" alt="pg" /></p>
 
 <h2 id="풀이실패">풀이(실패)</h2>
-<pre><code class="language-python">def solution(phone_number):
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">phone_number</span><span class="p">):</span>
     
-    for i in range(len(phone_number)-4):
-        phone_number = phone_number.replace(phone_number[i], '*')
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">phone_number</span><span class="p">)</span><span class="o">-</span><span class="mi">4</span><span class="p">):</span>
+        <span class="n">phone_number</span> <span class="o">=</span> <span class="n">phone_number</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="n">phone_number</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="sh">'</span><span class="s">*</span><span class="sh">'</span><span class="p">)</span>
     
-    return phone_number
-</code></pre>
+    <span class="k">return</span> <span class="n">phone_number</span>
+</code></pre></div></div>
 
 <ol>
   <li>실행결과 9번만 맞고 다른 결과는 실패로 나왔습니다. 찾아보니 9번 케이스는 문자열 길이가 4인 경우라고 하네요. 실행 전 테스트 케이스는 다 통과했었는데 실패하는 이유가 뭘까요?</li>
 </ol>
 
 <h2 id="풀이성공">풀이(성공)</h2>
-<pre><code class="language-python">def solution(phone_number):
-    return '*' * (len(phone_number)-4) + phone_number[-4:]
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">phone_number</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sh">'</span><span class="s">*</span><span class="sh">'</span> <span class="o">*</span> <span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">phone_number</span><span class="p">)</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="n">phone_number</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
+</code></pre></div></div>
 
 <ol>
   <li>다른 방식으로 풀이하여 통과하였습니다.</li>
@@ -163,15 +168,23 @@
                 <div class="clearfix"></div>
 			</div>
 
+            <div class="post-tags">
+            
+                <p>Python</p>
+            
+                <p>Programmers</p>
+            
+                <p>codingtest</p>
+            
+            </div>
+
             <!-- Post Date -->
-            <p>
+            <p style="text-align: right;">
             <small>
-                <span class="post-date"><time class="post-date" datetime="2021-12-25">2021년 12월 25일</time></span>           
+                <span class="post-date"><time class="post-date" datetime="2021-12-25">Post : 2021.12.25</time></span>           
                 
                 </small>
             </p>
-            
-			
             
             <!-- Prev/Next -->
             <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
@@ -186,12 +199,7 @@
                 </div>
               
             </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                
-            
+            <!-- End Prev/Next -->            
             
             <!-- Begin Comments
             ================================================== -->
@@ -239,15 +247,7 @@
                 </li>
             
                 <li>
-                    <a href="/categories/java/">Java</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/project/">Project</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/sql/">SQL</a>
+                    <a href="/categories/pl-sql/">PL/SQL</a>
                 </li>
             
         </ul>
@@ -282,7 +282,7 @@
     
     </ul>
     <div class="copyright small">
-       Copyright © Lisa de Blog. All rights reserved.
+       Copyright © Lisa.dev. All rights reserved.
     </div>
 </footer>
 

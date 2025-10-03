@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" href="/assets/images/favicon.ico">
 
-<title>프로그래머스 Lv.2| MySQL - 이름에 el이 들어가는 동물 찾기 | Lisa de Blog</title>
+<title>프로그래머스 Lv.2| MySQL - 이름에 el이 들어가는 동물 찾기 | Lisa.dev</title>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>프로그래머스 Lv.2 MySQL - 이름에 el이 들어가는 동물 찾기 | Lisa de Blog</title>
+<title>프로그래머스 Lv.2 MySQL - 이름에 el이 들어가는 동물 찾기 | Lisa.dev</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="프로그래머스 Lv.2 MySQL - 이름에 el이 들어가는 동물 찾기" />
 <meta name="author" content="Lisa" />
@@ -17,7 +17,7 @@
 <meta property="og:description" content="문제 설명" />
 <link rel="canonical" href="http://localhost:4000/codingtest/2021/09/29/mysql_like.html" />
 <meta property="og:url" content="http://localhost:4000/codingtest/2021/09/29/mysql_like.html" />
-<meta property="og:site_name" content="Lisa de Blog" />
+<meta property="og:site_name" content="Lisa.dev" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-09-29T00:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
@@ -27,7 +27,8 @@
 <!-- End Jekyll SEO tag -->
 
 
-<link href="/assets/css/theme.css?v=1759420604" rel="stylesheet">
+<link href="/assets/css/theme.css?v=1759472989" rel="stylesheet">
+<link href="/assets/css/syntax.css?v=1759472989" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
@@ -46,7 +47,7 @@
 
           <a class="navbar-brand text-dark font-weight-bold big d-flex align-items-center" href="/">
           <img class="mr-2" src="/assets/images/logo.png" alt="logo"> 
-          <span class="d-none d-md-inline-block">Lisa de Blog</span>
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
           </a>
 
           <!-- <div class="d-flex align-items-center">
@@ -83,11 +84,15 @@
             <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
               
               <li class="nav-item">
+                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
+              </li>
+              
+              <li class="nav-item">
                 <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
               </li>
               
               <li class="nav-item">
-                <a class="nav-link px-3 " href="/about/" alt="About">About</a>
+                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
               </li>
               
             </ul>
@@ -140,7 +145,7 @@
 			<div class="article-post">
 				<h2 id="문제-설명">문제 설명</h2>
 
-<p><code>ANIMAL_INS</code> 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다. <code>ANIMAL_INS</code> 테이블 구조는 다음과 같으며, <code>ANIMAL_ID</code>, <code>ANIMAL_TYPE</code>, <code>DATETIME</code>, <code>INTAKE_CONDITION</code>, <code>NAME</code>, <code>SEX_UPON_INTAKE</code>는 각각 동물의 아이디, 생물 종, 보호 시작일, 보호 시작 시 상태, 이름, 성별 및 중성화 여부를 나타냅니다.</p>
+<p><code class="language-plaintext highlighter-rouge">ANIMAL_INS</code> 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다. <code class="language-plaintext highlighter-rouge">ANIMAL_INS</code> 테이블 구조는 다음과 같으며, <code class="language-plaintext highlighter-rouge">ANIMAL_ID</code>, <code class="language-plaintext highlighter-rouge">ANIMAL_TYPE</code>, <code class="language-plaintext highlighter-rouge">DATETIME</code>, <code class="language-plaintext highlighter-rouge">INTAKE_CONDITION</code>, <code class="language-plaintext highlighter-rouge">NAME</code>, <code class="language-plaintext highlighter-rouge">SEX_UPON_INTAKE</code>는 각각 동물의 아이디, 생물 종, 보호 시작일, 보호 시작 시 상태, 이름, 성별 및 중성화 여부를 나타냅니다.</p>
 
 <table>
   <thead>
@@ -188,7 +193,7 @@
 
 <p><strong>예시</strong></p>
 
-<p>예를 들어 <code>ANIMAL_INS</code> 테이블이 다음과 같다면</p>
+<p>예를 들어 <code class="language-plaintext highlighter-rouge">ANIMAL_INS</code> 테이블이 다음과 같다면</p>
 
 <table>
   <thead>
@@ -273,35 +278,45 @@
 
 <h2 id="풀이">풀이</h2>
 
-<pre><code class="language-sql">SELECT
-    ANIMAL_ID, NAME
-FROM
-    ANIMAL_INS
-WHERE
-    ANIMAL_TYPE = 'Dog'
-AND NAME LIKE '%el%'
-ORDER BY
-    NAME
-;
-</code></pre>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span>
+    <span class="n">ANIMAL_ID</span><span class="p">,</span> <span class="n">NAME</span>
+<span class="k">FROM</span>
+    <span class="n">ANIMAL_INS</span>
+<span class="k">WHERE</span>
+    <span class="n">ANIMAL_TYPE</span> <span class="o">=</span> <span class="s1">'Dog'</span>
+<span class="k">AND</span> <span class="n">NAME</span> <span class="k">LIKE</span> <span class="s1">'%el%'</span>
+<span class="k">ORDER</span> <span class="k">BY</span>
+    <span class="n">NAME</span>
+<span class="p">;</span>
+</code></pre></div></div>
 
 <ol>
-  <li>LIKE 문을 사용해서 원하는 문자열을 찾았습니다. <code>'%el%'</code>에서 <code>%</code>의 의미는 중간에 el 문자열이 있다면 앞뒤에 어떤 문자가 있어도 일치한다는 뜻입니다.</li>
-  <li>LIKE 문에서는 <code>_</code> 또한 사용할 수 있는데 문자의 개수를 의미합니다. 예를 들어 NAME LIKE ‘_____‘를 사용하면 다섯 글자인 이름들이 출력됩니다.</li>
+  <li>LIKE 문을 사용해서 원하는 문자열을 찾았습니다. <code class="language-plaintext highlighter-rouge">'%el%'</code>에서 <code class="language-plaintext highlighter-rouge">%</code>의 의미는 중간에 el 문자열이 있다면 앞뒤에 어떤 문자가 있어도 일치한다는 뜻입니다.</li>
+  <li>LIKE 문에서는 <code class="language-plaintext highlighter-rouge">_</code> 또한 사용할 수 있는데 문자의 개수를 의미합니다. 예를 들어 NAME LIKE ‘_____‘를 사용하면 다섯 글자인 이름들이 출력됩니다.</li>
 </ol>
 
                 <div class="clearfix"></div>
 			</div>
 
+            <div class="post-tags">
+            
+                <p>MySQL</p>
+            
+                <p>SQL</p>
+            
+                <p>Programmers</p>
+            
+                <p>codingtest</p>
+            
+            </div>
+
             <!-- Post Date -->
-            <p>
+            <p style="text-align: right;">
             <small>
-                <span class="post-date"><time class="post-date" datetime="2021-09-29">2021년 09월 29일</time></span>           
+                <span class="post-date"><time class="post-date" datetime="2021-09-29">Post : 2021.09.29</time></span>           
                 
                 </small>
             </p>
-            
-			
             
             <!-- Prev/Next -->
             <div class="row PageNavigation mt-4 prevnextlinks d-flex justify-content-between">
@@ -316,12 +331,7 @@ ORDER BY
                 </div>
               
             </div>
-            <!-- End Prev/Next -->
-            
-            
-             <!-- Author Box -->
-                
-            
+            <!-- End Prev/Next -->            
             
             <!-- Begin Comments
             ================================================== -->
@@ -369,15 +379,7 @@ ORDER BY
                 </li>
             
                 <li>
-                    <a href="/categories/java/">Java</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/project/">Project</a>
-                </li>
-            
-                <li>
-                    <a href="/categories/sql/">SQL</a>
+                    <a href="/categories/pl-sql/">PL/SQL</a>
                 </li>
             
         </ul>
@@ -412,7 +414,7 @@ ORDER BY
     
     </ul>
     <div class="copyright small">
-       Copyright © Lisa de Blog. All rights reserved.
+       Copyright © Lisa.dev. All rights reserved.
     </div>
 </footer>
 

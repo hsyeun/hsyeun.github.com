@@ -4,14 +4,14 @@ topmenu:
 # - title: Home
 #   url: ""
 
+- title: Project
+  url: "categories/project/"
+  
 - title: Archive
   url: "archive/"
 
-# - title: Category
-#   url: "categories/"
-
-- title: About
-  url: "about/"
+- title: Profile
+  url: "profile/"
 
 # - title: Contact
 #   url: "contact/"
