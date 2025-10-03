@@ -8,7 +8,7 @@ published: true
 ---
 
 ## 프로젝트 개요
-- **프로젝트명** : 영화 추천 및 정보 제공 챗봇 프로젝트  
+- **프로젝트명** : 영화 추천 및 정보 제공 챗봇 프로젝트 ( [**Github**](https://github.com/hsyeun/Kosa_3_ChatBot_Project) )  
 - **기간** : 2022.02 ~ 2022.02(2주)  
 - **소속/고객사** : 팀 프로젝트
 - **사용 기술** : Python, Flask, MySQL, HTML, CSS, JavaScript, BeautifulSoup, Selenium, Pandas, OpenPyXL, Konlpy(코모란, Okt), Tensorflow/Keras(Bi-LSTM), PyMySQL 등   

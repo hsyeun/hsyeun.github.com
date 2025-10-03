@@ -2,13 +2,13 @@
 layout: post
 title:  "AI 기반 IT 취업 지원 웹 서비스 프로젝트"
 categories: project
-tags: [project, Python, Flask, MySQL, HTML, CSS, JavaScript, BeautifulSoup, Selenium, Pandas, OpenPyXL, Konlpy, Okt, Tensorflow, Keras, LSTM, PyMySQL]
+tags: [project, Flask, Tomcat, Spring, Python, Java, HTML, CSS, JavaScript, JSP, MariaDB, GPT2, KoGPT2, BERT, Pandas, NumPy, TensorFlow, Scikit-learn, BeautifulSoup, Selenium ]
 image: assets/images/post/2025/2025-10-04-project_kosa4_itsjob1.png
 published: true
 ---
 
 ## 프로젝트 개요
-- **프로젝트명** : AI 기반 IT 취업 지원 서비스
+- **프로젝트명** : AI 기반 IT 취업 지원 서비스 ( [**Github**](https://github.com/hsyeun/Kosa_Main_Project) )
 - **기간** : 2022.02 ~ 2022.04 (약 7주)  
 - **소속/고객사** : 팀 프로젝트
 - **사용 기술** :  

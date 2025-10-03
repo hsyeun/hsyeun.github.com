@@ -9,7 +9,7 @@ published: true
 ---
 
 ## 프로젝트 개요
-- **프로젝트명** : 신년 분석과 트렌드 예측 프로젝트  
+- **프로젝트명** : 신년 분석과 트렌드 예측 프로젝트 ( [**Github**](https://github.com/hsyeun/Kosa_2_Data_Project) )  
 - **기간** : 2022.01 ~ 2022.01(2주)  
 - **소속/고객사** : 팀 프로젝트 (데이터 분석 & 웹 구현)
 - **사용 기술** : Python, Jupyter, HTML, CSS, JavaScript, AmCharts4, BeautifulSoup, Selenium, Pandas, Numpy 등  
