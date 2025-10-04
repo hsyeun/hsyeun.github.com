@@ -56,7 +56,12 @@ post_class: post-template
             <!-- Post Date -->
             <p style="text-align: right;">
                 <small>
-                    <span class="post-date"><time class="post-date" datetime="{{ page.date | date:'%Y.%m.%d %H:%M' }}">Post : {{ page.date | date: "%Y.%m.%d %H:%M" }}</time></span>           
+                    <span class="post-date">
+                        {% assign kst = page.date | date: "%s" | plus: 32400 %}
+                        <time class="post-date" datetime="{{ kst | date:'%Y.%m.%d %H:%M' }}">
+                            Post : {{ kst | date: "%Y.%m.%d %H:%M" }}
+                        </time>
+                    </span>           
                 </small>
             </p>
             

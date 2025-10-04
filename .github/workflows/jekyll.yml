@@ -8,8 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      TZ: Asia/Seoul
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -24,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           bundle config set path 'vendor/bundle'
-          bundle install --without windows
+          bundle install
 
       - name: Build site with Jekyll
         run: bundle exec jekyll build --trace

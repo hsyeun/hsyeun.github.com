@@ -5,8 +5,10 @@ permalink: "/archive.html"
 ---
 <div class="tags-expo">
   {% for post in site.posts %}
-    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+    {% assign kst = post.date | date: "%s" | plus: 32400 %}
+    {% assign prekst = post.previous.date | date: "%s" | plus: 32400 %}
+    {% capture this_year %}{{ kst | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ prekst | date: "%Y" }}{% endcapture %}
 
     {% if forloop.first %}
       <div class="tags-expo-section">
@@ -21,8 +23,7 @@ permalink: "/archive.html"
               </a>
               <span>{{ site.data.categories[post.categories.first] | default: post.categories }}</span>
             </p>
-            
-            <small class="post-date">{{ post.date | date: "%Y년 %m월 %d일" }}</small>
+            <small class="post-date">{{ kst | date: "%Y년 %m월 %d일" }}</small>
           </li>
 
     {% if forloop.last %}

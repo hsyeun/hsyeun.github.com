@@ -1,6 +1,7 @@
 title: Lisa.dev
 email: # wowthemesnet@gmail.com
-timezone: Asia/Seoul
+timezone: 
+future: true
 url     : https://hsyeun.github.io/
 baseurl: ''
 permalink: # "/:title/"

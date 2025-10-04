@@ -2,11 +2,6 @@
 
 source "https://rubygems.org"
 
-# Windows 전용
-group :windows do
-  gem 'tzinfo-data'
-end
-
 gem "jekyll", "~> 4.4.1"
 
 group :jekyll_plugins do
