@@ -5,7 +5,7 @@ categories: project
 tags: [project, BI, BI Portal, Javascript, jQuery, JSP, CSS, Kotlin, Spring Boot, MariaDB, UI/UX, Tableau]
 image: assets/images/post/2025/2025-10-04-project_kerney1.png
 color: "#383838"
-published: false
+published: true
 ---
 
 ## 프로젝트 개요
