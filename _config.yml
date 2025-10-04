@@ -21,6 +21,7 @@ kramdown:
     css_class: 'highlight'
 highlighter: rouge
 sass:
+  quiet_deps: true
   sass_dir: _sass
   style: :compressed
 ganalytics: UA-113961478-1
@@ -30,7 +31,7 @@ authors:
   lisa:
     name: Lisa
     display_name: # Sal
-    avatar: 'assets/images/sal.png'
+    avatar: # 'assets/images/sal.png'
     email: # wowthemesnet@gmail.com
     web: https://github.com/hsyeun
     twitter: # https://twitter.com/wowthemesnet
