@@ -6,10 +6,12 @@ permalink: "/profile/"
 ---
 
 **리사의 개발 블로그**에 오신 것을 환영합니다.  
-저는 **프론트엔드를 중심으로 백엔드까지 아우르는 웹 개발자**입니다.  
+저는 **프론트엔드를 중심으로 백엔드와 디자인까지 아우르는 웹 개발자**입니다.  
 
 React와 TypeScript를 활용한 UI/UX 중심의 프론트엔드 개발을 주력으로 하며,  
 Spring Boot와 Kotlin, Java 기반의 백엔드 API 설계·구현 경험도 갖추고 있습니다.  
+또한 Figma, Photoshop 등 디자인 툴을 활용한 UI 설계와 시각적 완성도 높은 화면 구현 경험을 보유하고 있습니다.  
+
 데이터 분석·CRM 솔루션(예: Tableau, Salesforce)과의 연동 프로젝트에도 참여하여  
 **데이터와 사용자 경험을 연결하는 서비스**를 만들어 왔습니다.  
 
@@ -27,13 +29,16 @@ Spring Boot와 Kotlin, Java 기반의 백엔드 API 설계·구현 경험도 갖
 
 | Category           | Skills                                                                                                      |
 |--------------------|-------------------------------------------------------------------------------------------------------------|
-| **Frontend**       | `React` `React Query` `Styled-Components` `Typescript` `Javascript` `HTML` `CSS` `jQuery`                   |
-| **Backend**        | `Kotlin` `Java` `Spring Boot` `Spring Security` `JSP`                                                       |
-| **DB**             | `MySql` `MariaDB` `Oracle`                                                                                  |
-| **API & Architecture** | `REST API`                                                                                              |
-| **OS & Infra**     | `Linux`                                                                                                     |
-| **VCS**            | `Git` `GitHub Actions` `Jenkins`                                                                            |
-| **UI/UX**          | `Figma` `Adobe Photoshop` `Adobe Illustrator`                                                               |
+| **Frontend**       | `React` `React Query` `Styled-Components` `Axios` `Typescript` `Javascript` `HTML` `CSS` `jQuery` `Liquid` `Markdown`                    |
+| **Backend**        | `Kotlin` `Java` `Spring Boot` `Spring Security` `JSP` `Ruby` `Maven` `Gradle`                                                       |
+| **DB**             | `MySql` `MariaDB` `Oracle` `PostgreSQL`                                                                                 |
+| **API & Architecture** | `REST API`, `Postman`                                                                                              |
+| **OS & Infra**     | `Linux`, `GitHub Pages`                                                                                                     |
+| **CI/CD & VCS**            | `Git` `GitHub Actions` `Jenkins` `Git Bash`                                                                            |
+| **Data Visualization**            | `Tableau` `Chart.js` `ECharts`                                                                            |
+| **Collaboration & Tools**            | `Notion` `Slack` `Jira` ...                                                                           |
+| **UI/UX & Design**          | `Figma` `Adobe Photoshop` `Adobe Illustrator` `Jekyll`                                                               |
+| **Documentation & Office**          | `Microsoft PowerPoint` `Microsoft Word` `Google Workspace`                                                               |
 
 
 {% assign start1 = '2019-01-21' | date: "%s" %}
