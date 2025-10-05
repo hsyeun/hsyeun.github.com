@@ -36,7 +36,7 @@ Spring Boot와 Kotlin, Java 기반의 백엔드 API 설계·구현 경험도 갖
 | **OS & Infra**     | `Linux`, `GitHub Pages`                                                                                                     |
 | **CI/CD & VCS**            | `Git` `GitHub Actions` `Jenkins` `Git Bash`                                                                            |
 | **Data Visualization**            | `Tableau` `Chart.js` `ECharts`                                                                            |
-| **Collaboration & Tools**            | `Notion` `Slack` `Jira` ...                                                                           |
+| **Collaboration & Tools**            | `Notion` `Slack` `Jira`                                                                           |
 | **UI/UX & Design**          | `Figma` `Adobe Photoshop` `Adobe Illustrator` `Jekyll`                                                               |
 | **Documentation & Office**          | `Microsoft PowerPoint` `Microsoft Word` `Google Workspace`                                                               |
 
