@@ -9,12 +9,19 @@
            script-src 'self' 'unsafe-inline' 'unsafe-eval'
              https://*.google-analytics.com
              https://*.googletagmanager.com
-             https://*.analytics.google.com;
+             https://*.analytics.google.com
+             https://analytics.google.com
+             https://*.gstatic.com;
            connect-src 'self'
              https://*.google-analytics.com
-             https://*.analytics.google.com;
-           img-src 'self' data:
-             https://*.google-analytics.com;
+             https://*.analytics.google.com
+             https://analytics.google.com
+             https://stats.g.doubleclick.net;
+           img-src 'self'
+             https://*.google-analytics.com
+             https://google-analytics.com
+             https://www.google.co.kr
+             https://stats.g.doubleclick.net;
            style-src 'self' 'unsafe-inline'
              https://fonts.googleapis.com
              https://cdn.jsdelivr.net
@@ -22,7 +29,8 @@
            font-src 'self'
              https://fonts.gstatic.com
              https://cdn.jsdelivr.net
-             https://cdnjs.cloudflare.com data:;">
+             https://cdnjs.cloudflare.com data:;
+           frame-src https://www.googletagmanager.com;">
   <link rel="icon" href="/assets/images/favicon.ico">
 
   <!-- <title>백준 10162번| Python - 전자레인지 | Lisa.dev</title> -->
@@ -45,8 +53,8 @@
 <!-- End Jekyll SEO tag -->
 
 
-  <link href="/assets/css/theme.css?v=1759658104" rel="stylesheet">
-  <link href="/assets/css/syntax.css?v=1759658104" rel="stylesheet">
+  <link href="/assets/css/theme.css?v=1759660243" rel="stylesheet">
+  <link href="/assets/css/syntax.css?v=1759660243" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
