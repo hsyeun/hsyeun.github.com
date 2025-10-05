@@ -794,7 +794,9 @@ blockquote {
     }
 }
 
-
+.pinned .card h2::before {
+  content: "📌 ";
+}
 .card {
     border: 0;
 }
