@@ -4,6 +4,7 @@ title: 백준 1000번| Python - A+B
 key: 20211208
 tags: Python BAEKJOON codingtest
 categories: codingtest
+published: false
 ---
 
 ![bj1](/assets/images/post/2021/2021-12-08-bj1.png)

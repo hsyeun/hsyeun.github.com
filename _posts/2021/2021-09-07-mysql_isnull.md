@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.1| MySQL - 이름이 없는 동물의 아이디
 key: 20210907
 tags: MySQL SQL Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ## 문제 설명

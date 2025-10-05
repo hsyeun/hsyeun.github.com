@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.2| MySQL - DATETIME에서 DATE로 형 변환
 key: 20211008  
 tags: MySQL SQL Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ## 문제 설명

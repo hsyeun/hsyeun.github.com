@@ -4,6 +4,7 @@ title: 백준 2753번| Python - 윤년
 key: 20211211
 tags: Python BAEKJOON codingtest
 categories: codingtest
+published: false
 ---
 
 ![bj](/assets/images/post/2021/2021-12-11-bj2.png)

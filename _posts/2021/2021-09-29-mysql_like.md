@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.2| MySQL - 이름에 el이 들어가는 동물 찾�
 key: 20210929  
 tags: MySQL SQL Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ## 문제 설명

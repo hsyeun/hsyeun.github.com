@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.2| Python - 피보나치 수
 key: 20211213
 tags: Python Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ![pg](/assets/images/post/2021/2021-12-13-pg1.png)

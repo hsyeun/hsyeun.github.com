@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.2| MySQL - 입양 시각 구하기(1)
 key: 20210908
 tags: MySQL SQL Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ## 문제 설명

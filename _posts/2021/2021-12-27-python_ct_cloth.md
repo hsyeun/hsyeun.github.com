@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.1| Python - 체육복
 key: 20211227
 tags: Python Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ![pg](/assets/images/post/2021/2021-12-27-pg1.png)

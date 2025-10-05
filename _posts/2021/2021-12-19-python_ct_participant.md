@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.1| Python - 완주하지 못한 선수
 key: 20211219
 tags: Python Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ![pg](/assets/images/post/2021/2021-12-19-pg1.png)

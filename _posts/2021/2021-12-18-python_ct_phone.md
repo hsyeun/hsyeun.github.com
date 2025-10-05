@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.2| Python - 전화번호 목록
 key: 20211218
 tags: Python Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ![pg](/assets/images/post/2021/2021-12-18-pg1.png)

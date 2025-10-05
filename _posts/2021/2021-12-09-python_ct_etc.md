@@ -4,6 +4,7 @@ title: 백준 10430번| Python - 나머지
 key: 20211209
 tags: Python BAEKJOON codingtest
 categories: codingtest
+published: false
 ---
 
 ![bj1](/assets/images/post/2021/2021-12-09-bj1.png)

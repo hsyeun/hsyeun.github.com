@@ -4,6 +4,7 @@ title: 백준 2588번| Python - 곱셈
 key: 20211210
 tags: Python BAEKJOON codingtest
 categories: codingtest
+published: false
 ---
 
 ![bj1](/assets/images/post/2021/2021-12-10-bj1.png)

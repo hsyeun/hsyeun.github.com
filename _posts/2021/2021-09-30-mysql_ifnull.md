@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.2| MySQL - NULL 처리하기
 key: 20210930  
 tags: MySQL SQL Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ## 문제 설명

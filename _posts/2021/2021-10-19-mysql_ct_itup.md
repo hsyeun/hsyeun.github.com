@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.3| MySQL - 있었는데요 없었습니다
 key: 20211019  
 tags: MySQL SQL Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ## 문제 설명

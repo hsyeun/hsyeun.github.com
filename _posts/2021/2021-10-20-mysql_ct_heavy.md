@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.3| MySQL - 헤비 유저가 소유한 장소
 key: 20211020  
 tags: MySQL SQL Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ## 문제 설명

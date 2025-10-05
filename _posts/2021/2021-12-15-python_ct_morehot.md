@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.2| Python - 더 맵게
 key: 20211215
 tags: Python Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ![pg](/assets/images/post/2021/2021-12-15-pg1.png)

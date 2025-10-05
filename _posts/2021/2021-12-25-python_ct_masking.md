@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.1| Python - 핸드폰 번호 가리기
 key: 20211225
 tags: Python Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ![pg](/assets/images/post/2021/2021-12-25-pg1.png)

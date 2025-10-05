@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.1| Python - x만큼 간격이 있는 n개의 숫자
 key: 20211211
 tags: Python Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ![pg](/assets/images/post/2021/2021-12-11-pg2.png)

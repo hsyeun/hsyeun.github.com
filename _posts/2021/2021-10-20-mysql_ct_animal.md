@@ -4,6 +4,7 @@ title: 프로그래머스 Lv.3| MySQL - 오랜 기간 보호한 동물(1)
 key: 20211020  
 tags: MySQL SQL Programmers codingtest
 categories: codingtest
+published: false
 ---
 
 ## 문제 설명
