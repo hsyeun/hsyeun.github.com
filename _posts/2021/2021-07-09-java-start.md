@@ -4,7 +4,7 @@ title: JAVA - 설치 및 환경변수 설정
 key: 20210709
 tags: Java 설치
 categories: java
-image: assets/images/java.jpg
+image: assets/images/thumbnail/java.jpg
 published: false
 ---
   

@@ -8,7 +8,7 @@
             {% assign default_images = "default1.jpg,default2.jpg,default3.jpg,default4.jpg" | split: "," %}
             {% assign index = post.url | size | modulo: default_images.size %}
             <img class="rounded mb-4"
-                src="{{ site.baseurl }}/assets/images/{{ default_images[index] }}"
+                src="{{ site.baseurl }}/assets/images/thumbnail/{{ default_images[index] }}"
                 alt="default image">
         {% endif %}
         <div class="card-block">

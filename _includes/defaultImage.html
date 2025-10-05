@@ -12,7 +12,7 @@
       const selected = images[random];
       const imgElem = document.getElementById('defaultImage');
       if (imgElem) {
-        imgElem.src = '{{ site.baseurl }}/assets/images/' + selected;
+        imgElem.src = '{{ site.baseurl }}/assets/images/thumbnail/' + selected;
       }
     }
   } catch (e) {

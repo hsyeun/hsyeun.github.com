@@ -4,7 +4,7 @@ title: Spring - 설치
 key: 20210713
 tags: Spring 설치
 categories: Spring
-image: assets/images/spring.jpg
+image: assets/images/thumbnail/spring.jpg
 published: false
 ---
 
