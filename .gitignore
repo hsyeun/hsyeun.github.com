@@ -1,0 +1,30 @@
+# Jekyll build output
+_site/
+
+# Sass / SCSS cache
+.sass-cache/
+.sass-cache/*
+
+# Jekyll cache folders
+.jekyll-cache/
+.jekyll-metadata
+
+# Temporary and backup files
+*.log
+*.tmp
+*.swp
+*.bak
+*.DS_Store
+Thumbs.db
+
+# Bundler dependencies
+vendor/
+.bundle/
+
+# Node modules (in case you add JS toolchains later)
+node_modules/
+
+# OS files
+.DS_Store
+ehthumbs.db
+Icon?
