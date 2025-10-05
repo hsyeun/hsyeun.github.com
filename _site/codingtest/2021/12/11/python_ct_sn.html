@@ -4,6 +4,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Security-Policy"
+  content="default-src 'self';
+           script-src 'self' 'unsafe-inline' 'unsafe-eval'
+             https://*.google-analytics.com
+             https://*.googletagmanager.com
+             https://*.analytics.google.com;
+           connect-src 'self'
+             https://*.google-analytics.com
+             https://*.analytics.google.com;
+           img-src 'self' data:
+             https://*.google-analytics.com;
+           style-src 'self' 'unsafe-inline'
+             https://fonts.googleapis.com
+             https://cdn.jsdelivr.net
+             https://cdnjs.cloudflare.com;
+           font-src 'self'
+             https://fonts.gstatic.com
+             https://cdn.jsdelivr.net
+             https://cdnjs.cloudflare.com data:;">
   <link rel="icon" href="/assets/images/favicon.ico">
 
   <!-- <title>프로그래머스 Lv.1| Python - x만큼 간격이 있는 n개의 숫자 | Lisa.dev</title> -->
@@ -26,8 +45,8 @@
 <!-- End Jekyll SEO tag -->
 
 
-  <link href="/assets/css/theme.css?v=1759652528" rel="stylesheet">
-  <link href="/assets/css/syntax.css?v=1759652528" rel="stylesheet">
+  <link href="/assets/css/theme.css?v=1759655771" rel="stylesheet">
+  <link href="/assets/css/syntax.css?v=1759655771" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -102,10 +121,27 @@
 			
             <div class="featured-image img-fluid rounded">
                 
-                
-                <img id="defaultImage" class="featured-image img-fluid rounded"
-                    src=""
-                    alt="default image">
+
+
+<img id="defaultImage" class="featured-image img-fluid rounded" alt="default image">
+
+<script>
+(function() {
+  try {
+    const images = JSON.parse('["default1.jpg","default2.jpg","default3.jpg","default4.jpg"]');
+    if (Array.isArray(images) && images.length > 0) {
+      const random = Math.floor(Math.random() * images.length);
+      const selected = images[random];
+      const imgElem = document.getElementById('defaultImage');
+      if (imgElem) {
+        imgElem.src = '/assets/images/' + selected;
+      }
+    }
+  } catch (e) {
+    console.error("⚠️ 이미지 랜덤 로드 중 오류 발생:", e);
+  }
+})();
+</script>
             </div>
             
 			<!-- End Featured Image -->
@@ -193,21 +229,21 @@
             ================================================== -->
             <section>
             <div id="comments">                          
-                <section class="disqus">
+                <!-- <section class="disqus">
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'devblog'; 
         var disqus_developer = 0;
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section>
- 
+  -->
             </div>
             </section>
             <!--End Comments

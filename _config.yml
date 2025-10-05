@@ -33,9 +33,9 @@ authors:
     display_name: # Sal
     avatar: # 'assets/images/sal.png'
     email: # wowthemesnet@gmail.com
-    web: https://github.com/hsyeun
-    twitter: # https://twitter.com/wowthemesnet
-    description: "Web Developer"
+    web: https://hsyeun.github.io/
+    github: https://github.com/hsyeun
+    description: "프론트엔드와 백엔드를 아우르는 개발 블로그"
     
 # Social
 social:

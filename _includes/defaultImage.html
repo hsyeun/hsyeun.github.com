@@ -1,0 +1,22 @@
+{% assign default_images = default_images | default: "default1.jpg,default2.jpg,default3.jpg,default4.jpg" | split: "," %}
+{% assign images_json = default_images | jsonify %}
+
+<img id="defaultImage" class="featured-image img-fluid rounded" alt="default image">
+
+<script>
+(function() {
+  try {
+    const images = JSON.parse('{{ images_json }}');
+    if (Array.isArray(images) && images.length > 0) {
+      const random = Math.floor(Math.random() * images.length);
+      const selected = images[random];
+      const imgElem = document.getElementById('defaultImage');
+      if (imgElem) {
+        imgElem.src = '{{ site.baseurl }}/assets/images/' + selected;
+      }
+    }
+  } catch (e) {
+    console.error("⚠️ 이미지 랜덤 로드 중 오류 발생:", e);
+  }
+})();
+</script>
