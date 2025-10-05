@@ -3,7 +3,7 @@ layout: post
 title:  "AI 기반 IT 취업 지원 웹 서비스 프로젝트"
 categories: project
 tags: [project, Flask, Tomcat, Spring, Python, Java, HTML, CSS, JavaScript, JSP, MariaDB, GPT2, KoGPT2, BERT, Pandas, NumPy, TensorFlow, Scikit-learn, BeautifulSoup, Selenium ]
-image: assets/images/post/2025/2025-10-04-project_kosa4_itsjob1.png
+image: assets/images/post/2025/2025-10-04-project_kosa4_itsjob1.jpg
 published: true
 ---
 

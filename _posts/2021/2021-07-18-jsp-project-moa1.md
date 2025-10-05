@@ -4,7 +4,7 @@ title: JSP 프로젝트 - 전시플랫폼 사이트
 key: 20210718
 tags: Java project JSP Servlet Oracle SQL Html CSS Javascript DBCP MVC jQuery
 categories: project
-image: assets/images/post/2021/2021-08-04-moa-main.png
+image: assets/images/post/2021/2021-08-04-moa-main.jpg
 color: "#383838"
 published: true
 ---

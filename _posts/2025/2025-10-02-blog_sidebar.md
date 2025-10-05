@@ -3,7 +3,7 @@ layout: post
 title:  "우여곡절 블로그 만들기-카테고리 메뉴"
 categories: blog
 tags: [Affiliates, Jekyll, theme, github, blog, liquid, sidemenu, menu, category]
-image: assets/images/1.jpg
+image: 
 color: "#8FC27A"
 published: true
 ---

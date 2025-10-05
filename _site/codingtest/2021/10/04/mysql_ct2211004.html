@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="icon" href="/assets/images/favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="/assets/images/favicon.ico">
 
-<title>프로그래머스 Lv.2| MySQL - 중성화 여부 파악하기 | Lisa.dev</title>
+  <!-- <title>프로그래머스 Lv.2| MySQL - 중성화 여부 파악하기 | Lisa.dev</title> -->
 
-<!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>프로그래머스 Lv.2 MySQL - 중성화 여부 파악하기 | Lisa.dev</title>
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="프로그래머스 Lv.2 MySQL - 중성화 여부 파악하기" />
@@ -27,60 +28,72 @@
 <!-- End Jekyll SEO tag -->
 
 
-<link href="/assets/css/theme.css?v=1759591787" rel="stylesheet">
-<link href="/assets/css/syntax.css?v=1759591787" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+  <link href="/assets/css/theme.css?v=1759652528" rel="stylesheet">
+  <link href="/assets/css/syntax.css?v=1759652528" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-   
-</head>   
-    
+  
+
+</head>
+
+
 
 <body class="layout-post">
 
-    
-<!-- Menu Navigation
+
+  <!-- Menu Navigation
 ================================================== -->
-<div class="navigation-wrap start-header start-style">
+  <div class="navigation-wrap start-header start-style">
     <nav class="navbar navbar-expand-lg">
-        <div class="container">
+      <div class="container">
 
-          <a class="navbar-brand font-weight-bold big d-flex align-items-center" href="/">
-            <img class="logo mr-2" src="/assets/images/logo.png" alt="logo"> 
-            <span class="d-none d-md-inline-block">Lisa.dev</span>
-          </a>    
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-              <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-            </svg>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
-              
-              <li class="nav-item">
-                <a class="nav-link px-3 " href="/categories/project/" alt="Project">Project</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link px-3 " href="/archive/" alt="Archive">Archive</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link px-3 " href="/profile/" alt="Profile">Profile</a>
-              </li>
-              
-            </ul>
-          </div>
-
+        <a class="navbar-brand font-weight-bold big d-flex align-items-center" href="/">
+          <img class="logo mr-2" src="/assets/images/logo.png" alt="logo">
+          <span class="d-none d-md-inline-block">Lisa.dev</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+            class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+            <path
+              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
+            
+            <li class="nav-item">
+              <a class="nav-link px-3 "
+                href="/categories/project/"
+                alt="Project">Project</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link px-3 "
+                href="/archive/"
+                alt="Archive">Archive</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link px-3 "
+                href="/profile/"
+                alt="Profile">Profile</a>
+            </li>
+            
+          </ul>
         </div>
-      </nav>
-    </div>  
 
-    
-<!-- Container
-================================================== -->    
-<main class="container">   
-      <!-- Begin Article
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- Container
+================================================== -->
+  <main class="container">
+    <!-- Begin Article
 ================================================== -->
 	<div class="row mt-5">
 		<!-- Post -->        
@@ -89,6 +102,14 @@
 		<div class="col-sm-9">
             <!-- Post Featured Image -->
 			
+            <div class="featured-image img-fluid rounded">
+                
+                
+                <img id="defaultImage" class="featured-image img-fluid rounded"
+                    src=""
+                    alt="default image">
+            </div>
+            
 			<!-- End Featured Image -->
 			<div class="mainheading">             
                 
@@ -369,49 +390,60 @@
 	</div>
 
 <!-- End Article
-================================================== -->  
-</main>
+================================================== -->
+  </main>
 
-<!-- 
+  <!-- 
 Top Button
-================================================== -->  
-<div class="top-button" id="toTop">
-  <i class="fa-regular fa-square-caret-up"></i>
-</div>
+================================================== -->
+  <div class="top-button" id="toTop">
+    <i class="fa-regular fa-square-caret-up"></i>
+  </div>
 
-<!-- Footer
-================================================== -->    
-<footer class="footer container text-center">  
-  <ul class="p-0 mb-1 small">
-    
+  <!-- Footer
+================================================== -->
+  <footer class="footer container text-center">
+    <ul class="p-0 mb-1 small">
+      
     </ul>
     <div class="copyright small">
-       Copyright © Lisa.dev. All rights reserved.
+      Copyright © Lisa.dev. All rights reserved.
     </div>
-</footer>
+  </footer>
 
-<!-- JavaScript
-================================================== -->    
-<script src="/assets/js/jquery.min.js"></script>   
-<script src="/assets/js/bootstrap.min.js"></script>   
-<script src="/assets/js/theme.js"></script> 
+  <!-- JavaScript
+================================================== -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/theme.js"></script>
 
-<script>
-  $(function(){
-    window.addEventListener('scroll' ,function() {
-      if(this.scrollY >= 250){
-        $('#toTop').show();
-      } else {
-        $('#toTop').hide();
+  <script>
+    $(function () {
+      window.addEventListener('scroll', function () {
+        if (this.scrollY >= 250) {
+          $('#toTop').show();
+        } else {
+          $('#toTop').hide();
+        }
+      })
+    
+      $('#toTop').click(function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      })
+
+      // post default image 랜덤 설정
+      const images = JSON.parse('');
+      if (Array.isArray(images) && images.length > 0) {
+        const random = Math.floor(Math.random() * images.length);
+        const selected = images[random];
+        const imgElem = document.getElementById('defaultImage');
+        if (imgElem) {
+          imgElem.src = '/assets/images/' + selected;
+        }
       }
     })
+  </script>
 
-    $('#toTop').click(function(){
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    })
-  })
-</script>
-    
 </body>
-    
+
 </html>

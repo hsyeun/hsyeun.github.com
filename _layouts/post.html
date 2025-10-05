@@ -14,8 +14,16 @@ post_class: post-template
 		<div class="col-sm-9">
             <!-- Post Featured Image -->
 			{% if page.image %}
-            <div class="featured-image img-fluid rounded" style="background-color: {{ page.color }}">
+            <div class="featured-image img-fluid rounded">
                 <img class="featured-image img-fluid rounded" style="margin: 0 auto;" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
+            </div>
+            {% else %}
+            <div class="featured-image img-fluid rounded">
+                {% assign default_images = "default1.jpg,default2.jpg,default3.jpg,default4.jpg" | split: "," %}
+                {% assign images_json = default_images | jsonify %}
+                <img id="defaultImage" class="featured-image img-fluid rounded"
+                    src=""
+                    alt="default image">
             </div>
             {% endif %}
 			<!-- End Featured Image -->
