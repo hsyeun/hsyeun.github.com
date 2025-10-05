@@ -155,15 +155,26 @@ small,
 }
 
 .top-button {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     right: 20px;
     bottom: 50px;
+    width: 42px;
+    height: 42px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
     font-size: 3rem;
     color: #ffe51f;
     z-index: 1050;
-    background-color: #fff;
     cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.top-button.active {
+    opacity: 1;
 }
 @media (min-width: 576px) {
     .top-button {
@@ -182,7 +193,7 @@ small,
 }
 @media (min-width: 1200px) {
     .top-button {
-        right: calc((100% - 1140px) / 2 - 80px);
+        right: calc((100% - 1200px) / 2 - 80px);
     }
 }
 

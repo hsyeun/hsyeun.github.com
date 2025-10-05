@@ -135,9 +135,9 @@ Top Button
     $(function () {
       window.addEventListener('scroll', function () {
         if (this.scrollY >= 250) {
-          $('#toTop').show();
+          $('#toTop').addClass('active');
         } else {
-          $('#toTop').hide();
+          $('#toTop').removeClass('active');
         }
       })
     
