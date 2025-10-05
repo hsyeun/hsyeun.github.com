@@ -10,12 +10,14 @@ pagination:
 ================================================== -->
 {% if paginator and paginator.page == 1 %}
 <div class="rounded mb-5 hero">
-  <div class="row align-items-center justify-content-between">
+  <div class="intro-wrap row align-items-center justify-content-between">
     <div class="col-md-7" style="padding: 0;">
       <h1 class="font-weight-bold mb-4 serif-font">Learn Once, Build Anywhere</h1>
-      <p class="lead mb-4"><b>React</b>의 철학처럼, 배운 원리를 다양한 환경에 적용합니다.<br>
-이 블로그는 개발 과정의 문제와 해결을 기록하며<br>
-더 유연하고 확장 가능한 코드를 탐구하는 공간입니다.</p>
+      <p class="lead mb-4">
+        <img class="react-logo" src="{{site.baseurl}}/assets/images/react.png" alt="react logo"><strong>React</strong>의 철학처럼, 배운 원리를 다양한 환경에 적용합니다.<br>
+        이 블로그는 개발 과정의 문제와 해결을 기록하며<br>
+        더 유연하고 확장 가능한 코드를 탐구하는 공간입니다.
+      </p>
       <a href="{{site.baseurl}}/profile" class="btn btn-dark text-white px-5 btn-lg">About me</a>
     </div>
     <div class="col-md-5 text-right pl-0 pl-lg-4">

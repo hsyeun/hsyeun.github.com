@@ -12,7 +12,12 @@ published: true
 - **프로젝트명** : 삼성 BI Portal 구축 및 기능 고도화 (삼성 전사 내부 Portal)  
 - **기간** : 2022.12 ~ 2023.09  
 - **소속/고객사** : (주)밀버스 / 커니코리아  
-- **사용 기술** : Javascript, jQuery, JSP, CSS, Kotlin, Java, Spring Boot, MariaDB 등  
+
+### 사용 기술
+| Category           | Skills                  |
+|--------------------|-------------------------|
+
+Javascript, jQuery, JSP, CSS, Kotlin, Java, Spring Boot, MariaDB 등  
 
 삼성 전사에서 활용하는 **BI Portal**은 Tableau 기반의 리포트를 통합 관리하고, 임직원들이 직관적으로 데이터를 조회할 수 있도록 지원하는 시스템입니다. 본 프로젝트는 **웹 포털 구축 및 고도화**를 목표로 진행되었습니다.  
 

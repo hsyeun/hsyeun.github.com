@@ -232,10 +232,6 @@ small,
     margin-left: 15px;
 }
 
-.intro {
-    height: 280px;
-}
-
 /* Sidebar
 ================================================== */
 .sidebar.sticky-top {
@@ -366,8 +362,22 @@ small,
 ================================================== */
 .hero {
     background: #fdd93d;
-    padding: 50px 80px;
+    padding: 50px 70px;
     margin-top: 3rem;
+
+    .intro-wrap {
+        margin: 0 auto;
+    }
+    .react-logo {
+        width: 20px;
+        margin-bottom: 3px;
+    }
+    .lead strong {
+        font-weight: 500;
+    }
+    .intro {
+        height: 280px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
