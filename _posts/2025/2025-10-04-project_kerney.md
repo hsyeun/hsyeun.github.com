@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "삼성 전사 BI Portal 구축 및 기능 고도화"
+title:  "[2022 ~ 2023년] 삼성 전사 BI Portal 구축 및 기능 고도화"
 categories: project
 tags: [project, BI, BI Portal, Javascript, jQuery, JSP, CSS, Kotlin, Spring Boot, MariaDB, UI/UX, Tableau]
 image: assets/images/post/2025/2025-10-04-project_kerney1.jpg

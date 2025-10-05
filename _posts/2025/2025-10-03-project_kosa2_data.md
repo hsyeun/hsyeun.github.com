@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "신년 분석과 트렌드 예측 프로젝트"
+title:  "[2022년] 신년 분석과 트렌드 예측 프로젝트"
 categories: project
 tags: [project, Python, Jupyter, HTML, CSS, JavaScript, AmCharts4, BeautifulSoup, Selenium, Pandas, Numpy]
 image: assets/images/post/2025/2025-10-03-project_kosa2_data2.jpg

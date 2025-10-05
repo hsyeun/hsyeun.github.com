@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "영화 추천 및 정보 제공 챗봇 프로젝트"
+title:  "[2022년] 영화 추천 및 정보 제공 챗봇 프로젝트"
 categories: project
 tags: [project, Python, Flask, MySQL, HTML, CSS, JavaScript, BeautifulSoup, Selenium, Pandas, OpenPyXL, Konlpy, Okt, Tensorflow, Keras, LSTM, PyMySQL]
 image: assets/images/post/2025/2025-10-03-project_kosa3_chatbot2.png
