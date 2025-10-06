@@ -3,7 +3,7 @@ layout: post
 title:  "[2023년 ~ 현재] 우아한형제들 BI Portal 구축 및 기능 고도화"
 categories: project
 tags: [project, React, TypeScript, React Query, Styled-components, Kotlin, Spring Boot, MariaDB, UI/UX, Tableau, BI, BI Portal, Frontend]
-image: 
+image: assets/images/post/2025/2025-10-05-project_woowahan1.jpg
 pin: true
 published: true
 ---
@@ -88,3 +88,14 @@ published: true
 - 요구사항을 기술적 솔루션으로 전환하는 리더십 역량 강화  
 
 본 프로젝트는 **React 컴포넌트 설계, 실시간 상태 관리, BI 임베딩(Tableau, Superset, Redash), 사용자 중심 UI 설계**를 결합한 사례로, 프론트엔드 중심의 기술 리더십과 데이터 기반 서비스 구축 능력을 입증한 대표 프로젝트입니다.
+
+
+## 주요 화면
+
+![woowahan1](/assets/images/post/2025/2025-10-05-project_woowahan2.png) *Home 화면*
+
+
+![woowahan2](/assets/images/post/2025/2025-10-05-project_woowahan3.png) *리포트 조회 화면*
+
+
+![woowahan3](/assets/images/post/2025/2025-10-05-project_woowahan4.jpg) *관리자 메뉴 화면*

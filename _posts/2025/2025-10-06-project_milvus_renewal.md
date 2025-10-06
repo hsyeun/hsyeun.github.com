@@ -86,10 +86,10 @@ React + Kotlin 기반으로 기술 스택을 최신화하고, 사용자 중심 �
 
 ## 주요 화면
 
-![login](/assets/images/post/2025/2025-10-06-project_milvus_security_after2.png)
+![login](/assets/images/post/2025/2025-10-06-project_milvus_security_after2.png) *로그인 화면*
 
-![main](/assets/images/post/2025/2025-10-06-project_milvus_security_after3.png)
+![main](/assets/images/post/2025/2025-10-06-project_milvus_security_after3.png) *메인화면*
 
-![table](/assets/images/post/2025/2025-10-06-project_milvus_security_after4.png)
+![table](/assets/images/post/2025/2025-10-06-project_milvus_security_after4.png) *테이블 화면*
 
-![modal](/assets/images/post/2025/2025-10-06-project_milvus_security_after5.png)
+![modal](/assets/images/post/2025/2025-10-06-project_milvus_security_after5.png) *모달 화면*
