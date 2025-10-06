@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[2022년 ~ 현재] 사내 HR 시스템 운영 및 UI/UX 고도화"
+title:  "[2022년 ~ 현재] 사내 HR 시스템 운영 및 기능 고도화"
 categories: project
 tags: [HR, Javascript, jQuery, JSP, CSS, Java, Spring Boot, MariaDB, UI/UX, Intranet, Frontend, Backend]
 image: 

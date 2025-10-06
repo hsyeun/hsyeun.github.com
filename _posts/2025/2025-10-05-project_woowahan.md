@@ -2,7 +2,7 @@
 layout: post
 title:  "[2023년 ~ 현재] 우아한형제들 BI Portal 구축 및 기능 고도화"
 categories: project
-tags: [project, React, TypeScript, React Query, Styled-components, Kotlin, Spring Boot, MariaDB, UI/UX, Tableau, BI, BI Portal]
+tags: [project, React, TypeScript, React Query, Styled-components, Kotlin, Spring Boot, MariaDB, UI/UX, Tableau, BI, BI Portal, Frontend]
 image: 
 pin: true
 published: true
