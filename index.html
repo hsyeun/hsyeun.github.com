@@ -31,13 +31,15 @@ pagination:
 ================================================== -->
 <section class="row">
   <div class="col-sm-9">
-    <div class="row">
+    <div class="row mb-4 pinned">
       {% assign pinned_posts = paginator.posts | where_exp: "post", "post.pin == true" %}
       {% for post in pinned_posts %}
-        <div class="col-md-6 mb-5 pinned">
+        <div class="col-md-6 mb-5">
         {% include postbox.html %}
         </div>
       {% endfor %}
+    </div>
+    <div class="row">
       {% assign normal_posts = paginator.posts | where_exp: "post", "post.pin != true" %}
       {% for post in normal_posts %}
         <div class="col-md-6 mb-5">

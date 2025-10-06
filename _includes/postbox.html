@@ -3,15 +3,15 @@
 <div class="card">
     <a href="{{ post.url | absolute_url }}">
         {% if post.image %} 
-            <img class="rounded mb-4" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}"> 
+            <img class="rounded" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}"> 
         {% else %}
             {% assign default_images = "default1.jpg,default2.jpg,default3.jpg,default4.jpg" | split: "," %}
             {% assign index = post.url | size | modulo: default_images.size %}
-            <img class="rounded mb-4"
+            <img class="rounded"
                 src="{{ site.baseurl }}/assets/images/thumbnail/{{ default_images[index] }}"
                 alt="default image">
         {% endif %}
-        <div class="card-block">
+        <div class="card-block pt-4">
             <h2 class="card-title h4 title-font">{{ post.title }}</h2>
             <p class="card-text text-muted">{{ post.excerpt | strip_html | truncatewords:15 }}</p>
             <div class="metafooter">

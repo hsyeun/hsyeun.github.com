@@ -794,8 +794,28 @@ blockquote {
     }
 }
 
-.pinned .card h2::before {
-  content: "📌 ";
+.pinned {
+    border-bottom: 1px solid #e5e7eb;
+    
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 25%;
+        background: linear-gradient(to bottom, rgba(255, 230, 0, 0.4), transparent);
+        pointer-events: none;
+    }
+    .card h2::before {
+        content: "📌 ";
+    }
+    .card h2 {
+        color: #1E3A8A;
+    }
+    .card p, .card span {
+        color: #223A70;
+    }
 }
 .card {
     border: 0;
