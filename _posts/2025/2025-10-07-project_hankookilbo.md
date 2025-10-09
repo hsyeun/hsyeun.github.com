@@ -85,3 +85,16 @@ published: true
 
 본 프로젝트는 한국일보의 통합 멤버십 서비스를 위한 Web Portal 구축 사례로,  
 프론트엔드 중심의 기술 구현과 고객사 협업을 통해 UX·기능·운영 효율성을 모두 향상시킨 프로젝트입니다.
+
+
+## 주요 화면
+
+![hankook1](/assets/images/post/2025/2025-10-07-project_hankookilbo2.png) *로그인 화면*
+
+![hankook2](/assets/images/post/2025/2025-10-07-project_hankookilbo3.png) *회원가입 화면*
+
+![hankook3](/assets/images/post/2025/2025-10-07-project_hankookilbo4.png) *배달사고 신청 화면*
+
+![hankook4](/assets/images/post/2025/2025-10-07-project_hankookilbo5.png) *문의내역 화면*
+
+![hankook5](/assets/images/post/2025/2025-10-07-project_hankookilbo6.png) *FAQ 화면*
