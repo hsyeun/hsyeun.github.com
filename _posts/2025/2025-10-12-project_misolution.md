@@ -83,10 +83,10 @@ published: true
 
 ![misolution1](/assets/images/post/2025/2025-10-12-project_misolution1.png) *로그인 화면*
 
-![misolution2](/assets/images/post/2025/2025-10-12-project_misolution2.png) *로그인 화면*
+![misolution2](/assets/images/post/2025/2025-10-12-project_misolution2.png) *메뉴 예시 화면*
 
-![misolution3](/assets/images/post/2025/2025-10-12-project_misolution3.png) *로그인 화면*
+![misolution3](/assets/images/post/2025/2025-10-12-project_misolution3.png) *알림톡 예시 화면*
 
-![misolution4](/assets/images/post/2025/2025-10-12-project_misolution4.png) *로그인 화면*
+![misolution4](/assets/images/post/2025/2025-10-12-project_misolution4.png) *표 예시 화면*
 
-![misolution5](/assets/images/post/2025/2025-10-12-project_misolution5.png) *로그인 화면*
+![misolution5](/assets/images/post/2025/2025-10-12-project_misolution5.png) *모달 예시 화면*
