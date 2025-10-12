@@ -41,8 +41,8 @@ Spring Boot와 Kotlin, Java 기반의 백엔드 API 설계·구현 경험도 갖
 | **Documentation & Office**          | `Microsoft PowerPoint` `Microsoft Word` `Google Workspace`                                                               |
 
 
-{% assign start1 = '2019-01-21' | date: "%s" %}
-{% assign end1   = '2020-10-19' | date: "%s" %}
+{% assign start1 = '2019-01-14' | date: "%s" %}
+{% assign end1   = '2020-10-31' | date: "%s" %}
 {% assign start2 = '2022-06-13' | date: "%s" %}
 {% assign end2   = 'now' | date: "%s" %}
 
