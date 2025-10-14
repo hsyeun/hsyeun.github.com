@@ -3,7 +3,7 @@ layout: post
 title: 깃허브 블로그 - 로고와 파비콘 변경하기
 key: 20210723
 tags: github blog jekyll TeXt logo favicon
-categories: blog
+categories: frontend
 ---
   
 

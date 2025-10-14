@@ -3,7 +3,7 @@ layout: post
 title: 깃허브 블로그 - 시작하기
 key: 20210722
 tags: github blog jekyll minimal-mistakes
-categories: blog
+categories: frontend
 ---
   
 
