@@ -3,7 +3,7 @@ layout: post
 title: PL/SQL - 기본 구조
 key: 20211122
 tags: SQL PL/SQL
-categories: plsql
+categories: aidata
 ---
 
 PL/SQL은 블록 구조를 가지고 있습니다.  

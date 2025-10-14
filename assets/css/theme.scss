@@ -761,17 +761,17 @@ span.post-read-more a:hover {
 
 blockquote {
     border-left: 4px solid $blue;
-    padding: 10px 20px;
+    padding: 10px 20px 1px;
     color: rgba(0, 0, 0, .5);
     margin-left: 10px;
     font-size: .9em;
-    
-    p {
-        margin: 0;
-    }
 
     p:hover {
-        color: #555f76;
+        color: #4b639a;
+    }
+
+    * {
+        font-size: .9em !important;
     }
 }
 
