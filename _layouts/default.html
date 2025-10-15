@@ -11,7 +11,8 @@
              https://*.googletagmanager.com
              https://*.analytics.google.com
              https://analytics.google.com
-             https://*.gstatic.com;
+             https://*.gstatic.com
+             https://giscus.app;
            connect-src 'self'
              https://*.google-analytics.com
              https://*.analytics.google.com
@@ -25,12 +26,15 @@
            style-src 'self' 'unsafe-inline'
              https://fonts.googleapis.com
              https://cdn.jsdelivr.net
-             https://cdnjs.cloudflare.com;
+             https://cdnjs.cloudflare.com
+             https://giscus.app;
            font-src 'self'
              https://fonts.gstatic.com
              https://cdn.jsdelivr.net
              https://cdnjs.cloudflare.com;
-           frame-src https://www.googletagmanager.com;">
+           frame-src 'self'
+              https://www.googletagmanager.com
+              https://giscus.app;">
   <link rel="icon" href="{{ site.baseurl }}/{{site.favicon}}">
 
   <!-- <title>{{ page.title }} | {{site.title}}</title> -->
@@ -54,6 +58,21 @@
   </script>
   {% endif %}
 
+  <script src="https://giscus.app/client.js"
+          data-repo="hsyeun/hsyeun.github.com"
+          data-repo-id="MDEwOlJlcG9zaXRvcnkzODA5OTg2ODg="
+          data-category="Comments"
+          data-category-id="DIC_kwDOFrWUIM4CwrDl"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="bottom"
+          data-theme="preferred_color_scheme"
+          data-lang="ko"
+          crossorigin="anonymous"
+          async>
+  </script>
 </head>
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
