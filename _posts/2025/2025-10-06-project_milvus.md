@@ -3,7 +3,7 @@ layout: post
 title:  "[2022년 ~ 현재] 사내 HR 시스템 운영 및 기능 고도화"
 categories: project
 tags: [HR, Javascript, jQuery, JSP, CSS, Java, Spring Boot, MariaDB, UI/UX, Intranet, Frontend, Backend]
-image: 
+image: assets/images/post/2025/2025-10-06-project_milvus.jpg
 published: true
 ---
 
@@ -71,3 +71,14 @@ published: true
 
 본 프로젝트는 장기 운영을 통한 지속적 개선을 지향하며, 사용자 중심 개편과 기능 고도화로 내부 고객의 만족도를 높인 사례입니다.  
 [**대규모 리뉴얼(2024.09~2024.11)**](/project/2025/10/06/project_milvus_renewal.html)은 별도 포스트에서 상세히 다룰 예정입니다.
+
+
+## 주요 화면
+
+![login](/assets/images/post/2025/2025-10-06-project_milvus1.jpg) *로그인 화면*
+
+![main](/assets/images/post/2025/2025-10-06-project_milvus2.jpg) *메인화면*
+
+![table](/assets/images/post/2025/2025-10-06-project_milvus3.jpg) *테이블*
+
+![modal](/assets/images/post/2025/2025-10-06-project_milvus4.jpg) *입력 화면*

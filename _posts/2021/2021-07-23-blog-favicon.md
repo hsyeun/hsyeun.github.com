@@ -1,9 +1,10 @@
 ---
 layout: post
-title: 깃허브 블로그 - 로고와 파비콘 변경하기
+title: 좌충우돌 블로그 만들기(3) - 로고와 파비콘 변경하기
 key: 20210723
 tags: github blog jekyll TeXt logo favicon
 categories: frontend
+image: assets/images/post/2021/2021-07-23-blog-favicon.jpg
 ---
   
 

@@ -1,9 +1,10 @@
 ---
 layout: post
-title: 깃허브 블로그 - 시작하기
+title: 좌충우돌 블로그 만들기(1) - 깃허브 블로그 시작하기
 key: 20210722
 tags: github blog jekyll minimal-mistakes
 categories: frontend
+image: assets/images/post/2021/2021-07-22-blog-start.jpg
 ---
   
 
