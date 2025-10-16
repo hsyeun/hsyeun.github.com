@@ -40,9 +40,11 @@ jobs:
               }'
             )
 
-            curl -X POST \
+            curl -s -o response.json -w "%{http_code}\n" \
               -H "Authorization: bearer $GISCUS_TOKEN" \
               -H "Content-Type: application/json" \
-              -d "$QUERY" \
+              -d "$CREATE_QUERY" \
               https://api.github.com/graphql
+
+            cat response.json
           done
