@@ -1,6 +1,6 @@
 name: Create Giscus Discussions for All Posts
 on:
-  workflow_dispatch:  # 수동 실행 버튼 추가
+  workflow_dispatch:  # 수동 실행
 
 jobs:
   create-all:
@@ -11,7 +11,8 @@ jobs:
 
       - name: Find all posts
         run: |
-          echo "ALL_FILES=$(find _posts -type f -name '*.md')" >> $GITHUB_ENV
+          echo "ALL_FILES=$(find _posts -type f -name '*.md' | tr '\n' ' ')" >> $GITHUB_ENV
+          echo "Detected files: $ALL_FILES"
 
       - name: Create discussions for all posts
         env:
