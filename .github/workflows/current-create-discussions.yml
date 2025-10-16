@@ -20,31 +20,36 @@ jobs:
           REPO_OWNER: hsyeun
           REPO_NAME: hsyeun/hsyeun.github.com
           CATEGORY_ID: DIC_kwDOFrWUIM4CwrDl
-        run: |
-          for FILE in $ALL_FILES; do
-            FILENAME=$(basename "$FILE" .md)
-            DATE=$(echo "$FILENAME" | cut -d'-' -f1-3)
-            SLUG=$(echo "$FILENAME" | cut -d'-' -f4-)
-            PATHNAME="/frontend/${DATE//-//}/${SLUG}/"
+          run: |
+            for FILE in $ALL_FILES; do
+              FILENAME=$(basename "$FILE" .md)
+              DATE=$(echo "$FILENAME" | cut -d'-' -f1-3)
+              SLUG=$(echo "$FILENAME" | cut -d'-' -f4-)
+              PATHNAME="/frontend/${DATE//-//}/${SLUG}/"
 
-            echo "Creating Discussion for $PATHNAME"
+              echo "Creating Discussion for $PATHNAME"
 
-            QUERY=$(jq -n \
-              --arg owner "$REPO_OWNER" \
-              --arg name "$REPO_NAME" \
-              --arg cat "$CATEGORY_ID" \
-              --arg title "$PATHNAME" \
-              '{
-                query: "mutation ($owner: String!, $name: String!, $cat: ID!, $title: String!) { createDiscussion(input: {repositoryId: repository(owner: $owner, name: $name) {id}, categoryId: $cat, title: $title, body: \"Auto-created for existing blog post.\"}) { discussion { id title url } } }",
-                variables: { owner: $owner, name: $name, cat: $cat, title: $title }
-              }'
-            )
+              REPO_ID=$(curl -s -H "Authorization: bearer $GISCUS_TOKEN" \
+                -H "Content-Type: application/json" \
+                -d "{\"query\": \"query { repository(owner: \\\"$REPO_OWNER\\\", name: \\\"$REPO_NAME\\\") { id } }\"}" \
+                https://api.github.com/graphql | jq -r ".data.repository.id")
 
-            curl -s -o response.json -w "%{http_code}\n" \
-              -H "Authorization: bearer $GISCUS_TOKEN" \
-              -H "Content-Type: application/json" \
-              -d "$CREATE_QUERY" \
-              https://api.github.com/graphql
+              echo "Repository ID: $REPO_ID"
 
-            cat response.json
-          done
+              CREATE_BODY=$(cat <<EOF
+              {
+                "query": "mutation { createDiscussion(input: {repositoryId: \\\"$REPO_ID\\\", categoryId: \\\"$CATEGORY_ID\\\", title: \\\"$PATHNAME\\\", body: \\\"Auto-created for existing blog post.\\\"}) { discussion { id title url } } }"
+              }
+              EOF
+              )
+
+              curl -s -o response.json -w "%{http_code}\n" \
+                -H "Authorization: bearer $GISCUS_TOKEN" \
+                -H "Content-Type: application/json" \
+                -d "$CREATE_BODY" \
+                https://api.github.com/graphql
+
+              echo "Response:"
+              cat response.json
+              echo "--------------------------------------"
+            done
