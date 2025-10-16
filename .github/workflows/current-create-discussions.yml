@@ -1,32 +1,26 @@
-name: Create Giscus Discussion
+name: Create Giscus Discussions for All Posts
 on:
-  push:
-    branches: [ branch ]
-    paths:
-      - '_posts/**'   # 새 블로그 글 추가 시만 동작
+  workflow_dispatch:  # 수동 실행 버튼 추가
 
 jobs:
-  create-discussion:
+  create-all:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Extract new post filenames
-        id: files
+      - name: Find all posts
         run: |
-          git fetch origin main
-          echo "NEW_FILES=$(git diff --name-only HEAD~1 HEAD | grep '_posts/' || true)" >> $GITHUB_ENV
+          echo "ALL_FILES=$(find _posts -type f -name '*.md')" >> $GITHUB_ENV
 
-      - name: Create discussions for new posts
-        if: env.NEW_FILES != ''
+      - name: Create discussions for all posts
         env:
           GISCUS_TOKEN: ${{ secrets.GISCUS_TOKEN }}
           REPO_OWNER: hsyeun
           REPO_NAME: hsyeun/hsyeun.github.com
           CATEGORY_ID: DIC_kwDOFrWUIM4CwrDl
         run: |
-          for FILE in $NEW_FILES; do
+          for FILE in $ALL_FILES; do
             FILENAME=$(basename "$FILE" .md)
             DATE=$(echo "$FILENAME" | cut -d'-' -f1-3)
             SLUG=$(echo "$FILENAME" | cut -d'-' -f4-)
@@ -40,7 +34,7 @@ jobs:
               --arg cat "$CATEGORY_ID" \
               --arg title "$PATHNAME" \
               '{
-                query: "mutation ($owner: String!, $name: String!, $cat: ID!, $title: String!) { createDiscussion(input: {repositoryId: repository(owner: $owner, name: $name) {id}, categoryId: $cat, title: $title, body: \"Auto-created for new blog post.\"}) { discussion { id title url } } }",
+                query: "mutation ($owner: String!, $name: String!, $cat: ID!, $title: String!) { createDiscussion(input: {repositoryId: repository(owner: $owner, name: $name) {id}, categoryId: $cat, title: $title, body: \"Auto-created for existing blog post.\"}) { discussion { id title url } } }",
                 variables: { owner: $owner, name: $name, cat: $cat, title: $title }
               }'
             )
