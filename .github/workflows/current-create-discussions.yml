@@ -25,7 +25,7 @@ jobs:
             FILENAME=$(basename "$FILE" .md)
             DATE=$(echo "$FILENAME" | cut -d'-' -f1-3)
             SLUG=$(echo "$FILENAME" | cut -d'-' -f4-)
-            PATHNAME="/frontend/${DATE//-//}/${SLUG}/"
+            PATHNAME="/${DATE//-//}/${SLUG}/"
 
             echo "Creating Discussion for $PATHNAME"
 
