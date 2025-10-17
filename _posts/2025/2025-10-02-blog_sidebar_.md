@@ -4,7 +4,7 @@ title:  "좌충우돌 블로그 만들기(4) - 사이드 메뉴"
 categories: frontend
 tags: [Affiliates, Jekyll, theme, github, blog, liquid, sidemenu, menu, category]
 image: assets/images/post/2025/2025-10-02-blog_sidebar_.jpg
-pin: true
+pin: false
 published: true
 ---
 

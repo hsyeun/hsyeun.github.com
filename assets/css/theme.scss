@@ -626,7 +626,7 @@ span.post-read-more a:hover {
     code {
         font-size: 15px;
         color: $blue;
-        padding: 3px 6px;
+        padding: 1px 6px;
         border: 1px solid rgba(37, 99, 235, 0.2);
         border-radius: 4px;
         background: rgba(37, 99, 235, 0.08);
@@ -771,7 +771,7 @@ blockquote {
     }
 
     * {
-        font-size: .9em !important;
+        font-size: 15px;
     }
 }
 
