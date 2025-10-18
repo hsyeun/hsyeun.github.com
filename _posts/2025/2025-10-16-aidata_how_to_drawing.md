@@ -2,79 +2,68 @@
 layout: post
 title:  "진짜와 가짜의 경계 ::AI 그림의 비밀"
 categories: aidata
-tags: [AI, ChatGPT, Diffusion, DALL-E, GenerativeAI, Content, AI Drawing]
+tags: [AI, ChatGPT, Diffusion, DALL·E, GenerativeAI, Content, AI Drawing]
 image: assets/images/post/2025/2025-10-14-frontend_react_34603.jpg
-published: false
+published: true
 ---
 
-React 공식 리포지토리의 DevTools 버그 이슈([#34603](https://github.com/facebook/react/issues/34603))에 참여하여 이슈가 최종적으로 *Closed* 처리되는 과정에 기여했다.  
 
-## Issue 개요
-- **이슈 번호**: [facebook/react #34603](https://github.com/facebook/react/issues/34603)  
-- **이슈명**: [DevTools Bug] Cannot read properties of undefined (reading 'length')  
-- **증상**: React Profiler 실행 중 **"Cannot read properties of undefined (reading 'length')"** 오류 발생  
-- **발생 조건**:  
-  - React 18 환경  
-  - `Highlight component updates` 활성화  
-  - `Record why each component rendered` 옵션 사용 시  
+최근 AI에 요청해서 사진을 지브리 스타일로 바꾸거나, 영상을 만들어 유튜브 채널로 활용하는 AI 콘텐츠가 폭발적으로 늘고 있다.  
+짧은 프롬프트 하나로 영화 같은 장면을 만들어내는 시대가 된 것이다.  
 
-## 검증 및 분석 과정
-이슈 제보 이후, React 19 환경에서 DevTools 버전별 비교를 통해 문제 해결 여부를 확인했다.
+나도 이 블로그를 꾸밀 때 ChatGPT에 요청해서 얻은 이미지를 직접 수정해서 활용한 점이 있는데 AI에는 텍스트로 된 프롬프트를 입력하여 요청을 한다.  
 
-| React 버전 | DevTools 버전 | 결과 |
-|---------|------------------|-------------|
-| React 19.2.0 | DevTools 6.1.5 | 오류 발생하지 않음 |
-| React 19.2.0 | DevTools 7.0.0 | 오류 발생하지 않음 |
-
-테스트 결과, React 19에서 **Profiler의 commit data 구조가 변경되며 `commitData`가 undefined로 전달되는 문제**가 해소된 것으로 보였다. 이는 React 18에서 발생하던 구조 불일치 현상이 React 19에서 내부 리팩터링을 통해 자연스럽게 해결된 사례로 판단되었다.
+그렇다면 ChatGPT는 이 텍스트로 어떻게 그림을 그릴 수 있는 걸까?    
 
 
-## 코멘트 및 피드백
-테스트 결과를 바탕으로 해당 이슈에 두 차례 코멘트를 남겼다.
+## DALL·E
 
-**1차 코멘트 (React 19 + DevTools 6.1.5 테스트 결과)**  
-> Hi! I couldn’t reproduce this in React 19.2.0 with React DevTools 6.1.5.  
-> The Profilerworks as expected no `commitData` or `.length` errors.
->
-> It seems this issue was limited to React 18’s profiler data format, where commitData could be undefined.  
-> React 19 introduced structural changes in commit data, which likely resolved it automatically.  
->
-> So this issue may be marked as **Fixed in React 19** or **No longer reproducible**. Thanks!
+핵심은 `DALL·E`이다.  
 
-이후 React 팀 contributor인 **@hoxyq**가 DevTools 7 버전으로의 재테스트를 요청했고, **@hoxyq**의 코멘트를 보자마자 바로 두 번째 테스트를 실행하여 아래와 같이 **2차 코멘트**를 통해 추가 검증 결과를 공유했다.
+DALL·E는 OpenAI가 개발한 이미지 생성 모델인데 현재는 3.0 버전까지 나왔다.  
+ChatGPT가 사용자가 입력한 문장의 의미를 해석하고, 이를 의미 구조로 바꿔 DALL·E에 전달하면 이 정보를 바탕으로 DALL·E가 그림을 그린다.  
 
-**2차 코멘트 (React 19 + DevTools 7 테스트 결과)**  
-> Hi, Quick follow-up !! I tested as requested with React 19.2.0 and React DevTools 7.  
-> Profiler works normally no `commitData` or `.length` errors observed.
-> 
-> It seems this issue has been resolved in the latest version.  
-> If no one else can reproduce it, it might be safe to close. Thanks!
-> 
-> P.S. My previous comment seems to have been hidden as spam 😅  
-> I mentioned that I also tested with React 19.2.0 and React DevTools 6.1.5, and everything worked fine - no issues observed.
+DALL·E의 기반은 확산 모델이다.  
+동작 과정은 다음과 같다.    
+1. 무작위한 노이즈 이미지를 생성
+2. AI가 텍스트의 의미를 참고해 노이즈를 조금씩 수정
+3. 수백 단계의 반복을 거쳐 결과 이미지 완성
 
-2차 코멘트를 작성하는 중에 뭔가 이상한 걸 발견했는데 내 1차 코멘트가 `Hidden as spam` 처리로 숨겨진 것이다!  
+### DALL·E 3
 
-![?!](/assets/images/meme/huk_cat.jpg){: width="450"}
+DALL·E 3는 이전 버전들과 달리 ChatGPT 내부에 직접 통합된 이미지 생성 모델이다.  
+이전의 DALL·E 2는 별도의 페이지에서만 프롬프트를 입력해야 했지만 DALL·E 3는 ChatGPT의 대화 맥락을 그대로 활용할 수 있다.  
 
-이슈 첫 참여라서 자만감 뿜뿜하고 있었는데 스팸 처리라니!!  
-너무 당황스러웠는데, 알고보니 내가 첫 댓글을 너무 봇처럼 작성해서 자동으로 스팸이 된 것이었다. (지금처럼 수정했더니 다행히 스팸이 풀렸다. ㅎ)  
+ChatGPT가 사용자의 의도를 파악하고 장면의 구도, 색감, 분위기까지 텍스트로 구체화한 뒤, 그걸 DALL·E 3에게 전달해 바로 이미지를 생성한다.  
 
-아무튼 2차 코멘트를 단 이후, React 팀 core member **@eps1lon**이 이슈를 *Completed*로 마감했고 이슈 작성자 **@eljonathas**로부터 (코멘트 하트❤️와 함께) "Yep. I can't reproduce this error anymore"라는 회신을 받았다. ![뿌듯](/assets/images/meme/ppudut.jpg){: width="35"}  
+이 덕분에 DALL·E 3는 짧은 프롬프트만으로도 의도에 맞는 이미지를 만들어낼 수 있는 것이다.  
 
-## 결과
-- React 19 + DevTools 6.1.5 / 7 환경에서 버그 재현 불가 확인  
-- 공식 리포지토리에서 **이슈 Closed (Completed)** 처리  
-- React DevTools 버그 해결 여부 검증에 기여 😏 
 
----
+#### DALL·E 3의 변화
 
-이 경험을 통해 오픈소스 커뮤니티의 **버그 리포트 → 검증 → 종료** 과정이 어떻게 이루어지는지를 직접 체감할 수 있었다.  
-특히 처음 참여한 이슈가 *Closed*까지 이어진 것이 개인적으로 의미 있고 뿌듯한 경험이었다!  
+| 구분 | DALL·E 2 | DALL·E 3 |
+|------|-----------|-----------|
+| **프롬프트 이해력** | 짧은 문장은 불명확하게 인식 | 복잡한 자연어 문장도 정밀하게 해석 |
+| **ChatGPT 통합** | 별도 도구 | ChatGPT 대화창 내 바로 생성 가능 |
+| **텍스트 정확도** | 이미지 속 글자 깨짐 잦음 | 로고, 간판 등 텍스트도 정확히 표현 가능 |
+| **리라이팅 기능** | 수동 입력 필요 | ChatGPT가 자동으로 프롬프트 최적화 |
+| **편집 기능** | 제한적 | "이 부분만 수정해줘" 같은 자연어 편집 지원 |  
 
-앞으로도 이런 방식으로 오픈소스 프로젝트의 품질 향상과 안정화 과정에 꾸준히 참여해야겠다. 후후..  
+특히 텍스트 인식 능력이 크게 개선돼서 이미지 속 간판, 문구, 포스터 같은 글자도 자연스럽게 들어간다.  
+또한 ChatGPT와 결합되어 있기 때문에 "이 배경에 사람 한 명 더 추가해줘", "색감만 따뜻하게 바꿔줘"처럼 대화형 편집도 가능하다.
+
+
+## 진짜와 가짜의 경계
+
+이러한 기술들이 발전할수록 진짜 예술과 가짜 예술의 경계가 흐려지고 있다.  
+AI가 만든 이미지는 점점 더 정교해져 이제는 사람의 손으로 그린 그림과 구분하기 어려울 정도다.  
+그 과정에서 원작자의 작품이 무단으로 학습되어 생성되는 문제로 심각한 저작권 분쟁이 발생하기도 한다.  
+
+기술을 활용하는 만큼 그 속의 책임과 윤리도 함께 인식해야 한다.  
+윤리적인 기준을 잘 지킨다면 AI는 예술의 범위를 넓히는 긍정적인 도구가 될 수 있다고 생각한다.    
 
 
 **참조 링크**
-- [GitHub Issue #34603 – facebook/react](https://github.com/facebook/react/issues/34603)
-- [React DevTools v7 Release Note](https://github.com/facebook/react/releases)
+- [DALL·E 3](https://openai.com/ko-KR/index/dall-e-3/)  
+- [GPT Image API](https://help.openai.com/ko-kr/articles/11128753-gpt-image-api)  
+- [OpenAI Platform > Models > DALL·E 3](https://platform.openai.com/docs/models/dall-e-3)  
