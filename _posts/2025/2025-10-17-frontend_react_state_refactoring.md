@@ -157,7 +157,7 @@ UI는 같지만 렌더링 패턴은 확실히 달랐다.
 
 ![As-Is](/assets/images/post/2025/2025-10-17-frontend_react_state_refactoring_as_is.jpg)  *As-Is*
 
-![To-Be](/assets/images/post/2025/2025-10-17-frontend_react_state_refactoring_to_be.jpg)  *To-Be*
+<!-- ![To-Be](/assets/images/post/2025/2025-10-17-frontend_react_state_refactoring_to_be.jpg)  *To-Be* -->
 
 
 ### 비교분석
