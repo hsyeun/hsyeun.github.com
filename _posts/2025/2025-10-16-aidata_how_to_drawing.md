@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "진짜와 가짜의 경계 ::AI 그림의 비밀"
+title:  "진짜와 가짜의 경계"
 categories: aidata
 tags: [AI, ChatGPT, Diffusion, DALL·E, GenerativeAI, Content, AI Drawing]
-image: assets/images/post/2025/2025-10-14-frontend_react_34603.jpg
+image: assets/images/post/2025/2025-10-16-aidata_how_to_drawing.jpg
 published: true
 ---
 
