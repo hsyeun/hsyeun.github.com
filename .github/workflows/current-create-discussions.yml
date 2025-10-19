@@ -3,18 +3,20 @@ on:
   workflow_dispatch:  # 수동 실행
 
 jobs:
-  create-all:
+  create-discussions:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Find all posts
+      - name: Find published posts
         run: |
-          echo "ALL_FILES=$(find _posts -type f -name '*.md' | tr '\n' ' ')" >> $GITHUB_ENV
-          echo "Detected files: $ALL_FILES"
+          echo "ALL_FILES=$(grep -rl '^published: true' _posts --include='*.md' | tr '\n' ' ')" >> $GITHUB_ENV
+          echo "Detected published posts:"
+          grep -rl '^published: true' _posts --include='*.md' || true
 
-      - name: Create discussions for all posts
+      - name: Create discussions only if missing
         env:
           GISCUS_TOKEN: ${{ secrets.GISCUS_TOKEN }}
           REPO_OWNER: hsyeun
@@ -25,26 +27,45 @@ jobs:
             FILENAME=$(basename "$FILE" .md)
             DATE=$(echo "$FILENAME" | cut -d'-' -f1-3)
             SLUG=$(echo "$FILENAME" | cut -d'-' -f4-)
-            PATHNAME="/${DATE//-//}/${SLUG}/"
+            CATEGORY=$(basename $(dirname "$FILE"))
+            PATHNAME="/${CATEGORY}/${DATE//-//}/${SLUG}/"
 
             echo "Creating Discussion for $PATHNAME"
+
+            SEARCH_BODY="{\"query\": \"query { repository(owner: \\\"$REPO_OWNER\\\", name: \\\"$REPO_NAME\\\") { discussions(first: 100, query: \\\"$PATHNAME\\\") { nodes { id title url } } } }\"}"
+
+            SEARCH_RESULT=$(curl -s -H "Authorization: bearer $GISCUS_TOKEN" \
+              -H "Content-Type: application/json" \
+              -d "$SEARCH_BODY" \
+              https://api.github.com/graphql)
+
+            EXISTING_URL=$(echo "$SEARCH_RESULT" | jq -r ".data.repository.discussions.nodes[0].url // empty")
+
+            if [ -n "$EXISTING_URL" ]; then
+              echo "Discussion already exists: $EXISTING_URL"
+              continue
+            fi
 
             REPO_ID=$(curl -s -H "Authorization: bearer $GISCUS_TOKEN" \
               -H "Content-Type: application/json" \
               -d "{\"query\": \"query { repository(owner: \\\"$REPO_OWNER\\\", name: \\\"$REPO_NAME\\\") { id } }\"}" \
               https://api.github.com/graphql | jq -r ".data.repository.id")
 
-            echo "Repository ID: $REPO_ID"
+            CREATE_BODY="{\"query\": \"mutation { createDiscussion(input: {repositoryId: \\\"$REPO_ID\\\", categoryId: \\\"$CATEGORY_ID\\\", title: \\\"$PATHNAME\\\", body: \\\"Auto-created for published blog post.\\\"}) { discussion { id title url } } }\"}"
 
-            CREATE_BODY="{\"query\": \"mutation { createDiscussion(input: {repositoryId: \\\"$REPO_ID\\\", categoryId: \\\"$CATEGORY_ID\\\", title: \\\"$PATHNAME\\\", body: \\\"Auto-created for existing blog post.\\\"}) { discussion { id title url } } }\"}"
-
-            curl -s -o response.json -w "%{http_code}\n" \
-              -H "Authorization: bearer $GISCUS_TOKEN" \
+            CREATE_RESPONSE=$(curl -s -H "Authorization: bearer $GISCUS_TOKEN" \
               -H "Content-Type: application/json" \
               -d "$CREATE_BODY" \
-              https://api.github.com/graphql
+              https://api.github.com/graphql)
 
-            echo "Response:"
-            cat response.json
+            NEW_URL=$(echo "$CREATE_RESPONSE" | jq -r ".data.createDiscussion.discussion.url // empty")
+
+            if [ -n "$NEW_URL" ]; then
+              echo "Created new Discussion: $NEW_URL"
+            else
+              echo "Failed to create Discussion for $PATHNAME"
+              echo "$CREATE_RESPONSE"
+            fi
+            
             echo "--------------------------------------"
           done
