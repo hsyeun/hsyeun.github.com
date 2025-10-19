@@ -33,7 +33,7 @@ jobs:
               CATEGORY="uncategorized"
             fi
 
-            PATHNAME="/${CATEGORY}/${DATE//-//}/${SLUG}/"
+            PATHNAME="${CATEGORY}/${DATE//-//}/${SLUG}/"
 
             echo "Creating Discussion for $PATHNAME"
 
