@@ -27,7 +27,12 @@ jobs:
             FILENAME=$(basename "$FILE" .md)
             DATE=$(echo "$FILENAME" | cut -d'-' -f1-3)
             SLUG=$(echo "$FILENAME" | cut -d'-' -f4-)
-            CATEGORY=$(basename $(dirname "$FILE"))
+
+            CATEGORY=$(grep -m1 '^categories:' "$FILE" | awk '{print $2}')
+            if [ -z "$CATEGORY" ]; then
+              CATEGORY="uncategorized"
+            fi
+
             PATHNAME="/${CATEGORY}/${DATE//-//}/${SLUG}/"
 
             echo "Creating Discussion for $PATHNAME"
@@ -66,6 +71,6 @@ jobs:
               echo "Failed to create Discussion for $PATHNAME"
               echo "$CREATE_RESPONSE"
             fi
-            
+
             echo "--------------------------------------"
           done
