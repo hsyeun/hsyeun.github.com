@@ -3,11 +3,12 @@ on:
   push:
     branches: [ branch ]
     paths:
-      - '_posts/**'   # 새 블로그 글 추가 시만 동작
+      - '_posts/**/**'
 
 jobs:
   create-discussion:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,24 +31,42 @@ jobs:
             FILENAME=$(basename "$FILE" .md)
             DATE=$(echo "$FILENAME" | cut -d'-' -f1-3)
             SLUG=$(echo "$FILENAME" | cut -d'-' -f4-)
-            PATHNAME="/frontend/${DATE//-//}/${SLUG}/"
+
+            CATEGORY=$(grep -m1 '^categories:' "$FILE" | awk '{print $2}')
+            if [ -z "$CATEGORY" ]; then
+              CATEGORY="uncategorized"
+            fi
+
+            PATHNAME="/${CATEGORY}/${DATE//-//}/${SLUG}"
 
             echo "Creating Discussion for $PATHNAME"
 
-            QUERY=$(jq -n \
-              --arg owner "$REPO_OWNER" \
-              --arg name "$REPO_NAME" \
+            REPO_ID=$(curl -s -H "Authorization: bearer $GISCUS_TOKEN" \
+              -H "Content-Type: application/json" \
+              -d "{\"query\": \"query { repository(owner:\\\"$REPO_OWNER\\\", name:\\\"$REPO_NAME\\\") { id } }\"}" \
+              https://api.github.com/graphql | jq -r ".data.repository.id")
+
+            CREATE_BODY=$(jq -n \
+              --arg rid "$REPO_ID" \
               --arg cat "$CATEGORY_ID" \
               --arg title "$PATHNAME" \
               '{
-                query: "mutation ($owner: String!, $name: String!, $cat: ID!, $title: String!) { createDiscussion(input: {repositoryId: repository(owner: $owner, name: $name) {id}, categoryId: $cat, title: $title, body: \"Auto-created for new blog post.\"}) { discussion { id title url } } }",
-                variables: { owner: $owner, name: $name, cat: $cat, title: $title }
+                query: "mutation ($rid: ID!, $cat: ID!, $title: String!) { createDiscussion(input: {repositoryId: $rid, categoryId: $cat, title: $title, body: \"Auto-created for new blog post.\"}) { discussion { id title url } } }",
+                variables: { rid: $rid, cat: $cat, title: $title }
               }'
             )
 
-            curl -X POST \
-              -H "Authorization: bearer $GISCUS_TOKEN" \
+            RESPONSE=$(curl -s -H "Authorization: bearer $GISCUS_TOKEN" \
               -H "Content-Type: application/json" \
-              -d "$QUERY" \
-              https://api.github.com/graphql
+              -d "$CREATE_BODY" \
+              https://api.github.com/graphql)
+
+            echo "$RESPONSE" | jq .
+
+            DISC_URL=$(echo "$RESPONSE" | jq -r ".data.createDiscussion.discussion.url // empty")
+            if [ -n "$DISC_URL" ]; then
+              echo "Created Discussion: $DISC_URL"
+            else
+              echo "Failed to create Discussion for $PATHNAME"
+            fi
           done
