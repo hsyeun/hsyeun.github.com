@@ -150,32 +150,86 @@ const linkBtnIcon = useMemo(() => {
 }, [isBlack]);
 ```
 
+
+## 비동기 상태 업데이트도 최적화하자
+
+렌더링은 상태뿐 아니라 비동기 처리 방식에도 큰 영향을 받는다.  
+특히 `axios`나 `fetch` 같은 요청에서 여러 개의 setState를 순차로 호출하면 React가 각각을 별도의 렌더 주기로 처리해 불필요한 렌더가 누적될 수 있다.  
+
+예를 들어 아래와 같은 코드가 있다.  
+
+```jsx
+async function handleColor() {
+  let data = [];
+  for (let cl of colorList) {
+    const res = await axios.get(`/api/color?id=${cl.id}`);
+    if (res.data.type === "success") {
+      data.push(res.data.data[0]);
+    }
+  }
+  setColors(data);
+  setPopOpen(true);
+}
+```
+이 코드는 요청을 순차적으로 처리하기 때문에 전체 요청 시간이 길고 각 요청이 끝날 때마다 이벤트 루프가 잠시 멈추며 React의 렌더링 타이밍이 지연된다.  
+
+이를 `Promise.all`로 병렬화하면 모든 요청이 완료된 뒤 한 번에 상태를 변경할 수 있다.  
+
+```jsx
+const handleColor = useCallback(async () => {
+  const res = await Promise.all(
+    colorList.map((cl) =>
+      axios.get(`/api/color?id=${cl.id}`)
+    )
+  );
+
+  const data = res
+    .map((r) => r.data)
+    .filter((r) => r.type === "success")
+    .flatMap((r) => r.data);
+
+  setColors(data);
+  setPopOpen(true);
+}, [colorList]);
+```
+
+이렇게 바꾸면 렌더링 횟수가 확연히 줄어든다.  
+<!-- React 18부터는 비동기 이벤트 내에서도 자동 배칭이 적용되어 같은 tick 안의 여러 상태 변경(setIndicators, setPopOpen)이 한 번의 렌더(commit) 로 병합된다. -->
+즉, 여러 번 나눠서 렌더하던 것을 한 번에 처리하게 되는 셈이다.  
+
 ## Profiler로 확인한 차이
 
 리팩토링의 전후를 React DevTools Profiler로 비교했다.  
-UI는 같지만 렌더링 패턴은 확실히 달랐다.    
+UI 동작은 완전히 동일하지만 렌더링 횟수와 시간에서 눈에 띄는 차이가 나타났다!      
 
 ![As-Is](/assets/images/post/2025/2025-10-17-frontend_react_state_refactoring_as_is.jpg)  *As-Is*
 
-<!-- ![To-Be](/assets/images/post/2025/2025-10-17-frontend_react_state_refactoring_to_be.jpg)  *To-Be* -->
+![To-Be](/assets/images/post/2025/2025-10-17-frontend_react_state_refactoring_to_be.jpg)  *To-Be*
 
 
 ### 비교분석
 
-| 항목                  | As-Is       | To-Be       | 개선 효과                                 |
-| ------------------- | ----------- | ----------- | ------------------------------------- |
-| **렌더 횟수**           | 9회          | 9회          | 동일 (측정 시나리오 동일)                       |
-| **초기 렌더링 (0~0.3s)** | 37.4 ms   | 31.5 ms | 🔽 약 15.8% 개선  (불필요한 `useState` 초기화 제거 효과)             |
+| 항목 | As-Is | To-Be | 변화 및 해석 |
+|------|------:|------:|--------------|
+| **렌더 횟수** | 9회 | 6회 | 🔽 **-33 % 감소** — React의 자동 배칭과 상태 업데이트 병합으로 불필요한 커밋이 줄어듦 |
+| **총 렌더링 시간 합계** | 252.8 ms | 161.1 ms | 🔽 **-36 % 개선** — 비동기 루프(`Promise.all`)와 `useCallback` 안정화로 렌더 시점 병합 |
+| **평균 렌더링 시간** | 28.1 ms | 26.9 ms | 🔽 **-4 % 개선** — 렌더 1회당 비용은 거의 동일하지만 횟수 감소로 전체 시간 단축 |
+| **최댓값(피크 렌더)** | 52.9 ms | 48.5 ms | 🔽 **-8 % 개선** — 연속 렌더 제거 효과 |
+| **초기 렌더링(0 ~ 1 s)** | 37.4 ms | 23.0 ms | 🔽 **-38 % 개선** — 불필요한 `useState` 초기화 및 의존성 연쇄 제거 |
 
-초기 렌더링 속도가 개선되었다. useState 초기화 과정이 줄어들면서 불필요한 렌더링이 사라졌기 때문이다.
 
+리팩토링 이후 렌더 횟수가 9회에서 6회로 감소되었고 총 렌더링 시간도 약 36% 단축되었다!!  
+
+이는 `useCallback`, `useMemo`를 통해 함수와 값을 안정화하고 비동기 루프를 `Promise.all`로 병렬화해 React의 자동 배칭이 효율적으로 작동한 결과다. ㅎㅎ  
+
+---
 
 React를 사용하다 보면 항상 신중해지는 질문이 있다. 
 > "이 값은 정말 상태여야 할까?"
 
-이번 리팩토링은 그 질문에 대한 좋은 사례였다.  
-state를 줄였을 뿐인데 렌더링이 훨씬 안정적이고 가벼워졌다.  
-useCallback과 useMemo를 함께 사용해 불필요한 함수와 값의 재생성까지 줄이니 React의 렌더링 사이클이 훨씬 단순해졌다.  
+이번 리팩토링은 그 질문에 대한 좋은 사례가 되었다.  
+state를 줄이고, 렌더 타이밍을 개선함으로써 렌더링이 훨씬 안정적이고 가벼워졌다.    
+또한, useCallback과 useMemo를 함께 사용해 불필요한 함수와 값의 재생성까지 줄이니 React의 렌더링 사이클이 훨씬 단순해졌다.  
 
-결국 상태 관리의 핵심은 "무엇을 기억하지 않을 것인가"를 결정하는 일이다.  
-필요한 것만 기억하고, 나머지는 계산하자. 그게 React를 빠르고 효율적으로 만드는 가장 확실한 방법이다.
+상태 관리의 핵심은 "무엇을 기억하지 않을 것인가"를 결정하는 일이다.  
+필요한 것만 기억하고 나머지는 필요할 때 다시 구하는 것이 React를 빠르고 효율적으로 만드는 확실한 방법이다.
