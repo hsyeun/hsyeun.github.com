@@ -51,7 +51,7 @@ collections:
 # Plugins
 plugins: 
 - jekyll-feed
-- jekyll-seo-tag
+# - jekyll-seo-tag
 - jekyll-archives
 - jekyll-paginate-v2
 
