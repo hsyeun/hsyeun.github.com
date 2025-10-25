@@ -18,9 +18,7 @@ post_class: post-template
             </div>
             {% else %}
             <div class="featured-image img-fluid rounded">
-                {% unless page.path contains "sitemap.xml" %}
                 {% include defaultImage.html %}
-                {% endunless %}
             </div>
             {% endif %}
 			<!-- End Featured Image -->
