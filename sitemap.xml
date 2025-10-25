@@ -35,7 +35,7 @@ permalink: /sitemap.xml
           {% if page.last_modified_at %}
             <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
           {% endif %}
-          <changefreq>monthly</changefreq>
+          <changefreq>weekly</changefreq>
           <priority>0.6</priority>
         </url>
       {% endunless %}
