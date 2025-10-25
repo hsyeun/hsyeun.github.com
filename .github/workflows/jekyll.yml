@@ -29,6 +29,10 @@ jobs:
       - name: Build site with Jekyll
         run: JEKYLL_ENV=production bundle exec jekyll build --trace
 
+      - name: Clean sitemap.xml
+        run: |
+          sed -i '/<script\/>/d' _site/sitemap.xml
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
