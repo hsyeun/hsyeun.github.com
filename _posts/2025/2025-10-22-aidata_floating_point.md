@@ -2,7 +2,7 @@
 layout: post
 title:  "0.1은 0.1이 아니다"
 categories: aidata
-tags: [SQL, JavaScript, Float, Decimal, Precision, Numeric]
+tags: [SQL, JavaScript, Float, Decimal, Precision, Numeric, Floating Point, DB]
 image: assets/images/post/2025/2025-10-22-aidata_floating_point.jpg
 published: true
 ---
