@@ -49,12 +49,11 @@ collections:
 
 # Plugins
 plugins: 
+- jekyll-sitemap
 - jekyll-feed
+- jekyll-seo-tag
 - jekyll-archives
 - jekyll-paginate-v2
-
-exclude:
-  - sitemap.xml
 
 pagination:
   enabled: true
