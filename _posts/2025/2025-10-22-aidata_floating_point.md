@@ -39,7 +39,7 @@ WHERE cast(VARCHAR_VALUE AS float) > 0.1
 WHERE cast(VARCHAR_VALUE AS float) > 0.1
 ```   
 
-여기에는 **두 개의 근사치**가 비교됩니다.  
+여기에는 **두 개의 근사치**가 비교된다.  
 
 1. `cast('0.1' AS float)` : 0.1의 근사치
 2. `0.1` : DB가 이 리터럴도 `float`로 해석하여 0.1의 근사치로 만든다.
