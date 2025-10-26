@@ -11,15 +11,23 @@ published: true
 ```sql
 SELECT VARCHAR_VALUE
 FROM TEMP_TBL
-WHERE cast(VARCHAR_VALUE AS float) > 0.1
-  AND cast(VARCHAR_VALUE AS float) < 0.5;
+WHERE cast(VARCHAR_VALUE AS float) > 0.1;
 ```
 
 이 쿼리를 실행하면 '0.1'은 조회될까, 조회되지 않을까?  
 
+<br>
+<br>
+<br>
+
 정답은... 조회된다!
 
+<br>
+<br>
+
 ![엥](/assets/images/meme/jaesuk_question.jpg)
+
+<br>
 
 ## 부동소수
 
