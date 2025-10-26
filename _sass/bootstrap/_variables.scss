@@ -290,7 +290,7 @@ $list-inline-padding:         .5rem !default;
 
 $mark-bg:                     #fcf8e3 !default;
 
-$hr-margin-y:                 $spacer !default;
+$hr-margin-y:                 ($spacer * 2) !default;
 
 
 // Tables
