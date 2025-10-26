@@ -23,7 +23,6 @@ WHERE cast(VARCHAR_VALUE AS float) > 0.1;
 정답은... 조회된다!
 
 <br>
-<br>
 
 ![엥](/assets/images/meme/jaesuk_question.jpg)
 
