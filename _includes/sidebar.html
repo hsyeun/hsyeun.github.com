@@ -10,11 +10,16 @@
         {% assign cats = cats | sort_natural %}
         <ul>            
             {% for category in cats %}
+                {% assign posts_count = site.categories[category] | size %}
                 <li>
                     {% if page.url contains category %}
-                    <a style="color: #2563eb;" href="{{ site.baseurl }}/categories/{{ category | slugify }}/">{{ site.data.categories[category] | default: category }}</a>
+                    <a style="color: #2563eb;" href="{{ site.baseurl }}/categories/{{ category | slugify }}/">
+                        {{ site.data.categories[category] | default: category }} ({{ posts_count }})
+                    </a>
                     {% else %}
-                    <a href="{{ site.baseurl }}/categories/{{ category | slugify }}/">{{ site.data.categories[category] | default: category }}</a>
+                    <a href="{{ site.baseurl }}/categories/{{ category | slugify }}/">
+                        {{ site.data.categories[category] | default: category }} ({{ posts_count }})
+                    </a>
                     {% endif %}
                 </li>
             {% endfor %}
