@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "🚨개발자의 대체 가능성? AI 시대에 '설계'가 더 중요한 이유"
-categories: aidata
-tags: [AI, Issue, Software Engineering, Architecture]
+categories: insight
+tags: [Insight, AI, Issue, Software Engineering, Architecture]
 image: 
 published: true
 ---
@@ -10,7 +10,7 @@ published: true
 
 최근 Cursor, Copilot 등 AI 도구의 발전이 빠르게 이뤄지고 있다.  
 이제 프롬프트 몇 줄이면 몇 초 만에 코드가 작성되고 기능이 완성된다.  
-AI 도구의 활용성이 높아질수록, "결국 개발자가 AI로 대체되는 것은 아닐까?" 하는 불안함이 드는 것도 사실이다. (나 역시 마찬가지)  
+AI 도구의 활용성이 높아질수록, "결국 개발자가 AI로 대체되는 것은 아닐까?" 하는 불안함이 드는 것도 사실이다. (나 역시 마찬가지ㅎ)  
 
 하지만 기술이 발전할수록 역설적으로 인간 개발자의 **'설계 능력'**은 더욱 빛을 발하게 될 것이다. 그 이유를 세 가지 관점에서 정리해 보았다.  
 
